@@ -15,10 +15,12 @@ import AIAutomation from './screens/Services/AllServices/AIAutomation';
 import MobileAppDevelopment from './screens/Services/AllServices/MobileAppDevelopment';
 import ProjectPage from './screens/Portfolio/ProjectDetails/ProjectPage';
 import Contact from './screens/ContactUs/Contact';
+import ScrollToTop from './Common/ScrollToTop';
 
 const NavbarLayout = () => {
   return (
     <>
+    <ScrollToTop />
       <Navbar />
       <main style={{ paddingTop: "100px" }}>
         <Outlet />
