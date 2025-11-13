@@ -93,7 +93,7 @@ const Services = () => {
   // 3. Start animation on component mount
   useEffect(() => {
     startAnimation();
-  }, []); // Added controls to dependency array
+  }); // Added controls to dependency array
 
   return (
     <section className="w-full py-4 md:py-8 overflow-hidden">
