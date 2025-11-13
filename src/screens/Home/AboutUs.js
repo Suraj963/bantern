@@ -1,8 +1,9 @@
 /* src/components/AboutUs.jsx */
 
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, useScroll, useTransform, useInView } from 'framer-motion';
-import { SparklesIcon } from '@heroicons/react/24/solid'; // Using SparklesIcon for a touch of flair
+import React, { useState, useEffect, useRef } from "react";
+import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { SparklesIcon } from "@heroicons/react/24/solid"; // Using SparklesIcon for a touch of flair
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   // Ref for the entire section to trigger scroll animations
@@ -16,10 +17,10 @@ const AboutUs = () => {
   // Scroll animations for the image
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
   // Reduced the scroll effect for a more subtle feel on all screens
-  const translateYImage = useTransform(scrollYProgress, [0, 1], [-20, 20]); 
+  const translateYImage = useTransform(scrollYProgress, [0, 1], [-20, 20]);
 
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -35,12 +36,12 @@ const AboutUs = () => {
 
     const currentRef = ref.current;
     if (currentRef) {
-      currentRef.addEventListener('mousemove', handleMouseMove);
+      currentRef.addEventListener("mousemove", handleMouseMove);
     }
 
     return () => {
       if (currentRef) {
-        currentRef.removeEventListener('mousemove', handleMouseMove);
+        currentRef.removeEventListener("mousemove", handleMouseMove);
       }
     };
   }, []);
@@ -80,7 +81,7 @@ const AboutUs = () => {
         className="hidden lg:block absolute w-8 h-48 bg-gradient-to-b from-primary to-background/50 rounded-full shadow-lg pointer-events-none z-10"
         style={{
           left: mousePosition.x - 16, // Center the stick horizontally
-          top: mousePosition.y - 96,  // Center the stick vertically
+          top: mousePosition.y - 96, // Center the stick vertically
           filter: `drop-shadow(0 0 10px hsl(var(--primary) / 0.5))`, // Soft glow
         }}
         animate={{
@@ -89,32 +90,56 @@ const AboutUs = () => {
         }}
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
       />
-      
+
       {/* Left Content Area (Now appears second on mobile) */}
       <div className="relative z-20 lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0 p-4">
         <p className="text-sm font-medium text-primary mb-2 uppercase tracking-wider">
           Know About Us
         </p>
-        
+
         <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-          {companyName}: <span className="text-primary italic">{companySlogan}</span>
+          {companyName}:{" "}
+          <span className="text-primary italic">{companySlogan}</span>
         </h2>
 
         <p className="text-lg text-muted-foreground mb-6 max-w-prose mx-auto lg:mx-0">
-          At {companyName}, we are a team of dedicated innovators passionate about creating dynamic and impactful digital experiences. From concept to deployment, we thrive on solving complex problems with clean, efficient code and user-centric design. Our expertise spans modern web technologies, cloud solutions, and scalable software architecture, and we're always eager to embrace new challenges.
+          At {companyName}, we are a team of dedicated innovators passionate
+          about creating dynamic and impactful digital experiences. From concept
+          to deployment, we thrive on solving complex problems with clean,
+          efficient code and user-centric design. Our expertise spans modern web
+          technologies, cloud solutions, and scalable software architecture, and
+          we're always eager to embrace new challenges.
         </p>
         <p className="text-lg text-muted-foreground mb-8 max-w-prose mx-auto lg:mx-0">
-          When we're not immersed in development, we're exploring new ideas, staying curious about emerging tech, and fostering a culture of continuous learning. We believe in creating solutions that not only meet but exceed expectations, making a tangible difference for our clients and their users.
+          When we're not immersed in development, we're exploring new ideas,
+          staying curious about emerging tech, and fostering a culture of
+          continuous learning. We believe in creating solutions that not only
+          meet but exceed expectations, making a tangible difference for our
+          clients and their users.
         </p>
-        
+
         {/* Call to Action Button */}
-        <motion.button
-          whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(var(--primary-rgb), 0.3)" }}
+        <motion.div
+          whileHover={{
+            scale: 1.05,
+            boxShadow: "0 0 20px rgba(var(--primary-rgb), 0.3)",
+          }}
           whileTap={{ scale: 0.95 }}
-          className=" bg-foreground text-background px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 shadow-md"
+          className="inline-block"
         >
-          Discover Our Vision
-        </motion.button>
+          <Link
+            to="/about"
+            className="
+      bg-foreground text-background 
+      px-8 py-3 rounded-full 
+      text-lg font-medium 
+      transition-all duration-300 
+      shadow-md block text-center
+    "
+          >
+            Discover Our Vision
+          </Link>
+        </motion.div>
       </div>
 
       {/* Right Image Area (Now appears first on mobile) */}
@@ -127,7 +152,7 @@ const AboutUs = () => {
         >
           {/* Example: A stylized icon representing growth or innovation */}
           <SparklesIcon className="w-3/4 h-3/4 text-primary opacity-70" />
-          
+
           {/* Overlay to enhance the glow effect */}
           <div className="absolute inset-0 rounded-3xl border border-primary/40 pointer-events-none" />
           <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-primary/10 to-transparent blur-xl opacity-50 pointer-events-none" />

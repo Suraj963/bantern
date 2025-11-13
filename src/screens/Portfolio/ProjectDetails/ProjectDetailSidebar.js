@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRightIcon, CheckIcon } from "@heroicons/react/24/solid";
 import React from "react";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 // Animation for the container
 const containerVariants = {
@@ -64,8 +65,6 @@ const ProjectDetailSidebar = ({ budget, timeline, date, liveSiteUrl, keyFeatures
             px-5 py-3 rounded-full 
             text-base font-medium 
             flex items-center justify-center group 
-            transition-all shadow-lg hover:shadow-primary/30
-            hover:bg-primary hover:text-primary-foreground
           "
         >
           View Live Site
@@ -106,10 +105,10 @@ const ProjectDetailSidebar = ({ budget, timeline, date, liveSiteUrl, keyFeatures
             px-5 py-2 rounded-full 
             text-sm font-medium 
             flex items-center justify-center group 
-            transition-shadow shadow-lg hover:shadow-primary/30
           "
         >
           Launch Your Project
+           <ArrowRightIcon className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
         </motion.a>
       </motion.div>
     </motion.div>

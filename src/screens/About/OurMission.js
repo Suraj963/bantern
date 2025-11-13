@@ -43,8 +43,8 @@ const OurMission = () => {
           </p>
 
           {/* --- 4. UPDATED: Added Button --- */}
-          <motion.button
-            whileHover={{ scale: 1.05, boxShadow: "0 0 20px hsl(var(--primary) / 0.3)" }}
+          {/* <motion.button
+            whileHover={{ scale: 1.05}}
             whileTap={{ scale: 0.95 }}
             className="
               bg-foreground text-background 
@@ -52,12 +52,12 @@ const OurMission = () => {
               text-base font-medium 
               flex items-center group
               mx-auto lg:mx-0
-              transition-shadow shadow-lg
+              transition-colors
             "
           >
             Learn More
             <ArrowRightIcon className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-          </motion.button>
+          </motion.button> */}
           {/* --- END OF UPDATE --- */}
         </div>
 

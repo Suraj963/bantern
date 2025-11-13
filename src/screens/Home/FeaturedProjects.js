@@ -96,7 +96,7 @@ const FeaturedProjects = () => {
           Featured Projects
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mb-12">
-          A selection of my most impactful work across various industries
+          A selection of our most impactful work across various industries
           and technologies.
         </p>
       </div>

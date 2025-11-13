@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ChevronRightIcon } from "@heroicons/react/24/solid";
-import React from "react"; 
+import React from "react";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 // --- Animation Variants (Consistent with main Hero) ---
 const containerVariants = {
@@ -11,7 +12,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2, 
+      staggerChildren: 0.2,
       delayChildren: 0.3,
     },
   },
@@ -21,7 +22,7 @@ const itemVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
-    y: 0, 
+    y: 0,
     transition: {
       type: "spring",
       stiffness: 100,
@@ -37,7 +38,7 @@ const PortfolioHero = () => {
       initial="hidden"
       animate="visible" // Self-animates on page load
       className="relative flex flex-col items-center justify-center text-center 
-                 min-h-[70vh] w-full px-4 pt-32 pb-16 overflow-hidden" 
+                 min-h-[70vh] w-full px-4 pt-32 pb-16 overflow-hidden"
       style={{
         // Radial glow background (consistent theme)
         background: `radial-gradient(ellipse 80% 60% at 50% 100%, hsl(var(--primary) / 0.1), transparent)`,
@@ -45,7 +46,6 @@ const PortfolioHero = () => {
     >
       {/* 1. Content Container (Staggered Animation) */}
       <div className="relative z-10 max-w-4xl px-4">
-        
         {/* Category Pill */}
         <motion.div
           variants={itemVariants}
@@ -68,18 +68,28 @@ const PortfolioHero = () => {
           variants={itemVariants}
           className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-8"
         >
-          Explore our selection of high-performance applications and successful client collaborations built to drive real business value.
+          Explore our selection of high-performance applications and successful
+          client collaborations built to drive real business value.
         </motion.p>
-        
+
         {/* CTA Button (White Theme) */}
         <motion.div variants={itemVariants} className="flex justify-center">
-            <Link
-                to="/services" 
-                className="bg-foreground text-background px-6 py-2 rounded-full text-base font-medium hover:bg-primary/90 transition-colors flex items-center gap-1 shadow-lg"
-            >
-                View Services
-                <ChevronRightIcon className="w-4 h-4" />
-            </Link>
+          <Link
+            to="/services"
+            className="
+    bg-foreground text-background 
+    px-6 py-2 rounded-full 
+    text-base font-medium 
+    flex items-center gap-1 
+    shadow-lg 
+    transition-all duration-200 
+    group
+    hover:scale-105
+  "
+          >
+            View Services
+            <ArrowRightIcon className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+          </Link>
         </motion.div>
       </div>
     </motion.section>

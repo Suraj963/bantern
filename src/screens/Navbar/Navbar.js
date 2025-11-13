@@ -101,7 +101,7 @@ const Navbar = () => {
   };
 
   const ctaButtonClass =
-    " bg-foreground text-background px-5 py-2 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors";
+    " bg-foreground text-background px-5 py-2 rounded-full text-sm font-medium hover:scale-105";
   
   const mobileCtaButtonClass =
     "block w-full text-center px-3 py-2 rounded-md text-base font-medium bg-foreground text-background hover:bg-primary/90 transition-colors mt-2";
@@ -219,7 +219,7 @@ const Navbar = () => {
                   </p>
                   <Link 
                     to="/services" 
-                    className="bg-foreground text-background px-4 py-2 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors flex items-center gap-1"
+                    className="bg-foreground text-background px-4 py-2 rounded-full text-sm font-medium hover:scale-105 flex items-center gap-1"
                   >
                     View All Services
                     <ArrowRightIcon className="w-4 h-4" />

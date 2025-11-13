@@ -134,7 +134,6 @@ const FinalCtaBanner = ({
         px-8 py-3 rounded-full 
         text-lg font-medium 
         inline-flex items-center group 
-        transition-shadow shadow-lg hover:shadow-primary/30
       "
                 >
                   {ctaText}

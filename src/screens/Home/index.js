@@ -14,9 +14,9 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <AnimatedSection>
+      {/* <AnimatedSection>
         <FeaturesGrid />
-      </AnimatedSection>
+      </AnimatedSection> */}
       <AnimatedSection>
         <AboutUs />
       </AnimatedSection>
@@ -24,24 +24,23 @@ const Home = () => {
         <Services />
       </AnimatedSection>
       <AnimatedSection>
-        <CtaVideo />
-      </AnimatedSection>
-      <AnimatedSection>
-        <Process />
-      </AnimatedSection>
-      <AnimatedSection>
-        <FeaturedProjects />
-      </AnimatedSection>
-      <AnimatedSection>
         <WhyChooseUs />
       </AnimatedSection>
+      <AnimatedSection>
+        <CtaVideo />
+      </AnimatedSection>
+      {/* <AnimatedSection>
+        <Process />
+      </AnimatedSection> */}
+      {/* <AnimatedSection>
+        <FeaturedProjects />
+      </AnimatedSection> */}
       <AnimatedSection>
         <Testimonials />
       </AnimatedSection>
       <AnimatedSection>
         <ContactSection />
       </AnimatedSection>
-      
     </>
   );
 };

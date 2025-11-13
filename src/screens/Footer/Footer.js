@@ -153,7 +153,7 @@ const Footer = () => {
                     bg-foreground text-background
                     px-4 py-2 rounded-full 
                     text-sm font-bold 
-                    group transition-shadow shadow-lg hover:shadow-primary/30
+                    transition-colors
                   "
                 >
                   Get in Touch
