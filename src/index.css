@@ -1,0 +1,73 @@
+/* src/index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================
+  Your Custom Design System
+  ==========================================
+*/
+@layer base {
+  :root {
+    /* Main Palette */
+    --background: 0 0% 0%;             /* black */
+    --foreground: 0 0% 100%;           /* white */
+
+    --primary: 154 100% 50%;         /* your new green #00ff8f */ 
+    --primary-foreground: 0 0% 0%; /* black (for text on bright green) */
+
+    /* Component Colors (based on your palette) */
+    --card: 0 0% 8%;                 /* very dark gray, almost black */
+    --card-foreground: 0 0% 95%;     /* off-white */
+    
+    --popover: 0 0% 5%;              /* slightly darker than card */
+    --popover-foreground: 0 0% 95%;
+
+    --muted: 0 0% 15%;               /* dark gray for hovers */
+    --muted-foreground: 0 0% 65%;    /* light gray (for non-active text) */
+    
+    --border: 0 0% 20%;              /* gray for borders */
+    --input: 0 0% 15%;
+    --ring: 154 100% 50%;            /* your new green for focus rings */
+
+    /* Other vars */
+    --radius: 0.75rem;
+  }
+
+  @keyframes shine {
+    from { background-position: 200% 0; }
+    to { background-position: -200% 0; }
+  }
+
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  @keyframes scroll-right {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+  }
+
+  /* Apply base styles */
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* === Embla Carousel Base === */
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 auto;
+  min-width: 0;
+  position: relative;
+}
+}

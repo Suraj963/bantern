@@ -1,0 +1,19 @@
+/* src/App.css */
+
+/* ... any other css ... */
+
+.hero-glow::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px; /* Adjust height of the glow */
+  opacity: 0.6;
+  /* This creates the wide, curved white glow */
+  background: radial-gradient(
+    ellipse 100% 40% at 50% 100%, 
+    hsl(var(--foreground), 0.15), /* 15% opacity white */
+    transparent 60%
+  );
+}
