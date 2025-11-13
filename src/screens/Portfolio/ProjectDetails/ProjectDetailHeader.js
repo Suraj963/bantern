@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeftIcon, CalendarIcon, ClockIcon, CurrencyDollarIcon } from "@heroicons/react/24/solid";
+import { ArrowLeftIcon, ClockIcon, CurrencyDollarIcon } from "@heroicons/react/24/solid";
 import React from "react";
 
 // Animation for the container

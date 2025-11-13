@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { 
   SparklesIcon,   // Represents Innovation
-  CheckBadgeIcon, // Represents Quality
   UsersIcon,      // Represents Collaboration
   CodeBracketIcon,  // Represents Technology
   GlobeAltIcon,   // Represents Global Reach

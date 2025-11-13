@@ -2,13 +2,14 @@
 
 import { motion, useAnimation } from "framer-motion"; // Import useAnimation
 import { useEffect } from "react"; // Import useEffect
-import { 
-  ArrowRightIcon, 
-  CodeBracketIcon, 
-  DevicePhoneMobileIcon, 
-  CloudIcon, 
-  SparklesIcon 
+import {
+  ArrowRightIcon,
+  CodeBracketIcon,
+  DevicePhoneMobileIcon,
+  CloudIcon,
+  SparklesIcon,
 } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 /**
  * A single service card component (No change)
@@ -28,24 +29,44 @@ const ServiceCard = ({ icon: Icon, title, children }) => {
 
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-muted-foreground mb-4 flex-grow">{children}</p>
-      
-      <a 
-        href="#" 
+
+      <Link
+        to="/services"
         className="text-foreground font-medium flex items-center group"
       >
         Learn More
         <ArrowRightIcon className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-      </a>
+      </Link>
     </motion.div>
   );
 };
 
 // --- Service data array (No change) ---
 const servicesList = [
-  { icon: CodeBracketIcon, title: "Web Development", description: "Full-stack solutions, custom web apps, API integrations, and clean, scalable code for maximum performance." },
-  { icon: DevicePhoneMobileIcon, title: "Mobile App Design", description: "Custom UI/UX design for iOS and Android, focusing on mobile-first layouts and aesthetic visuals that represent your brand." },
-  { icon: CloudIcon, title: "Cloud & DevOps", description: "High-availability infrastructure, CI/CD pipelines, and scalable cloud solutions on AWS, Azure, and GCP." },
-  { icon: SparklesIcon, title: "AI & ML Solutions", description: "Full-stack solutions, landing pages, API integrations, and clean, scalable code for performance." }
+  {
+    icon: CodeBracketIcon,
+    title: "Web Development",
+    description:
+      "Full-stack solutions, custom web apps, API integrations, and clean, scalable code for maximum performance.",
+  },
+  {
+    icon: DevicePhoneMobileIcon,
+    title: "Mobile App Design",
+    description:
+      "Custom UI/UX design for iOS and Android, focusing on mobile-first layouts and aesthetic visuals that represent your brand.",
+  },
+  {
+    icon: CloudIcon,
+    title: "Cloud & DevOps",
+    description:
+      "High-availability infrastructure, CI/CD pipelines, and scalable cloud solutions on AWS, Azure, and GCP.",
+  },
+  {
+    icon: SparklesIcon,
+    title: "AI & ML Solutions",
+    description:
+      "Full-stack solutions, landing pages, API integrations, and clean, scalable code for performance.",
+  },
 ];
 
 /**
@@ -64,28 +85,26 @@ const Services = () => {
         ease: "linear",
         repeat: Infinity,
         repeatType: "loop",
-        delay: 2 
-      }
+        delay: 2,
+      },
     });
   };
 
   // 3. Start animation on component mount
   useEffect(() => {
     startAnimation();
-  }, [controls]); // Added controls to dependency array
+  }, []); // Added controls to dependency array
 
   return (
     <section className="w-full py-4 md:py-8 overflow-hidden">
-      
       {/* 5. New container to constrain heading (No change) */}
       <div className="w-full max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="flex flex-col items-center text-center">
-          
           <div className="bg-card border border-border/50 rounded-full px-4 py-1 text-sm text-primary mb-4">
             Services
           </div>
 
-          <h2 
+          <h2
             className="
               text-4xl md:text-6xl font-bold mb-4
               bg-clip-text text-transparent 
@@ -96,17 +115,20 @@ const Services = () => {
             What We Offer
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mb-12">
-            Comprehensive software development and design services tailored
-            to bring your specific needs from concept to reality.
+            Comprehensive software development and design services tailored to
+            bring your specific needs from concept to reality.
           </p>
         </div>
-      </div> 
+      </div>
       {/* End of constrained container */}
 
       {/* 6. Scroller is now outside the max-w container and has hover controls */}
-      <div 
+      <div
         className="w-full"
-        style={{ maskImage: "linear-gradient(to right, transparent, black 5%, black 95%, transparent)" }}
+        style={{
+          maskImage:
+            "linear-gradient(to right, transparent, black 5%, black 95%, transparent)",
+        }}
         // --- UPDATED: Added touch controls ---
         onMouseEnter={() => controls.stop()}
         onMouseLeave={startAnimation}
@@ -121,7 +143,9 @@ const Services = () => {
           animate={controls}
         >
           {[...servicesList, ...servicesList].map((service, index) => (
-            <div key={index} className="flex-shrink-0 w-80 md:w-96 p-3"> {/* Sized wrapper for card */}
+            <div key={index} className="flex-shrink-0 w-80 md:w-96 p-3">
+              {" "}
+              {/* Sized wrapper for card */}
               <ServiceCard icon={service.icon} title={service.title}>
                 {service.description}
               </ServiceCard>

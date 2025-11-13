@@ -1,7 +1,6 @@
 /* src/components/FeaturedProjects.jsx */
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion } from 'framer-motion';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { ProjectCard } from './ProjectCard'; // Adjust path as needed

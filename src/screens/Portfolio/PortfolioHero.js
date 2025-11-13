@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRightIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import { ChevronRightIcon } from "@heroicons/react/24/solid";
 import React from "react"; 
 
 // --- Animation Variants (Consistent with main Hero) ---
