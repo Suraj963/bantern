@@ -122,7 +122,7 @@ const Process = ({ title, subtitle, stepsData = DEFAULT_PROCESS_STEPS }) => {
   const colorIndex = (currentStepData.id - 1) % cardGradients.length; 
 
   return (
-    <section className="w-full max-w-screen-xl mx-auto p-4 md:p-8">
+    <section className="w-full max-w-screen-xl mx-auto p-4 md:p-8 pt-0 sm:pt-28 lg:pt-0">
       {/* === TOP HEADING (Uses props) === */}
       <div className="flex flex-col items-center text-center">
         <div className="bg-card border border-border/50 rounded-full px-4 py-1 text-sm text-primary mb-4">

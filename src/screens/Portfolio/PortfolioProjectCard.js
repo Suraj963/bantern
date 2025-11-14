@@ -105,37 +105,27 @@ const PortfolioProjectCard = () => {
       variants={containerVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      className="w-full max-w-screen-xl mx-auto p-4 md:p-8"
+      className="w-full max-w-screen-xl mx-auto p-4 md:p-16 pt-16"
     >
-      <div className="text-center mb-12">
-               {" "}
-        <h2
+
+        <div className="flex flex-col items-center text-center">
+        <div className="bg-card border border-border/50 rounded-full px-4 py-1 text-sm text-primary mb-4">
+          Our Work
+        </div>
+        <h2 
           className="
-    text-3xl 
-    sm:text-4xl 
-    md:text-5xl 
-    lg:text-6xl 
-    font-bold mb-2 
-    bg-clip-text text-transparent 
-    bg-[linear-gradient(110deg,hsl(var(--foreground))_30%,hsl(var(--primary))_50%,hsl(var(--foreground))_70%)]
-    bg-[200%_auto] animate-shine
-  "
+            text-4xl md:text-6xl font-bold mb-4
+            bg-clip-text text-transparent 
+            bg-[linear-gradient(110deg,hsl(var(--foreground))_30%,hsl(var(--primary))_50%,hsl(var(--foreground))_70%)]
+            bg-[200%_auto] animate-shine
+          "
         >
-         Our Featured Work
+          Our Featured Work
         </h2>
-               {" "}
-        <p
-          className="
-    text-base 
-    sm:text-lg 
-    md:text-xl 
-    lg:text-2xl 
-    text-muted-foreground
-  "
-        >
-         See how we've helped health practices get more patients.
+        <p className="text-lg text-muted-foreground max-w-2xl mb-12">
+          A selection of our most impactful work across various industries
+          and technologies.
         </p>
-             {" "}
       </div>
 
       {/* Grid Display */}

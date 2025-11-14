@@ -32,7 +32,7 @@ const Hero = () => {
 
   return (
     <motion.section
-      className="relative flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 overflow-hidden text-center hero-glow pt-20 sm:pt-32 pb-16"
+      className="relative flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 overflow-hidden text-center hero-glow pt-6 sm:pt-10 pb-16"
       style={{
         background: `radial-gradient(ellipse 80% 60% at 50% 100%, hsl(var(--primary) / 0.1), transparent)`,
       }}

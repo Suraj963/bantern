@@ -155,7 +155,7 @@ const Testimonials = () => {
       variants={containerVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      className="w-full py-4 md:py-8 overflow-hidden"
+      className="w-full py-4 md:py-8 overflow-hidden pt-12 sm:pt-28 lg:pt-8"
     >
       
       {/* === TOP HEADING (No change) === */}

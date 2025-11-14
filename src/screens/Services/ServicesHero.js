@@ -2,26 +2,27 @@
 
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+// CHANGED: Using SOLID icon for the primary CTA
 import { ArrowRightIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
-import React from "react"; // Import React
+import React from "react";
 
-// --- Animation Variants ---
+// --- Animation Variants (No change) ---
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2, // Stagger children animations
+      staggerChildren: 0.2,
       delayChildren: 0.3,
     },
   },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 }, // Start 20px down and faded out
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
-    y: 0, // Animate to 0px (original position)
+    y: 0,
     transition: {
       duration: 0.5,
       ease: "easeInOut",
@@ -34,15 +35,14 @@ const ServicesHero = () => {
     <motion.section
       variants={containerVariants}
       initial="hidden"
-      animate="visible" // Animate on page load
-      className="relative flex items-center justify-center min-h-[70vh] px-4 overflow-hidden text-center pt-32 pb-16"
-      // This radial gradient creates the primary color glow from the bottom
+      animate="visible"
+      className="relative flex items-center justify-center min-h-[70vh] px-4 overflow-hidden text-center pt-8 pb-16"
       style={{
         background: `radial-gradient(ellipse 80% 60% at 50% 100%, hsl(var(--primary) / 0.1), transparent)`,
       }}
     >
       <div className="relative z-10 flex flex-col items-center">
-        {/* 1. "Our Services" Pill */}
+        {/* 1. "Our Services" Pill (No change) */}
         <motion.div
           variants={itemVariants}
           className="mb-6 flex items-center gap-1 text-sm font-medium text-primary bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-full px-4 py-1.5 transition-colors cursor-pointer"
@@ -51,48 +51,66 @@ const ServicesHero = () => {
           <ChevronRightIcon className="w-4 h-4" />
         </motion.div>
 
-        {/* 2. Main Headline */}
+        {/* ======================================
+          CHANGED: Main Headline
+          - Ripped out the "Scalable Solutions" fluff.
+          - Ripped out the inconsistent 'font-serif' and gradient.
+          - Replaced with a strong, direct, SANS-SERIF headline
+            that matches your "for all business" brand.
+          ======================================
+        */}
         <motion.h1
           variants={itemVariants}
-          className="text-5xl font-bold tracking-tight text-transparent sm:text-7xl lg:text-8xl bg-clip-text bg-gradient-to-b from-foreground to-muted-foreground font-serif max-w-5xl"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground max-w-4xl"
         >
-          Scalable Solutions,
-          <span className="italic text-muted-foreground/80">
-            {' '}Seamless Experiences
-          </span>
+          Websites, Apps, & E-Commerce.
+          <br />
+          Built Right.
         </motion.h1>
 
-        {/* 3. Sub-headline */}
+        {/* ======================================
+          CHANGED: Sub-headline
+          - Replaced "end-to-end software solutions" fluff.
+          - Added a direct, confident promise.
+          ======================================
+        */}
         <motion.p
           variants={itemVariants}
           className="mt-8 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-lg text-muted-foreground max-w-2xl"
         >
-          We provide end-to-end software solutions designed to grow with your business.
+          We are your dedicated technical partner for growing any business, of any size.
         </motion.p>
 
-        {/* 4. CTA Buttons */}
+        {/* ======================================
+          CHANGED: Call to Action
+          - Ripped out the weak, dead-end "View Work" button.
+          - Replaced with your STANDARD, BULLETPROOF CTA block.
+          - This funnels all users to your one conversion goal.
+          ======================================
+        */}
         <motion.div
           variants={itemVariants}
-          className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="mt-12 w-full flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-2"
         >
-          {/* Main CTA */}
           <Link
-            to="/portfolio" // Link to your projects
-            className="flex items-center gap-2 px-6 py-3 text-sm font-medium transition-colors rounded-full bg-card hover:bg-muted text-foreground border border-border"
+            to="/audit"
+            className="w-full sm:w-auto"
           >
-            <span>View Our Work</span>
-            <span className="flex items-center justify-center w-5 h-5 p-1 rounded-full bg-muted-foreground/20">
-              <ArrowRightIcon className="w-3 h-3 text-foreground" />
-            </span>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-primary text-primary-foreground rounded-full px-6 py-3 text-sm font-medium flex items-center justify-center gap-2 group transition-colors w-full"
+            >
+              <span>Book Free 15-min Audit</span>
+              <ArrowRightIcon className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+            </motion.button>
           </Link>
-          
-          {/* Email Link */}
-          <a
-            href="mailto:hello@bantern.com"
-            className="px-4 py-3 text-sm font-medium transition-colors rounded-full text-muted-foreground hover:text-primary"
+          <Link
+            to="/portfolio"
+            className="flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium transition-colors rounded-full bg-card hover:bg-muted text-foreground border border-border w-full sm:w-auto"
           >
-            hello@bantern.com
-          </a>
+            <span>See Our Work</span>
+          </Link>
         </motion.div>
       </div>
     </motion.section>

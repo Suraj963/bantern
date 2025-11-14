@@ -54,7 +54,7 @@ const FAQSection = ({faqData}) => {
       variants={containerVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      className="w-full max-w-4xl mx-auto p-4 md:p-8 py-20"
+      className="w-full max-w-4xl mx-auto p-4 md:p-8 pt-0 sm:pt-28 lg:pt-0"
     >
       {/* === HEADING BLOCK === */}
       <div className="text-center mb-16">

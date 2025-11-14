@@ -48,7 +48,7 @@ const FinalCtaBanner = ({
   return (
     <motion.section
       ref={ref}
-      className="relative w-full py-20 overflow-hidden"
+      className="relative w-full py-20 overflow-hidden pt-12 sm:pt-28 lg:pt-8"
       variants={containerVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}

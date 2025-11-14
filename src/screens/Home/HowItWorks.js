@@ -24,7 +24,7 @@ const HowItWorks = () => {
       variants={sectionVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      className="relative w-full max-w-screen-xl mx-auto p-4 md:p-8 flex flex-col-reverse lg:flex-row items-center justify-between min-h-[70vh] overflow-hidden"
+      className="relative w-full max-w-screen-xl mx-auto p-4 md:p-8 flex flex-col-reverse lg:flex-row items-center justify-between min-h-[70vh] overflow-hidden pt-14 sm:pt-28 lg:pt-10"
     >
       {/* Left Content Area */}
       <div className="relative z-20 lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0 p-4">

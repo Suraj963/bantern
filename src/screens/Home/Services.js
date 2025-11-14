@@ -127,7 +127,7 @@ const Services = () => {
   // --- END OF EMBLA SETUP ---
 
   return (
-    <section className="w-full py-4 md:py-8 overflow-hidden">
+    <section className="w-full py-4 md:py-8 overflow-hidden pt-0 sm:pt-20 lg:pt-5">
       {/* 5. New container to constrain heading (No change) */}
       <div className="w-full max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="flex flex-col items-center text-center">

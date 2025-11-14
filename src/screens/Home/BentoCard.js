@@ -24,9 +24,9 @@ export const BentoCard = ({ className, children, variants }) => {
         bg-background border border-border 
         p-6 ${className}
         transition-colors duration-300
-        hover:border-primary/30 /* Subtle border highlight on hover */
-        hover:z-10 /* Ensure card is on top when hovered */
-        rounded-2xl /* --- ADDED THIS BACK --- */
+        hover:border-primary/30 
+        hover:z-10 
+        rounded-2xl 
       `}
     >
       {/* The content */}

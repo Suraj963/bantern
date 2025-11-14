@@ -48,7 +48,7 @@ const CtaVideo = () => {
       variants={containerVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      className="w-full max-w-screen-xl mx-auto p-4 md:p-8"
+      className="w-full max-w-screen-xl mx-auto p-4 md:p-8 pt-12 sm:pt-28 lg:pt-8"
     >
       {/* Main container */}
       <div

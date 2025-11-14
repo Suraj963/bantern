@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import React from "react";
 
-
 // --- Animation Variants (No Change) ---
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -26,7 +25,7 @@ const itemVariants = {
 /**
  * Reusable component for displaying Key Features in a grid.
  */
-const KeyFeaturesGrid = ({featureData}) => {
+const KeyFeaturesGrid = ({ featureData }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: "-100px 0px",
@@ -38,20 +37,31 @@ const KeyFeaturesGrid = ({featureData}) => {
       variants={containerVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      className="w-full max-w-screen-xl mx-auto p-4 md:p-8"
+      className="w-full max-w-screen-xl mx-auto p-4 md:p-8 pt-0 sm:pt-28 lg:pt-0"
     >
       {/* Heading Block --- UPDATED: Added Shine Effect --- */}
       <div className="text-center mb-12">
-        <motion.h2 
-          variants={itemVariants} 
+        <motion.h2
+          variants={itemVariants}
           className="text-3xl md:text-5xl font-bold mb-3 text-transparent bg-clip-text 
-                     bg-[linear-gradient(110deg,hsl(var(--foreground))_30%,hsl(var(--primary))_50%,hsl(var(--foreground))_70%)]
-                     bg-[200%_auto] animate-shine"
+               bg-[linear-gradient(110deg,hsl(var(--foreground))_30%,hsl(var(--primary))_50%,hsl(var(--foreground))_70%)]
+               bg-[200%_auto] animate-shine inline-block leading-[1.08] pb-0.5"
+          style={{
+            overflow: "visible", // prevents clipping when parent has overflow-hidden
+            WebkitBackgroundClip: "text", // ensure background-clip works across browsers
+            WebkitTextFillColor: "transparent", // ensures text color is transparent for bg-clip
+            transform: "translateZ(0)", // promote to its own layer to avoid subpixel rasterization artifacts
+          }}
         >
           Key Features
         </motion.h2>
-        <motion.p variants={itemVariants} className="text-muted-foreground max-w-3xl mx-auto">
-          Our service includes everything you need to create a compelling online presence.
+
+        <motion.p
+          variants={itemVariants}
+          className="text-muted-foreground max-w-3xl mx-auto"
+        >
+          Our service includes everything you need to create a compelling online
+          presence.
         </motion.p>
       </div>
 
@@ -62,7 +72,7 @@ const KeyFeaturesGrid = ({featureData}) => {
             key={index}
             variants={itemVariants}
             // --- UPDATED: Hover effect for lift and green border ---
-            whileHover={{ y: -5 }} 
+            whileHover={{ y: -5 }}
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
             className="group bg-background border border-border/50 rounded-lg p-6 flex flex-col h-full 
                        transition-colors duration-300 hover:border-primary hover:shadow-xl hover:shadow-primary/20"
@@ -71,10 +81,14 @@ const KeyFeaturesGrid = ({featureData}) => {
             <div className="mb-4">
               <feature.icon className="w-8 h-8 text-primary" />
             </div>
-            
+
             {/* Title & Description */}
-            <h3 className="text-xl font-semibold text-foreground mb-2">{feature.title}</h3>
-            <p className="text-muted-foreground text-sm flex-grow">{feature.description}</p>
+            <h3 className="text-xl font-semibold text-foreground mb-2">
+              {feature.title}
+            </h3>
+            <p className="text-muted-foreground text-sm flex-grow">
+              {feature.description}
+            </p>
           </motion.div>
         ))}
       </div>

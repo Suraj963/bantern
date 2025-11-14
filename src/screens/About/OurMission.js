@@ -11,7 +11,7 @@ import {
 
 const OurMission = () => {
   return (
-    <section className="w-full max-w-screen-xl mx-auto p-4 md:p-8">
+    <section className="w-full max-w-screen-xl mx-auto p-4 md:p-8 pt-12 sm:pt-28 lg:pt-8">
       {/* Main grid: Text on left, visuals on right */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         
