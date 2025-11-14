@@ -9,36 +9,59 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 // 1. Define your project data (No change)
 const projectData = [
   {
-    title: "Project Alpha",
+    id: 1,
+    title: "EcoSense Platform",
     category: "Web Application",
-    description: "A dynamic, multi-dashboard web platform built to manage and scale enterprise-level solutions.",
-    tags: ["React", "Node.js", "TypeScript", "+3"],
-    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-    url: "#"
+    description:
+      "A comprehensive dashboard for environmental tracking and resource management built with real-time data streaming.",
+    tags: ["React", "Node.js", "PostgreSQL", "AWS"],
+    imageUrl:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+    url: "#",
   },
   {
-    title: "SaaS Dashboard",
-    category: "Cloud Solution",
-    description: "A comprehensive SaaS dashboard for real-time analytics, user management, and API integrations.",
-    tags: ["Vue.js", "AWS", "Python", "+5"],
-    imageUrl: "https://images.unsplash.com/photo-1556155092-490a1ba16284?q=80&w=2070&auto=format&fit=crop",
-    url: "#"
+    id: 2,
+    title: "Nexus Pro CMS",
+    category: "CMS/SaaS",
+    description:
+      "A highly customizable headless CMS solution allowing content delivery across web and mobile endpoints.",
+    tags: ["Next.js", "TypeScript", "GraphQL", "Tailwind CSS"],
+    imageUrl:
+      "https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1936&auto=format&fit=crop",
+    url: "#",
   },
   {
-    title: "E-Commerce Store",
-    category: "Web Development",
-    description: "A high-converting e-commerce store with custom CMS, payment integrations, and scalable architecture.",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "+2"],
-    imageUrl: "https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?q=80&w=2070&auto=format&fit=crop",
-    url: "#"
-  },
-  {
-    title: "Mobile App",
+    id: 3,
+    title: "Flow State Mobile App",
     category: "Mobile Application",
-    description: "A cross-platform mobile app designed to bring wellness and tracking to users' fingertips.",
-    tags: ["React Native", "Firebase", "PHP", "+4"],
-    imageUrl: "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?q=80&w=2070&auto=format&fit=crop",
-    url: "#"
+    description:
+      "Cross-platform mobile application focused on productivity, utilizing geolocation and real-time alerts.",
+    tags: ["React Native", "Firebase", "TypeScript", "+3"],
+    imageUrl:
+      "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?q=80&w=2070&auto=format&fit=crop",
+    url: "#",
+  },
+  {
+    id: 4,
+    title: "Aura E-Commerce",
+    category: "E-Commerce",
+    description:
+      "Bespoke online store design and development with integrated inventory management and secure payment gateways.",
+    tags: ["Shopify+", "Liquid", "React", "Stripe"],
+    imageUrl:
+      "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop",
+    url: "#",
+  },
+  {
+    id: 5,
+    title: "Quantum API Gateway",
+    category: "Backend/API",
+    description:
+      "Robust, scalable API gateway designed for microservice communication and high-volume data traffic.",
+    tags: ["Node.js", "Docker", "AWS Lambda", "Go"],
+    imageUrl:
+      "https://images.unsplash.com/photo-1581094488347-3d1490232d4b?q=80&w=2070&auto=format&fit=crop",
+    url: "#",
   },
 ];
 

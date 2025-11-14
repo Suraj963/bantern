@@ -17,6 +17,7 @@ import {
   SparklesIcon,
   ArrowRightIcon,
 } from "@heroicons/react/24/outline";
+import ThemeToggle from "../../Common/ThemeToggle"; // Assuming this path is correct
 
 // --- Data for the dropdown (No change) ---
 const servicesDropdownItems = [
@@ -124,7 +125,6 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
-      {/* --- UPDATED: 'nav' is now relative --- */}
       <nav 
         className="relative w-full max-w-6xl mx-auto bg-card/80 backdrop-blur-md rounded-full shadow-2xl border border-border/50"
         onMouseLeave={() => setIsServicesOpen(false)}
@@ -143,7 +143,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* --- UPDATED: Desktop Navigation Links (Center) --- */}
+          {/* Desktop Navigation Links (No change) */}
           <div className="hidden md:flex items-center space-x-2">
             <NavLink to="/" className={getNavLinkClass} end>
               Home
@@ -151,8 +151,6 @@ const Navbar = () => {
             <NavLink to="/about" className={getNavLinkClass}>
               About
             </NavLink>
-            
-            {/* --- Services Button (no dropdown here) --- */}
             <div 
               onMouseEnter={() => setIsServicesOpen(true)}
             >
@@ -163,19 +161,19 @@ const Navbar = () => {
                 />
               </button>
             </div>
-            {/* --- END: Services Button --- */}
-
             <NavLink to="/portfolio" className={getNavLinkClass}>
               Portfolio
             </NavLink>
           </div>
 
-          {/* Desktop Auth Section (Right) (No change) */}
+          {/* --- UPDATED: Desktop Auth Section (Removed duplicate) --- */}
           <div className="hidden md:flex items-center space-x-3">
+            <ThemeToggle />
             <NavLink to="/" className={ctaButtonClass}>
               Get Started
             </NavLink>
           </div>
+          {/* --- END OF UPDATE --- */}
 
           {/* Mobile Menu Button (No change) */}
           <div className="-mr-2 flex md:hidden">
@@ -194,8 +192,7 @@ const Navbar = () => {
           </div>
         </div>
         
-        {/* --- 1. UPDATED: Desktop Dropdown moved here --- */}
-        {/* This is now positioned relative to the whole nav bar */}
+        {/* Desktop Dropdown (No change) */}
         <AnimatePresence>
           {isServicesOpen && (
             <motion.div
@@ -205,7 +202,7 @@ const Navbar = () => {
               exit="exit"
               transition={{ duration: 0.2, ease: "easeInOut" }}
               className="absolute top-full mt-2 left-1/2 -translate-x-1/2 w-[40rem] z-50"
-              onMouseEnter={() => setIsServicesOpen(true)} // Keep open on hover
+              onMouseEnter={() => setIsServicesOpen(true)} 
             >
               <div className="bg-card border border-border/50 rounded-2xl shadow-2xl p-4">
                 <div className="grid grid-cols-2 gap-2">
@@ -229,11 +226,8 @@ const Navbar = () => {
             </motion.div>
           )}
         </AnimatePresence>
-        {/* --- END: Desktop Dropdown --- */}
 
-
-        {/* --- 2. UPDATED: Mobile Menu (No layout changes) --- */}
-        {/* The animation logic is now cleaner */}
+        {/* --- UPDATED: Mobile Menu (Added ThemeToggle) --- */}
         <AnimatePresence>
           {isOpen && (
             <motion.div 
@@ -251,7 +245,7 @@ const Navbar = () => {
                   About
                 </NavLink>
                 
-                {/* Mobile Services Accordion */}
+                {/* Mobile Services Accordion (No change) */}
                 <div>
                   <button
                     onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
@@ -297,9 +291,13 @@ const Navbar = () => {
                   Portfolio
                 </NavLink>
                 
-                <NavLink to="/" className={mobileCtaButtonClass} onClick={() => setIsOpen(false)}>
-                  Get Started
-                </NavLink>
+                {/* Added ThemeToggle inside the menu layout */}
+                <div className="pt-2 flex items-center justify-between">
+                  <NavLink to="/" className={mobileCtaButtonClass} onClick={() => setIsOpen(false)}>
+                    Get Started
+                  </NavLink>
+                  <ThemeToggle />
+                </div>
               </div>
             </motion.div>
           )}

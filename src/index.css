@@ -4,21 +4,50 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ==========================================
-  Your Custom Design System
-  ==========================================
-*/
 @layer base {
-  :root {
+  /* ==========================================
+     1. Light Mode (Default)
+    ========================================== */
+ :root {
+    /* Main Palette */
+    --background: 0 0% 98%;           /* off-white */
+    --foreground: 0 0% 0%;             /* black */
+
+    --primary: 154 100% 50%;         /* your bright green */ 
+    --primary-foreground: 0 0% 0%; /* black (for text on green) */
+
+    /* Component Colors */
+    --card: 0 0% 100%;                 /* white */
+    --card-foreground: 0 0% 10%;      /* dark gray */
+    
+    --popover: 0 0% 100%;             /* white */
+    --popover-foreground: 0 0% 10%;
+
+    --muted: 0 0% 90%;                /* light gray for hovers */
+    /* --- UPDATED: Made text darker (40% -> 25%) --- */
+    --muted-foreground: 0 0% 25%;     /* darker gray (for non-active text) */
+    
+    --border: 0 0% 85%;               /* light gray for borders */
+    --input: 0 0% 85%;
+    --ring: 154 100% 50%;             /* your green for focus rings */
+
+    /* Other vars */
+    --radius: 0.75rem;
+  }
+
+  /* ==========================================
+     2. Dark Mode (When html.dark is present)
+    ========================================== */
+  html.dark {
     /* Main Palette */
     --background: 0 0% 0%;             /* black */
     --foreground: 0 0% 100%;           /* white */
 
-    --primary: 154 100% 50%;         /* your new green #00ff8f */ 
-    --primary-foreground: 0 0% 0%; /* black (for text on bright green) */
+    --primary: 154 100% 50%;         /* your bright green */ 
+    --primary-foreground: 0 0% 0%; /* black (for text on green) */
 
-    /* Component Colors (based on your palette) */
-    --card: 0 0% 8%;                 /* very dark gray, almost black */
+    /* Component Colors */
+    --card: 0 0% 8%;                 /* very dark gray */
     --card-foreground: 0 0% 95%;     /* off-white */
     
     --popover: 0 0% 5%;              /* slightly darker than card */
@@ -29,45 +58,36 @@
     
     --border: 0 0% 20%;              /* gray for borders */
     --input: 0 0% 15%;
-    --ring: 154 100% 50%;            /* your new green for focus rings */
-
-    /* Other vars */
-    --radius: 0.75rem;
+    --ring: 154 100% 50%;            /* your green for focus rings */
   }
 
-  @keyframes shine {
-    from { background-position: 200% 0; }
-    to { background-position: -200% 0; }
-  }
-
-  @keyframes scroll-left {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
-
-  @keyframes scroll-right {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(0); }
-  }
-
-  /* Apply base styles */
+  /* ==========================================
+     3. Base Styles
+    ========================================== */
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+    @apply transition-colors duration-300;
   }
 
-  /* === Embla Carousel Base === */
-.embla {
-  overflow: hidden;
-}
-.embla__container {
-  display: flex;
-}
-.embla__slide {
-  flex: 0 0 auto;
-  min-width: 0;
-  position: relative;
-}
+  /* ... Your Keyframes (shine, scroll-left, etc.) ... */
+  @keyframes shine {
+    from { background-position: 200% 0; }
+    to { background-position: -200% 0; }
+  }
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  @keyframes scroll-right {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+  }
+
+  /* Embla Carousel Base */
+  .embla { overflow: hidden; }
+  .embla__container { display: flex; }
+  .embla__slide { flex: 0 0 auto; min-width: 0; position: relative; }
 }

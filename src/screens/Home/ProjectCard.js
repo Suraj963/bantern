@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
 
 // A single project card
 export const ProjectCard = ({ project }) => {
@@ -51,8 +52,8 @@ export const ProjectCard = ({ project }) => {
         {/* Removed all transition classes from this div */}
         <div 
           className="
-            mt-auto p-3 bg-foreground rounded-lg 
-            text-primary-foreground font-medium flex items-center justify-between 
+            mt-auto p-3 bg-foreground text-background rounded-lg 
+            font-medium flex items-center justify-between 
             text-sm
           "
         >
@@ -63,14 +64,12 @@ export const ProjectCard = ({ project }) => {
       </div>
 
       {/* 5. Full card link overlay (No change) */}
-      <a 
-        href={project.url} 
-        target="_blank" 
-        rel="noopener noreferrer"
+       <Link
+        to={`/portfolio/${project.id}`}
         className="absolute inset-0 z-10"
       >
         <span className="sr-only">View project: {project.title}</span>
-      </a>
+      </Link>
     </motion.div>
   );
 };

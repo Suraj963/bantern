@@ -75,7 +75,7 @@ const serviceData = [
     ],
     imageUrl:
       "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=2070&auto=format&fit=crop",
-    href: "/services/mobile-app-development",
+    href: "/services/app-development",
   },
   {
     icon: CpuChipIcon,
@@ -151,6 +151,8 @@ const ServiceCard = ({ service }) => {
       "
       // --- END OF UPDATE ---
     >
+        <Link to={href}>
+
       {/* Image & Icon */}
       <div className="relative w-full h-48">
         <img
@@ -178,20 +180,18 @@ const ServiceCard = ({ service }) => {
         </ul>
 
         {/* Learn More Button */}
-        <Link to={href} className="mt-auto w-fit">
           <motion.div
             whileHover={{
               scale: 1.05,
-              boxShadow: "0 0 20px hsl(var(--primary) / 0.3)",
             }}
             whileTap={{ scale: 0.95 }}
-            className="bg-foreground text-background px-5 py-2 rounded-full text-sm font-medium flex items-center group transition-shadow shadow-lg"
+            className="bg-foreground text-background px-5 py-2 rounded-full text-sm font-medium flex items-center group mt-auto w-fit"
           >
             Learn More
             <ArrowRightIcon className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
           </motion.div>
-        </Link>
       </div>
+        </Link>
     </motion.div>
   );
 };

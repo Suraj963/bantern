@@ -57,7 +57,7 @@ export const ProjectGridItem = ({ project, variants }) => {
         <div
           className="
             mt-auto p-3 bg-foreground rounded-lg 
-            text-primary-foreground font-medium flex items-center justify-between 
+            bg-foreground text-background font-medium flex items-center justify-between 
             text-sm
           "
         >
