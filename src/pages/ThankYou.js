@@ -1,7 +1,7 @@
 // src/pages/ThankYou.jsx
 import { Link } from "react-router-dom";
 
-export default function ThankYou() {
+const ThankYou = () => {
   return (
     <main className="min-h-screen flex items-center justify-center py-20 bg-background text-foreground px-4">
       <section className="max-w-xl text-center bg-card p-8 rounded-lg border border-border">
@@ -14,3 +14,5 @@ export default function ThankYou() {
     </main>
   );
 }
+
+export default ThankYou;
