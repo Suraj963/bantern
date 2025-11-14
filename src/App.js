@@ -18,6 +18,7 @@ import Contact from './screens/ContactUs/Contact';
 import ScrollToTop from './Common/ScrollToTop';
 import ThankYou from './pages/ThankYou';
 import AuditForm from './pages/AuditForm';
+import WhatsAppCTA from './Common/WhatsAppCTA';
 
 const NavbarLayout = () => {
   return (
@@ -28,6 +29,7 @@ const NavbarLayout = () => {
         <Outlet />
       </main>
       <Footer />
+      <WhatsAppCTA />
     </>
   );
 };
