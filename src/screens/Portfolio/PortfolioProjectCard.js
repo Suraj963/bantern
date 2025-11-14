@@ -9,79 +9,68 @@ import React from "react";
 const projectData = [
   {
     id: 1,
-    title: "EcoSense Platform",
-    category: "Web Application",
+    title: "Clarity Dental Clinic",
+    category: "Dental Practice Website",
     description:
-      "A comprehensive dashboard for environmental tracking and resource management built with real-time data streaming.",
-    tags: ["React", "Node.js", "PostgreSQL", "AWS"],
+      "A 7-day build for a local dental practice, focused on patient trust and a high-conversion 'Book Now' flow.",
+    tags: ["Webflow", "Local SEO", "Booking System"],
     imageUrl:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1606813838122-b3698d2511c1?q=80&w=2070&auto=format&fit=crop", // Dental clinic image
     url: "#",
   },
   {
     id: 2,
-    title: "Nexus Pro CMS",
-    category: "CMS/SaaS",
+    title: "Peak Physio",
+    category: "Physiotherapy Clinic",
     description:
-      "A highly customizable headless CMS solution allowing content delivery across web and mobile endpoints.",
-    tags: ["Next.js", "TypeScript", "GraphQL", "Tailwind CSS"],
+      "Full website relaunch focused on integrating their 'Jane' booking system and optimizing for 'physio near me'.",
+    tags: ["React", "Jane App", "Google Maps"],
     imageUrl:
-      "https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1936&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1599058882045-f661d9016e6f?q=80&w=2070&auto=format&fit=crop", // Physio image
     url: "#",
   },
   {
     id: 3,
-    title: "Flow State Mobile App",
-    category: "Mobile Application",
+    title: "Glow Aesthetics",
+    category: "Skin Clinic E-Commerce",
     description:
-      "Cross-platform mobile application focused on productivity, utilizing geolocation and real-time alerts.",
-    tags: ["React Native", "Firebase", "TypeScript", "+3"],
+      "Designed a clean, high-end website with an integrated Shopify store for selling skincare products.",
+    tags: ["Shopify", "React", "Stripe", "E-Commerce"],
     imageUrl:
-      "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1556760544-4f24800361e6?q=80&w=1974&auto=format&fit=crop", // Skin clinic image
     url: "#",
   },
   {
     id: 4,
-    title: "Aura E-Commerce",
-    category: "E-Commerce",
+    title: "Nourish Nutrition",
+    category: "Nutritionist Website",
     description:
-      "Bespoke online store design and development with integrated inventory management and secure payment gateways.",
-    tags: ["Shopify+", "Liquid", "React", "Stripe"],
+      "A personal branding site for a nutritionist, including a blog, recipe section, and Calendly integration.",
+    tags: ["Next.js", "Calendly", "CMS"],
     imageUrl:
-      "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1543362906-acfc16c67564?q=80&w=1965&auto=format&fit=crop", // Nutrition image
     url: "#",
   },
   {
     id: 5,
-    title: "Quantum API Gateway",
-    category: "Backend/API",
+    title: "Local Dental SEO Audit",
+    category: "Local SEO",
     description:
-      "Robust, scalable API gateway designed for microservice communication and high-volume data traffic.",
-    tags: ["Node.js", "Docker", "AWS Lambda", "Go"],
+      "A successful SEO campaign that took a dental practice from page 3 to the #1 Google Maps spot in 3 months.",
+    tags: ["SEO", "Google Business", "Analytics"],
     imageUrl:
-      "https://images.unsplash.com/photo-1581094488347-3d1490232d4b?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1517048676732-d6589e7afc58?q=80&w=2070&auto=format&fit=crop", // Office/Analytics image
     url: "#",
   },
   {
     id: 6,
-    title: "Brand Site Relaunch",
-    category: "Website Design",
+    title: "MyClinic Telehealth",
+    category: "Telehealth Platform",
     description:
-      "Complete overhaul of a corporate identity website, focusing on aesthetic visuals and improved core web vitals.",
-    tags: ["Figma", "Tailwind CSS", "HTML5", "SEO"],
+      "Integration of a secure, HIPAA-compliant telehealth portal for virtual patient consultations.",
+    tags: ["Telehealth", "Web App", "Security"],
     imageUrl:
-      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop",
-    url: "#",
-  },
-  {
-    id: 7,
-    title: "FinTech Data Model",
-    category: "Data & AI",
-    description:
-      "Development of predictive data models using Python and custom machine learning algorithms for financial forecasting.",
-    tags: ["Python", "Pandas", "AI/ML", "SQL"],
-    imageUrl:
-      "https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1576091160399-112a14c6790a?q=80&w=2070&auto=format&fit=crop", // Telehealth image
     url: "#",
   },
 ];
@@ -132,7 +121,7 @@ const PortfolioProjectCard = () => {
     bg-[200%_auto] animate-shine
   "
         >
-          All Projects
+         Our Featured Work
         </h2>
                {" "}
         <p
@@ -144,7 +133,7 @@ const PortfolioProjectCard = () => {
     text-muted-foreground
   "
         >
-          A comprehensive view of our solutions across diverse industries.
+         See how we've helped health practices get more patients.
         </p>
              {" "}
       </div>

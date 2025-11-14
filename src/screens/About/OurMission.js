@@ -31,15 +31,15 @@ const OurMission = () => {
           
           {/* 2. Sub-heading */}
           <p className="text-2xl md:text-3xl font-semibold text-muted-foreground mb-6">
-            To Architect the Future of Digital Interaction.
+            We build the right solution for your business
           </p>
           
           {/* 3. Paragraphs */}
           <p className="text-lg text-muted-foreground mb-4">
-            Our mission is to empower businesses by transforming innovative ideas into high-performance, scalable, and user-centric software solutions. We build the technology that lets our partners lead their industry.
+           Our mission is to give your business the exact technical solution it needs to succeed. Whether it's a high-speed website, a custom e-commerce store, or a complex mobile app, we deliver high-quality, reliable code. We're your long-term technical partner, built for results.
           </p>
           <p className="text-lg text-muted-foreground mb-8">
-            We believe in a future where technology is seamless and intuitive. Through a culture of relentless innovation, radical collaboration, and uncompromising quality, we aim to be the most trusted partner in our clients' digital journey.
+            Our vision is simple: to be the most trusted, no-nonsense developer for growing businesses. We do that by being transparent with our process, honest with our timelines, and obsessed with the quality of your final product.
           </p>
 
           {/* --- 4. UPDATED: Added Button --- */}

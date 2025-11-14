@@ -128,7 +128,7 @@ const AboutUs = () => {
           className="inline-block"
         >
           <Link
-            to="/about"
+            to="/audit"
             className="
       bg-foreground text-background 
       px-8 py-3 rounded-full 
@@ -137,7 +137,7 @@ const AboutUs = () => {
       shadow-md block text-center
     "
           >
-            Discover Our Vision
+            Book free Audit
           </Link>
         </motion.div>
       </div>

@@ -75,7 +75,7 @@ const PortfolioHero = () => {
         {/* CTA Button (White Theme) */}
         <motion.div variants={itemVariants} className="flex justify-center">
           <Link
-            to="/services"
+            to="/audit"
             className="
     bg-foreground text-background 
     px-6 py-2 rounded-full 
@@ -87,7 +87,7 @@ const PortfolioHero = () => {
     hover:scale-105
   "
           >
-            View Services
+            Book Your Free Audit
             <ArrowRightIcon className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
           </Link>
         </motion.div>

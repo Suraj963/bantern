@@ -16,6 +16,7 @@ import MobileAppDevelopment from './screens/Services/AllServices/MobileAppDevelo
 import ProjectPage from './screens/Portfolio/ProjectDetails/ProjectPage';
 import Contact from './screens/ContactUs/Contact';
 import ScrollToTop from './Common/ScrollToTop';
+import AuditForm from './pages/AuditForm';
 
 const NavbarLayout = () => {
   return (
@@ -35,6 +36,7 @@ function App() {
     <Routes>
         <Route path="/" element={<NavbarLayout />}>
           <Route index element={<Home />} />
+          <Route path="/audit" element={<AuditForm />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/website-design" element={<WebsiteDesign />} />

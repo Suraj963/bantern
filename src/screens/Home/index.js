@@ -6,6 +6,7 @@ import CtaVideo from "./CtaVideo";
 import FeaturedProjects from "./FeaturedProjects";
 import FeaturesGrid from "./FeaturesGrid";
 import Hero from "./Hero";
+import HowItWorks from "./HowItWorks";
 import Services from "./Services";
 import Testimonials from "./Testimonials";
 import WhyChooseUs from "./WhyChooseUs";
@@ -18,7 +19,8 @@ const Home = () => {
         <FeaturesGrid />
       </AnimatedSection> */}
       <AnimatedSection>
-        <AboutUs />
+        {/* <AboutUs /> */}
+        <HowItWorks/>
       </AnimatedSection>
       <AnimatedSection>
         <Services />

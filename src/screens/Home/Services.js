@@ -12,7 +12,7 @@ import {
   ShieldCheckIcon,
 } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
-import { BoltIcon } from "@heroicons/react/24/solid";
+import { BoltIcon, ShoppingCartIcon } from "@heroicons/react/24/solid";
 // --- 1. IMPORT EMBLA AND AUTOPLAY ---
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -47,54 +47,48 @@ const ServiceCard = ({ icon: Icon, title, path, children }) => {
 const servicesList = [
   {
     icon: CodeBracketIcon,
-    title: "Website Design",
+    title: "Website Design & Development",
     description:
-      "Custom, responsive web designs that reflect your brand identity.",
-    path: "/services/website-design",
+      "Custom, responsive websites built to be fast, modern, and reflect your brand identity.",
+    path: "/services",
   },
   {
-    icon: CodeBracketIcon,
-    title: "Website Development",
+    icon: ShoppingCartIcon, // NEW
+    title: "E-Commerce Solutions",
     description:
-      "Full-stack website development using modern frameworks and scalable architectures.",
-    path: "/services/website-development",
+      "Full-featured online stores with secure payments and inventory management to sell your products.",
+    path: "/services",
   },
   {
     icon: DevicePhoneMobileIcon,
     title: "Mobile App Development",
     description:
-      "High-performance mobile apps for iOS & Android using native and cross-platform technologies.",
-    path: "/services/app-development",
+      "Native and cross-platform mobile apps for iOS and Android to reach your customers anywhere.",
+    path: "/services",
   },
   {
-    icon: BugAntIcon,
-    title: "Bug Fixing & Responsiveness",
+    icon: SparklesIcon, // NEW
+    title: "Custom Software",
     description:
-      "Fix layout issues, broken functionality, responsive problems, and browser inconsistencies.",
-    path: "/services/bug-fixing",
-  },
-  {
-    icon: ShieldCheckIcon,
-    title: "Website Maintenance & Security",
-    description:
-      "Regular updates, backups, security protection, and performance monitoring.",
-    path: "/services/maintenance",
+      "Bespoke software solutions, automations, and dashboards to solve your unique business problems.",
+    path: "/services",
   },
   {
     icon: BoltIcon,
     title: "Speed Optimization & SEO",
     description:
-      "Improve website speed, Core Web Vitals, and search visibility for better ranking.",
-    path: "/services/speed-seo",
+      "Your site will be lightning-fast and optimized for Google, so new clients can actually find you.",
+    path: "/services",
   },
   {
-    icon: SparklesIcon,
-    title: "AI & Automation",
+    icon: ShieldCheckIcon,
+    title: "Website Maintenance",
     description:
-      "Integrate AI models, automation workflows, and intelligent systems to boost efficiency.",
-    path: "/services/ai-automation",
+      "Don't want to handle updates or security? We offer simple monthly plans to keep your site fast and safe.",
+    path: "/services",
   },
 ];
+
 
 /**
  * The main "What We Offer" services section
