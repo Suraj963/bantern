@@ -3,15 +3,19 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
-import { BoltIcon, ArrowUpIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
+import {
+  BoltIcon,
+  ArrowUpIcon,
+  ArrowRightIcon,
+} from "@heroicons/react/24/solid";
 // --- 1. UPDATED: Imported new icons ---
-import { 
-  FaLinkedin, 
-  FaTwitter, 
-  FaGithub, 
-  FaInstagram, 
-  FaFacebook, 
-  FaYoutube 
+import {
+  FaLinkedin,
+  FaTwitter,
+  FaGithub,
+  FaInstagram,
+  FaFacebook,
+  FaYoutube,
 } from "react-icons/fa";
 
 // --- Animation Variants ---
@@ -78,13 +82,11 @@ const Footer = () => {
       className="w-full bg-background mt-20"
     >
       <div className="w-full max-w-screen-xl mx-auto p-8 md:p-12">
-        
         {/* Top border line */}
         <motion.hr variants={itemVariants} className="border-border/50 mb-10" />
 
         {/* === Top Section: 4-Column Grid === */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
-          
           {/* Column 1: Brand */}
           <motion.div variants={itemVariants} className="flex flex-col">
             <Link to="/" className="flex items-center space-x-3 mb-4">
@@ -96,17 +98,23 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs">
-              Innovating the Future, Together. We turn your vision into high-performance digital reality.
+              Innovating the Future, Together. We turn your vision into
+              high-performance digital reality.
             </p>
           </motion.div>
 
           {/* Column 2: Quick Links */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-lg font-semibold text-primary mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-primary mb-4">
+              Quick Links
+            </h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link to={link.path} className="text-muted-foreground hover:text-primary transition-colors">
+                  <Link
+                    to={link.path}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -116,11 +124,16 @@ const Footer = () => {
 
           {/* Column 3: Services */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-lg font-semibold text-primary mb-4">Services</h3>
+            <h3 className="text-lg font-semibold text-primary mb-4">
+              Services
+            </h3>
             <ul className="space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link.name}>
-                  <Link to={link.path} className="text-muted-foreground hover:text-primary transition-colors">
+                  <Link
+                    to={link.path}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -130,44 +143,51 @@ const Footer = () => {
 
           {/* Column 4: Get in Touch */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-lg font-semibold text-primary mb-4">Get in Touch</h3>
+            <h3 className="text-lg font-semibold text-primary mb-4">
+              Get in Touch
+            </h3>
             <ul className="space-y-3">
               <li>
-                <a href="mailto:hello@bantern.com" className="text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="mailto:hello@bantern.com"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   hello@bantern.com
                 </a>
               </li>
               <li>
-                <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="tel:+1234567890"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   +1 (234) 567-890
                 </a>
               </li>
-              
+
               <li className="pt-2">
-                <motion.a
-                  href="mailto:hello@bantern.com"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <Link
+                  to="/contact"
                   className="
-                    inline-flex items-center
-                    bg-foreground text-background
-                    px-4 py-2 rounded-full 
-                    text-sm font-bold 
-                    transition-colors
-                  "
+      inline-flex items-center
+      bg-foreground text-background
+      px-4 py-2 rounded-full 
+      text-sm font-bold 
+      transition-colors
+      hover:scale-105 active:scale-95
+    "
                 >
                   Get in Touch
                   <ArrowRightIcon className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-                </motion.a>
+                </Link>
               </li>
 
               {/* --- 3. UPDATED: Social Icons (now wraps) --- */}
               <div className="flex flex-wrap gap-4 pt-4">
                 {socialLinks.map((link, index) => (
-                  <a 
-                    key={index} 
-                    href={link.path} 
-                    target="_blank" 
+                  <a
+                    key={index}
+                    href={link.path}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-primary hover:scale-110 transition-all"
                   >
@@ -177,19 +197,18 @@ const Footer = () => {
               </div>
             </ul>
           </motion.div>
-
         </div>
 
         {/* === Bottom Bar: Copyright & Back to Top === */}
         <motion.hr variants={itemVariants} className="border-border/50" />
-        <motion.div 
-          variants={itemVariants} 
+        <motion.div
+          variants={itemVariants}
           className="flex flex-col-reverse md:flex-row justify-between items-center gap-6 mt-8"
         >
           <p className="text-sm text-muted-foreground text-center md:text-left">
             © {new Date().getFullYear()} Bantern Solutions. All rights reserved.
           </p>
-          
+
           <button
             onClick={scrollToTop}
             className="w-10 h-10 rounded-full bg-muted border border-border/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-all"
@@ -198,7 +217,6 @@ const Footer = () => {
             <ArrowUpIcon className="w-5 h-5" />
           </button>
         </motion.div>
-
       </div>
     </motion.footer>
   );
