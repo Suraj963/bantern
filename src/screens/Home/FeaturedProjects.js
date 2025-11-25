@@ -1,77 +1,72 @@
 /* src/components/FeaturedProjects.jsx */
 
-import React, { useState, useEffect, useCallback } from 'react';
-import useEmblaCarousel from 'embla-carousel-react';
-import Autoplay from 'embla-carousel-autoplay';
-import { ProjectCard } from './ProjectCard'; // Adjust path as needed
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
+import React, { useState, useEffect, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { ProjectCard } from "./ProjectCard"; // Adjust path as needed
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
 // 1. Define your project data (No change)
 const projectData = [
   {
     id: 1,
-    title: "EcoSense Platform",
-    category: "Web Application",
+    title: "Lumina Dental",
+    category: "Dental Practice Website",
     description:
-      "A comprehensive dashboard for environmental tracking and resource management built with real-time data streaming.",
-    tags: ["React", "Node.js", "PostgreSQL", "AWS"],
+      "A professional dental clinic website providing appointment scheduling, service details, and patient resources.",
+    tags: ["SEO", "Portfolio Showcase", "Client Testimonials"],
     imageUrl:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-    url: "#",
-  },
-  {
-    id: 2,
-    title: "Nexus Pro CMS",
-    category: "CMS/SaaS",
-    description:
-      "A highly customizable headless CMS solution allowing content delivery across web and mobile endpoints.",
-    tags: ["Next.js", "TypeScript", "GraphQL", "Tailwind CSS"],
-    imageUrl:
-      "https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1936&auto=format&fit=crop",
-    url: "#",
+      "hhttps://drive.usercontent.google.com/download?id=11zzlxaEFmGt73P-nYECaVeP-i9AFsfMb&export=view&authuser=0", // Dental clinic image
+    url: "https://dental-liart-eight.vercel.app/",
   },
   {
     id: 3,
-    title: "Flow State Mobile App",
-    category: "Mobile Application",
+    title: "Aura",
+    category: " E-Commerce",
     description:
-      "Cross-platform mobile application focused on productivity, utilizing geolocation and real-time alerts.",
-    tags: ["React Native", "Firebase", "TypeScript", "+3"],
+      "A modern ecommerce store featuring curated clothing collections with smooth shopping and secure checkout.",
+    tags: ["SEO", "Portfolio Showcase", "Client Testimonials"],
     imageUrl:
-      "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?q=80&w=2070&auto=format&fit=crop",
-    url: "#",
+      "https://drive.usercontent.google.com/download?id=1y6dV2XQPk79uBiZJVRUJSGT7s0Fd0n45&export=view&authuser=0", // Skin clinic image
+    url: "https://ecommerce-lovat-one-65.vercel.app/",
   },
   {
     id: 4,
-    title: "Aura E-Commerce",
-    category: "E-Commerce",
+    title: "Lumina Interiors",
+    category: "Interioor",
     description:
-      "Bespoke online store design and development with integrated inventory management and secure payment gateways.",
-    tags: ["Shopify+", "Liquid", "React", "Stripe"],
+      "An elegant home interiors site showcasing portfolios, service packages, and client testimonials.",
+    tags: ["SEO", "Portfolio Showcase", "Client Testimonials"],
     imageUrl:
-      "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop",
-    url: "#",
+      "https://drive.usercontent.google.com/download?id=1I5j_8Oco_tl3Wq2MIxDfivLVzKkryG0G&export=view&authuser=0", // Nutrition image
+    url: "https://interior-seven-gray.vercel.app/",
   },
   {
     id: 5,
-    title: "Quantum API Gateway",
-    category: "Backend/API",
+    title: "Paws and Care",
+    category: "Local SEO",
     description:
-      "Robust, scalable API gateway designed for microservice communication and high-volume data traffic.",
-    tags: ["Node.js", "Docker", "AWS Lambda", "Go"],
+      "A user-friendly pet care platform offering service booking, pet health tips, and community forums.",
+    tags: ["SEO", "Portfolio Showcase", "Client Testimonials"],
     imageUrl:
-      "https://images.unsplash.com/photo-1581094488347-3d1490232d4b?q=80&w=2070&auto=format&fit=crop",
-    url: "#",
+      "https://drive.usercontent.google.com/download?id=18ffp0S8IuIOgtAGWgfRf_J715uoWpuvQ&export=view&authuser=0", // Office/Analytics image
+    url: "https://veterinary-beta.vercel.app/",
   },
 ];
 
 const FeaturedProjects = () => {
   // 2. Set up Embla Carousel (No change)
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, align: 'start' }, 
-    [Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })]
+    { loop: true, align: "start" },
+    [
+      Autoplay({
+        delay: 5000,
+        stopOnInteraction: false,
+        stopOnMouseEnter: true,
+      }),
+    ]
   );
-  
+
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   // 3. Create scroll functions (No change)
@@ -83,9 +78,12 @@ const FeaturedProjects = () => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
 
-  const scrollTo = useCallback((index) => {
-    if (emblaApi) emblaApi.scrollTo(index);
-  }, [emblaApi]);
+  const scrollTo = useCallback(
+    (index) => {
+      if (emblaApi) emblaApi.scrollTo(index);
+    },
+    [emblaApi]
+  );
 
   // 4. Update the active dot (No change)
   useEffect(() => {
@@ -93,11 +91,11 @@ const FeaturedProjects = () => {
     const onSelect = () => {
       setSelectedIndex(emblaApi.selectedScrollSnap());
     };
-    emblaApi.on('select', onSelect);
-    emblaApi.on('reInit', onSelect);
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
     return () => {
-      emblaApi.off('select', onSelect);
-      emblaApi.off('reInit', onSelect);
+      emblaApi.off("select", onSelect);
+      emblaApi.off("reInit", onSelect);
     };
   }, [emblaApi]);
 
@@ -108,7 +106,7 @@ const FeaturedProjects = () => {
         <div className="bg-card border border-border/50 rounded-full px-4 py-1 text-sm text-primary mb-4">
           Our Works
         </div>
-        <h2 
+        <h2
           className="
             text-4xl md:text-6xl font-bold mb-4
             bg-clip-text text-transparent 
@@ -119,8 +117,8 @@ const FeaturedProjects = () => {
           Featured Projects
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mb-12">
-          A selection of our most impactful work across various industries
-          and technologies.
+          A selection of our most impactful work across various industries and
+          technologies.
         </p>
       </div>
 
@@ -129,9 +127,11 @@ const FeaturedProjects = () => {
       <div className="relative">
         {/* The Carousel Viewport */}
         <div className="embla" ref={emblaRef}>
-          <div className="embla__container -ml-2"> {/* Offset padding */}
+          <div className="embla__container -ml-2">
+            {" "}
+            {/* Offset padding */}
             {projectData.map((project, index) => (
-              <div 
+              <div
                 key={index}
                 className="embla__slide p-2 flex-[0_0_90%] sm:flex-[0_0_50%] lg:flex-[0_0_33.33%]"
               >
@@ -140,19 +140,19 @@ const FeaturedProjects = () => {
             ))}
           </div>
         </div>
-        
+
         {/* --- 6. UPDATED: Arrow Buttons Position --- */}
         {/* Arrows are now positioned relative to the div above */}
-        <button 
-          onClick={scrollPrev} 
+        <button
+          onClick={scrollPrev}
           className="flex items-center justify-center w-10 h-10 rounded-full bg-card/50 backdrop-blur-sm border border-border/50 text-foreground
                      absolute top-1/2 -translate-y-1/2 left-[-1rem] md:left-[-2rem] z-10 
                      transition-all hover:bg-muted hover:scale-110"
         >
           <ChevronLeftIcon className="w-5 h-5" />
         </button>
-        <button 
-          onClick={scrollNext} 
+        <button
+          onClick={scrollNext}
           className="flex items-center justify-center w-10 h-10 rounded-full bg-card/50 backdrop-blur-sm border border-border/50 text-foreground
                      absolute top-1/2 -translate-y-1/2 right-[-1rem] md:right-[-2rem] z-10 
                      transition-all hover:bg-muted hover:scale-110"
@@ -162,7 +162,6 @@ const FeaturedProjects = () => {
       </div>
       {/* --- END OF UPDATE --- */}
 
-
       {/* 7. Pagination Dots (No change) */}
       <div className="flex justify-center gap-2 mt-8">
         {projectData.map((_, index) => (
@@ -170,12 +169,11 @@ const FeaturedProjects = () => {
             key={index}
             onClick={() => scrollTo(index)}
             className={`w-2 h-2 rounded-full transition-all ${
-              index === selectedIndex ? 'bg-primary scale-125' : 'bg-muted'
+              index === selectedIndex ? "bg-primary scale-125" : "bg-muted"
             }`}
           />
         ))}
       </div>
-
     </section>
   );
 };
