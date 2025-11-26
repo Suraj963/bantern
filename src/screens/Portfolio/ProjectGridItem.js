@@ -68,12 +68,20 @@ export const ProjectGridItem = ({ project, variants }) => {
       </div>
 
       {/* 5. Full card link overlay (No change) */}
-      <Link
+      {/* <Link
         to={`/portfolio/${project.id}`}
         className="absolute inset-0 z-10"
       >
         <span className="sr-only">View project: {project.title}</span>
-      </Link>
+      </Link> */}
+      <a
+        href={project.url} // full external URL
+        target="_blank" // optional: open in new tab
+        rel="noopener noreferrer" // security best practice
+        className="absolute inset-0 z-10"
+      >
+        <span className="sr-only">View project: {project.url}</span>
+      </a>
     </motion.div>
   );
 };

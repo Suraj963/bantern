@@ -9,69 +9,47 @@ import React from "react";
 const projectData = [
   {
     id: 1,
-    title: "Clarity Dental Clinic",
+    title: "Lumina Dental",
     category: "Dental Practice Website",
     description:
-      "A 7-day build for a local dental practice, focused on patient trust and a high-conversion 'Book Now' flow.",
-    tags: ["Webflow", "Local SEO", "Booking System"],
+      "A professional dental clinic website providing appointment scheduling, service details, and patient resources.",
+    tags: ["SEO", "Portfolio Showcase", "Client Testimonials"],
     imageUrl:
-      "https://images.unsplash.com/photo-1606813838122-b3698d2511c1?q=80&w=2070&auto=format&fit=crop", // Dental clinic image
-    url: "#",
-  },
-  {
-    id: 2,
-    title: "Peak Physio",
-    category: "Physiotherapy Clinic",
-    description:
-      "Full website relaunch focused on integrating their 'Jane' booking system and optimizing for 'physio near me'.",
-    tags: ["React", "Jane App", "Google Maps"],
-    imageUrl:
-      "https://images.unsplash.com/photo-1599058882045-f661d9016e6f?q=80&w=2070&auto=format&fit=crop", // Physio image
-    url: "#",
+      "hhttps://drive.usercontent.google.com/download?id=11zzlxaEFmGt73P-nYECaVeP-i9AFsfMb&export=view&authuser=0", // Dental clinic image
+    url: "https://dental-liart-eight.vercel.app/",
   },
   {
     id: 3,
-    title: "Glow Aesthetics",
-    category: "Skin Clinic E-Commerce",
+    title: "Aura",
+    category: " E-Commerce",
     description:
-      "Designed a clean, high-end website with an integrated Shopify store for selling skincare products.",
-    tags: ["Shopify", "React", "Stripe", "E-Commerce"],
+      "A modern ecommerce store featuring curated clothing collections with smooth shopping and secure checkout.",
+    tags: ["SEO", "Portfolio Showcase", "Client Testimonials"],
     imageUrl:
-      "https://images.unsplash.com/photo-1556760544-4f24800361e6?q=80&w=1974&auto=format&fit=crop", // Skin clinic image
-    url: "#",
+      "https://drive.usercontent.google.com/download?id=1y6dV2XQPk79uBiZJVRUJSGT7s0Fd0n45&export=view&authuser=0", // Skin clinic image
+    url: "https://ecommerce-lovat-one-65.vercel.app/",
   },
   {
     id: 4,
-    title: "Nourish Nutrition",
-    category: "Nutritionist Website",
+    title: "Lumina Interiors",
+    category: "Interioor",
     description:
-      "A personal branding site for a nutritionist, including a blog, recipe section, and Calendly integration.",
-    tags: ["Next.js", "Calendly", "CMS"],
+      "An elegant home interiors site showcasing portfolios, service packages, and client testimonials.",
+    tags: ["SEO", "Portfolio Showcase", "Client Testimonials"],
     imageUrl:
-      "https://images.unsplash.com/photo-1543362906-acfc16c67564?q=80&w=1965&auto=format&fit=crop", // Nutrition image
-    url: "#",
+      "https://drive.usercontent.google.com/download?id=1I5j_8Oco_tl3Wq2MIxDfivLVzKkryG0G&export=view&authuser=0", // Nutrition image
+    url: "https://interior-seven-gray.vercel.app/",
   },
   {
     id: 5,
-    title: "Local Dental SEO Audit",
+    title: "Paws and Care",
     category: "Local SEO",
     description:
-      "A successful SEO campaign that took a dental practice from page 3 to the #1 Google Maps spot in 3 months.",
-    tags: ["SEO", "Google Business", "Analytics"],
+      "A user-friendly pet care platform offering service booking, pet health tips, and community forums.",
+    tags: ["SEO", "Portfolio Showcase", "Client Testimonials"],
     imageUrl:
-      "https://images.unsplash.com/photo-1517048676732-d6589e7afc58?q=80&w=2070&auto=format&fit=crop", // Office/Analytics image
-    url: "#",
-  },
-  {
-    id: 6,
-    title: "MyClinic Telehealth",
-    category: "Telehealth Platform",
-    description:
-      "Integration of a secure, HIPAA-compliant telehealth portal for virtual patient consultations.",
-    tags: ["Telehealth", "Web App", "Security"],
-    imageUrl:
-      "https://images.unsplash.com/photo-1576091160399-112a14c6790a?q=80&w=2070&auto=format&fit=crop", // Telehealth image
-    url: "#",
+      "https://drive.usercontent.google.com/download?id=18ffp0S8IuIOgtAGWgfRf_J715uoWpuvQ&export=view&authuser=0", // Office/Analytics image
+    url: "https://veterinary-beta.vercel.app/",
   },
 ];
 
@@ -107,12 +85,11 @@ const PortfolioProjectCard = () => {
       animate={inView ? "visible" : "hidden"}
       className="w-full max-w-screen-xl mx-auto p-4 md:p-16 pt-16"
     >
-
-        <div className="flex flex-col items-center text-center">
+      <div className="flex flex-col items-center text-center">
         <div className="bg-card border border-border/50 rounded-full px-4 py-1 text-sm text-primary mb-4">
           Our Work
         </div>
-        <h2 
+        <h2
           className="
             text-4xl md:text-6xl font-bold mb-4
             bg-clip-text text-transparent 
@@ -123,8 +100,8 @@ const PortfolioProjectCard = () => {
           Our Featured Work
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mb-12">
-          A selection of our most impactful work across various industries
-          and technologies.
+          A selection of our most impactful work across various industries and
+          technologies.
         </p>
       </div>
 
