@@ -23,12 +23,12 @@ export const ProjectGridItem = ({ project, variants }) => {
           alt={project.title}
           className="w-full h-full object-cover"
         />
-        <span
+        {/* <span
           className="absolute bottom-3 left-3 inline-block bg-primary/10 text-primary 
                      text-xs font-medium rounded-full px-3 py-1"
         >
           {project.category}
-        </span>
+        </span> */}
       </div>
 
       {/* 2. Content (No change) */}
