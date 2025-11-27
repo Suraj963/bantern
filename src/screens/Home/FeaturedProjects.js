@@ -5,6 +5,10 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ProjectCard } from "./ProjectCard"; // Adjust path as needed
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import interior from "../../assets/iinterior.png";
+import dentist from "../../assets/dentist.png";
+import ecommerce from "../../assets/ecommerce.png";
+import veterinary from "../../assets/pets.png";
 
 // 1. Define your project data (No change)
 const projectData = [
@@ -15,8 +19,7 @@ const projectData = [
     description:
       "A professional dental clinic website providing appointment scheduling, service details, and patient resources.",
     tags: ["SEO", "Portfolio Showcase", "Client Testimonials"],
-    imageUrl:
-      "hhttps://drive.usercontent.google.com/download?id=11zzlxaEFmGt73P-nYECaVeP-i9AFsfMb&export=view&authuser=0", // Dental clinic image
+    imageUrl: dentist, // Dental clinic image
     url: "https://dental-liart-eight.vercel.app/",
   },
   {
@@ -26,8 +29,7 @@ const projectData = [
     description:
       "A modern ecommerce store featuring curated clothing collections with smooth shopping and secure checkout.",
     tags: ["SEO", "Portfolio Showcase", "Client Testimonials"],
-    imageUrl:
-      "https://drive.usercontent.google.com/download?id=1y6dV2XQPk79uBiZJVRUJSGT7s0Fd0n45&export=view&authuser=0", // Skin clinic image
+    imageUrl: ecommerce, // Skin clinic image
     url: "https://ecommerce-lovat-one-65.vercel.app/",
   },
   {
@@ -37,8 +39,7 @@ const projectData = [
     description:
       "An elegant home interiors site showcasing portfolios, service packages, and client testimonials.",
     tags: ["SEO", "Portfolio Showcase", "Client Testimonials"],
-    imageUrl:
-      "https://drive.usercontent.google.com/download?id=1I5j_8Oco_tl3Wq2MIxDfivLVzKkryG0G&export=view&authuser=0", // Nutrition image
+    imageUrl: interior, // Nutrition image
     url: "https://interior-seven-gray.vercel.app/",
   },
   {
@@ -48,8 +49,7 @@ const projectData = [
     description:
       "A user-friendly pet care platform offering service booking, pet health tips, and community forums.",
     tags: ["SEO", "Portfolio Showcase", "Client Testimonials"],
-    imageUrl:
-      "https://drive.usercontent.google.com/download?id=18ffp0S8IuIOgtAGWgfRf_J715uoWpuvQ&export=view&authuser=0", // Office/Analytics image
+    imageUrl: veterinary, // Office/Analytics image
     url: "https://veterinary-beta.vercel.app/",
   },
 ];
