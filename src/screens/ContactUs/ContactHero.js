@@ -36,7 +36,7 @@ const ContactHero = () => {
       initial="hidden"
       animate="visible" // Self-animates on page load
       className="relative flex flex-col items-center justify-center text-center 
-                 min-h-[70vh] w-full px-4 pt-32 pb-16 overflow-hidden" 
+                 min-h-[60vh] w-full px-4 pt-0 pb-16 overflow-hidden"
       style={{
         // Radial glow background (consistent theme)
         background: `radial-gradient(ellipse 80% 60% at 50% 100%, hsl(var(--primary) / 0.1), transparent)`,
