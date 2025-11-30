@@ -1,21 +1,84 @@
-/* src/components/WhyChooseUs.jsx */
-
+import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { 
+import {
   ClockIcon,
   CheckBadgeIcon,
-  ShieldCheckIcon
+  ShieldCheckIcon,
 } from "@heroicons/react/24/solid";
 
-const containerVariants = { /* ...no change... */ };
-const itemVariants = { /* ...no change... */ };
+const InfoCard = ({ Icon, title, description }) => {
+  return (
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5, ease: "easeOut" },
+        },
+      }}
+      whileHover={{ scale: 1.05, y: -8 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      className="group relative bg-card border border-border/50 rounded-2xl p-6"
+    >
+      <div className="relative z-10 flex flex-col items-center text-center">
+        <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mb-4">
+          {Icon && <Icon className="w-9 h-9 text-primary" />}
+        </div>
+        <h3 className="text-xl font-semibold mb-2">{title}</h3>
+        <p className="text-base text-muted-foreground">{description}</p>
+      </div>
+    </motion.div>
+  );
+};
 
 const WhyChooseUs = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: "-100px 0px",
   });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.12, delayChildren: 0.08 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.45, ease: "easeOut" },
+    },
+  };
+
+  const cards = [
+    {
+      id: 1,
+      Icon: ClockIcon,
+      title: "Strategy-led Delivery",
+      description:
+        "Every project begins with a clear business strategy — timelines, milestones and execution designed for predictable, high-quality delivery.",
+    },
+    {
+      id: 2,
+      Icon: CheckBadgeIcon,
+      title: "Conversion-first Design",
+      description:
+        "We design for results — clear messaging, strong CTAs, high-performance pages and UX that converts visitors into real customers.",
+    },
+    {
+      id: 3,
+      Icon: ShieldCheckIcon,
+      title: "Fully Managed Tech",
+      description:
+        "Hosting, security, monitoring and updates handled end-to-end. You get a reliable, fast website while we handle the technical heavy lifting.",
+    },
+  ];
 
   return (
     <motion.section
@@ -25,98 +88,44 @@ const WhyChooseUs = () => {
       animate={inView ? "visible" : "hidden"}
       className="w-full max-w-screen-xl mx-auto p-4 md:p-8 pt-12 sm:pt-28 lg:pt-8"
     >
-      {/* === TOP HEADING === */}
       <div className="flex flex-col items-center text-center">
-        <motion.div variants={itemVariants} className="bg-card border border-border/50 rounded-full px-4 py-1 text-sm text-primary mb-4">
+        <motion.div
+          variants={itemVariants}
+          className="bg-card border border-border/50 rounded-full px-4 py-1 text-sm text-primary mb-4"
+        >
           Our Promise
         </motion.div>
-        <motion.h2 
+
+        <motion.h2
           variants={itemVariants}
           className="text-4xl md:text-6xl font-bold mb-4"
         >
           Why Work With Us?
         </motion.h2>
-        {/* ======================================
-          CHANGED: Sub-headline
-          - Ripped out the strong "health practice" niche.
-          - Replaced with generic "partner" fluff.
-          ======================================
-        */}
-        <motion.p variants={itemVariants} className="text-lg text-muted-foreground max-w-2xl mb-12">
-          We're not just another developer. We're a dedicated partner
-          for your business. Here’s our simple, 3-point promise.
+
+        <motion.p
+          variants={itemVariants}
+          className="text-lg text-muted-foreground max-w-2xl mb-12"
+        >
+          We're not another freelancer — we're a strategic partner focused on
+          building websites that elevate your brand and drive real business
+          growth.
         </motion.p>
       </div>
 
-      {/* === 3-CARD GRID === */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        {/* Card 1: SPEED (This is still a valid generic promise) */}
-        <motion.div
-          variants={itemVariants}
-          whileHover={{ scale: 1.05, y: -8 }}
-          transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className="group relative bg-card border border-border/50 rounded-2xl p-6"
-        >
-          <div className="relative z-10 flex flex-col items-center text-center">
-            <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mb-4">
-              <ClockIcon className="w-9 h-9 text-primary" />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Launch in 7 Days</h3>
-            <p className="text-base text-muted-foreground">
-              Your new website will be live in one week. We're fast, focused, 
-              and we never miss a deadline. Period.
-            </p>
-          </div>
-        </motion.div>
-
-        {/* Card 2: RESULTS */}
-        <motion.div
-          variants={itemVariants}
-          whileHover={{ scale: 1.05, y: -8 }}
-          transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className="group relative bg-card border border-border/50 rounded-2xl p-6"
-        >
-          <div className="relative z-10 flex flex-col items-center text-center">
-            <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mb-4">
-              <CheckBadgeIcon className="w-9 h-9 text-primary" />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Focused on Results</h3>
-            {/* ======================================
-              REVERTED: "patients" -> "clients"
-              ======================================
-            */}
-            <p className="text-base text-muted-foreground">
-              We don't just build pretty sites. We build conversion-focused websites 
-              that turn your traffic into booked calls and paying clients.
-            </p>
-          </div>
-        </motion.div>
-
-        {/* Card 3: NO HASSLE */}
-        <motion.div
-          variants={itemVariants}
-          whileHover={{ scale: 1.05, y: -8 }}
-          transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className="group relative bg-card border border-border/50 rounded-2xl p-6"
-        >
-          <div className="relative z-10 flex flex-col items-center text-center">
-            <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mb-4">
-              <ShieldCheckIcon className="w-9 h-9 text-primary" />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Zero Tech-Headaches</h3>
-            {/* ======================================
-              REVERTED: "treating your patients" -> "running your business"
-              ======================================
-            */}
-            <p className="text-base text-muted-foreground">
-              Stop worrying about plugins, hosting, or security. We handle all 
-              the technical details so you can focus on what you do best: running your business.
-            </p>
-          </div>
-        </motion.div>
-
-      </div>
+      <motion.div
+        variants={itemVariants}
+        className="grid grid-cols-1 md:grid-cols-3 gap-6"
+      >
+        {cards.map((c) => (
+          <InfoCard
+            key={c.id}
+            Icon={c.Icon}
+            title={c.title}
+            description={c.description}
+          />
+        ))}
+      </motion.div>
     </motion.section>
   );
 };
