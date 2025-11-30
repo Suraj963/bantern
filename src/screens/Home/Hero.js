@@ -1,12 +1,9 @@
-/* src/components/Hero.jsx */
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRightIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import TechScroller from "./TechScroller";
 
 const Hero = () => {
-  // Animation variants are fine. Leave them.
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -41,12 +38,6 @@ const Hero = () => {
       animate="visible"
     >
       <div className="relative z-10 flex flex-col items-center w-full max-w-5xl">
-        {/* ======================================
-          CHANGED: Niche Pill
-          - Ripped out the strong "Dentists, Physios" niche.
-          - Replaced with weak, generic "all business" copy.
-          ======================================
-        */}
         <motion.div
           variants={itemVariants}
           className="mb-4 sm:mb-6 flex items-center gap-1 text-xs sm:text-sm font-medium text-primary bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-full px-3 sm:px-4 py-1.5 transition-colors"
@@ -55,40 +46,26 @@ const Hero = () => {
           <ChevronRightIcon className="w-4 h-4" />
         </motion.div>
 
-        {/* ======================================
-          CHANGED: Main Headline
-          - Ripped out the specific, high-value "booked patients."
-          - Replaced with the generic "paying clients."
-          ======================================
-        */}
         <motion.h1
           variants={itemVariants}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground max-w-4xl"
         >
-          We build professional websites that turn your visitors into paying clients.
+          We build professional websites that turn your visitors into paying
+          clients.
         </motion.h1>
-
-        {/* ======================================
-          CHANGED: Sub-headline
-          - "practice" -> "business"
-          ======================================
-        */}
         <motion.p
           variants={itemVariants}
           className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-foreground/80 max-w-3xl"
         >
-          Delivered in 7 days. SEO-optimized and ready to launch your business.
+          Strategy-led design. Conversion-focused development. Websites built
+          for serious business growth.
         </motion.p>
 
-        {/* These CTAs are correct. They stay. */}
         <motion.div
           variants={itemVariants}
           className="mt-8 sm:mt-12 w-full flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-2"
         >
-          <Link
-            to="/audit"
-            className="w-full sm:w-auto"
-          >
+          <Link to="/audit" className="w-full sm:w-auto">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -106,7 +83,6 @@ const Hero = () => {
           </Link>
         </motion.div>
 
-        {/* This is correct. It stays. */}
         <motion.div
           variants={itemVariants}
           className="w-full max-w-6xl mt-10 sm:mt-12 px-2"
