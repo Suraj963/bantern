@@ -1,5 +1,3 @@
-/* src/components/Navbar.jsx */
-
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
@@ -17,16 +15,15 @@ import {
   SparklesIcon,
   ArrowRightIcon,
 } from "@heroicons/react/24/outline";
-import ThemeToggle from "../../Common/ThemeToggle"; // Assuming this path is correct
+import ThemeToggle from "../../Common/ThemeToggle";
 
-// --- Data for the dropdown (No change) ---
 const servicesDropdownItems = [
-  {
-    title: "Website Design",
-    description: "Custom, responsive web designs that reflect your brand identity.",
-    icon: PaintBrushIcon,
-    href: "/services/website-design",
-  },
+  // {
+  //   title: "Website Design",
+  //   description: "Custom, responsive web designs that reflect your brand identity.",
+  //   icon: PaintBrushIcon,
+  //   href: "/services/website-design",
+  // },
   {
     title: "Website Development",
     description: "Full-stack web development using modern technologies.",
@@ -35,22 +32,24 @@ const servicesDropdownItems = [
   },
   {
     title: "Mobile App Development",
-    description: "High-performance mobile apps built for iOS and Android using modern native and cross-platform technologies.",
+    description:
+      "High-performance mobile apps built for iOS and Android using modern technologies.",
     icon: DevicePhoneMobileIcon,
     href: "/services/app-development",
   },
   {
     title: "AI & Automation",
-    description: "Integrate intelligent AI models and automation to boost efficiency.",
+    description:
+      "Integrate intelligent AI models and automation to boost efficiency.",
     icon: CpuChipIcon,
     href: "/services/ai-automation",
   },
-  {
-    title: "Bug Fixing & Responsiveness",
-    description: "Fix layout, code, and issues while ensuring your site is mobile-friendly.",
-    icon: WrenchScrewdriverIcon,
-    href: "/services/bug-fixing",
-  },
+  // {
+  //   title: "Bug Fixing & Responsiveness",
+  //   description: "Fix layout, code, and issues while ensuring your site is mobile-friendly.",
+  //   icon: WrenchScrewdriverIcon,
+  //   href: "/services/bug-fixing",
+  // },
   {
     title: "Website Maintenance & Security",
     description: "Regular updates and monitoring to keep your website secure.",
@@ -59,13 +58,13 @@ const servicesDropdownItems = [
   },
   {
     title: "Speed Optimization & SEO",
-    description: "Improve website speed, Core Web Vitals, and search visibility.",
+    description:
+      "Improve website speed, Core Web Vitals, and search visibility.",
     icon: SparklesIcon,
     href: "/services/speed-seo",
   },
 ];
 
-// --- Dropdown Item Sub-component (No change) ---
 const DropdownItem = ({ item, onClick = () => {} }) => (
   <Link
     to={item.href}
@@ -82,13 +81,11 @@ const DropdownItem = ({ item, onClick = () => {} }) => (
   </Link>
 );
 
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
-  // === STYLING FUNCTIONS (No change) ===
   const getNavLinkClass = ({ isActive }) => {
     return isActive
       ? "text-primary font-medium px-3 py-2 rounded-md text-sm transition-colors"
@@ -103,7 +100,7 @@ const Navbar = () => {
 
   const ctaButtonClass =
     " bg-foreground text-background px-5 py-2 rounded-full text-sm font-medium hover:scale-105";
-  
+
   const mobileCtaButtonClass =
     "block w-full text-center px-3 py-2 rounded-md text-base font-medium bg-foreground text-background hover:bg-primary/90 transition-colors mt-2";
 
@@ -115,23 +112,21 @@ const Navbar = () => {
     visible: { opacity: 1, y: 0, scale: 1 },
     exit: { opacity: 0, y: 10, scale: 0.95 },
   };
-  
+
   const mobileDropdownVariants = {
     hidden: { height: 0, opacity: 0, marginTop: 0 },
     visible: { height: "auto", opacity: 1, marginTop: "4px" },
     exit: { height: 0, opacity: 0, marginTop: 0 },
   };
 
-
   return (
     <div className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
-      <nav 
+      <nav
         className="relative w-full max-w-6xl mx-auto bg-card/80 backdrop-blur-md rounded-full shadow-2xl border border-border/50"
         onMouseLeave={() => setIsServicesOpen(false)}
       >
         <div className="flex items-center justify-between h-16 px-4 sm:px-6">
-          
-          {/* Logo (No change) */}
+          {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-3">
               <span className="bg-primary p-2 rounded-full">
@@ -143,7 +138,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation Links (No change) */}
+          {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-2">
             <NavLink to="/" className={getNavLinkClass} end>
               Home
@@ -151,13 +146,13 @@ const Navbar = () => {
             <NavLink to="/about" className={getNavLinkClass}>
               About
             </NavLink>
-            <div 
-              onMouseEnter={() => setIsServicesOpen(true)}
-            >
+            <div onMouseEnter={() => setIsServicesOpen(true)}>
               <button className={servicesLinkClass}>
                 Services
-                <ChevronDownIcon 
-                  className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} 
+                <ChevronDownIcon
+                  className={`w-4 h-4 transition-transform ${
+                    isServicesOpen ? "rotate-180" : ""
+                  }`}
                 />
               </button>
             </div>
@@ -166,16 +161,15 @@ const Navbar = () => {
             </NavLink>
           </div>
 
-          {/* --- UPDATED: Desktop Auth Section (Removed duplicate) --- */}
+          {/* --- Desktop Auth Section --- */}
           <div className="hidden md:flex items-center space-x-3">
-            <ThemeToggle />
-            <NavLink to="/" className={ctaButtonClass}>
+            {/* <ThemeToggle /> */}
+            <NavLink to="/contact" className={ctaButtonClass}>
               Get Started
             </NavLink>
           </div>
-          {/* --- END OF UPDATE --- */}
 
-          {/* Mobile Menu Button (No change) */}
+          {/* Mobile Menu Button */}
           <div className="-mr-2 flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -191,8 +185,8 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-        
-        {/* Desktop Dropdown (No change) */}
+
+        {/* Desktop Dropdown */}
         <AnimatePresence>
           {isServicesOpen && (
             <motion.div
@@ -202,7 +196,7 @@ const Navbar = () => {
               exit="exit"
               transition={{ duration: 0.2, ease: "easeInOut" }}
               className="absolute top-full mt-2 left-1/2 -translate-x-1/2 w-[40rem] z-50"
-              onMouseEnter={() => setIsServicesOpen(true)} 
+              onMouseEnter={() => setIsServicesOpen(true)}
             >
               <div className="bg-card border border-border/50 rounded-2xl shadow-2xl p-4">
                 <div className="grid grid-cols-2 gap-2">
@@ -214,8 +208,8 @@ const Navbar = () => {
                   <p className="text-sm text-muted-foreground">
                     Need a custom solution?
                   </p>
-                  <Link 
-                    to="/services" 
+                  <Link
+                    to="/services"
                     className="bg-foreground text-background px-4 py-2 rounded-full text-sm font-medium hover:scale-105 flex items-center gap-1"
                   >
                     View All Services
@@ -227,33 +221,47 @@ const Navbar = () => {
           )}
         </AnimatePresence>
 
-        {/* --- UPDATED: Mobile Menu (Added ThemeToggle) --- */}
         <AnimatePresence>
           {isOpen && (
-            <motion.div 
+            <motion.div
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              className="md:hidden bg-card/90 backdrop-blur-md absolute top-20 left-0 right-0 mx-auto max-w-lg rounded-xl shadow-lg border border-border overflow-hidden" 
+              className="md:hidden bg-card/90 backdrop-blur-md absolute top-20 left-0 right-0 mx-auto max-w-lg rounded-xl shadow-lg border border-border overflow-hidden"
               id="mobile-menu"
             >
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <NavLink to="/" className={getMobileNavLinkClass} onClick={() => setIsOpen(false)} end>
+                <NavLink
+                  to="/"
+                  className={getMobileNavLinkClass}
+                  onClick={() => setIsOpen(false)}
+                  end
+                >
                   Home
                 </NavLink>
-                <NavLink to="/about" className={getMobileNavLinkClass} onClick={() => setIsOpen(false)}>
+                <NavLink
+                  to="/about"
+                  className={getMobileNavLinkClass}
+                  onClick={() => setIsOpen(false)}
+                >
                   About
                 </NavLink>
-                
-                {/* Mobile Services Accordion (No change) */}
+
+                {/* Mobile Services Accordion */}
                 <div>
                   <button
-                    onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                    className={`${getMobileNavLinkClass({ isActive: false })} w-full flex justify-between items-center`}
+                    onClick={() =>
+                      setIsMobileServicesOpen(!isMobileServicesOpen)
+                    }
+                    className={`${getMobileNavLinkClass({
+                      isActive: false,
+                    })} w-full flex justify-between items-center`}
                   >
                     Services
-                    <ChevronDownIcon 
-                      className={`w-5 h-5 transition-transform ${isMobileServicesOpen ? 'rotate-180' : ''}`} 
+                    <ChevronDownIcon
+                      className={`w-5 h-5 transition-transform ${
+                        isMobileServicesOpen ? "rotate-180" : ""
+                      }`}
                     />
                   </button>
                   <AnimatePresence>
@@ -265,18 +273,18 @@ const Navbar = () => {
                         exit="exit"
                         className="pl-4 ml-3 border-l-2 border-primary/20 overflow-hidden"
                       >
-                        {servicesDropdownItems.map(item => (
-                          <NavLink 
-                            key={item.title} 
-                            to={item.href} 
+                        {servicesDropdownItems.map((item) => (
+                          <NavLink
+                            key={item.title}
+                            to={item.href}
                             className={getMobileNavLinkClass}
                             onClick={() => setIsOpen(false)}
                           >
                             {item.title}
                           </NavLink>
                         ))}
-                        <NavLink 
-                          to="/services" 
+                        <NavLink
+                          to="/services"
                           className={getMobileNavLinkClass}
                           onClick={() => setIsOpen(false)}
                         >
@@ -287,16 +295,23 @@ const Navbar = () => {
                   </AnimatePresence>
                 </div>
 
-                <NavLink to="/portfolio" className={getMobileNavLinkClass} onClick={() => setIsOpen(false)}>
+                <NavLink
+                  to="/portfolio"
+                  className={getMobileNavLinkClass}
+                  onClick={() => setIsOpen(false)}
+                >
                   Portfolio
                 </NavLink>
-                
-                {/* Added ThemeToggle inside the menu layout */}
+
                 <div className="pt-2 flex items-center justify-between">
-                  <NavLink to="/" className={mobileCtaButtonClass} onClick={() => setIsOpen(false)}>
+                  <NavLink
+                    to="/contact"
+                    className={mobileCtaButtonClass}
+                    onClick={() => setIsOpen(false)}
+                  >
                     Get Started
                   </NavLink>
-                  <ThemeToggle />
+                  {/* <ThemeToggle /> */}
                 </div>
               </div>
             </motion.div>

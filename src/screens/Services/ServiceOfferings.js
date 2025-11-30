@@ -1,5 +1,3 @@
-/* src/components/ServiceOfferings.jsx */
-
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import React from "react";
@@ -14,8 +12,12 @@ import {
   SparklesIcon,
   CpuChipIcon,
 } from "@heroicons/react/24/solid";
+import websiteDevelopment from "../../assets/website-development.jpg";
+import appDevelopment from "../../assets/app-development.png";
+import ai from "../../assets/ai.png";
+import maintenance from "../../assets/website-maintenance.png";
+import seo from "../../assets/seo.png";
 
-// --- Animation Variants ---
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -33,22 +35,21 @@ const itemVariants = {
   },
 };
 
-// --- Data for the cards (No change) ---
 const serviceData = [
-  {
-    icon: PaintBrushIcon,
-    title: "Website Design",
-    description:
-      "Custom, responsive web designs that reflect your brand identity and engage users.",
-    features: [
-      "Custom UI/UX design",
-      "Mobile-first responsive layouts",
-      "Brand identity integration",
-    ],
-    imageUrl:
-      "https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1936&auto=format&fit=crop",
-    href: "/services/website-design",
-  },
+  // {
+  //   icon: PaintBrushIcon,
+  //   title: "Website Design",
+  //   description:
+  //     "Custom, responsive web designs that reflect your brand identity and engage users.",
+  //   features: [
+  //     "Custom UI/UX design",
+  //     "Mobile-first responsive layouts",
+  //     "Brand identity integration",
+  //   ],
+  //   imageUrl:
+  //     "https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1936&auto=format&fit=crop",
+  //   href: "/services/website-design",
+  // },
   {
     icon: CodeBracketIcon,
     title: "Website Development",
@@ -59,8 +60,7 @@ const serviceData = [
       "Front-end (React, Next.js)",
       "Back-end (Node.js, Python)",
     ],
-    imageUrl:
-      "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop",
+    imageUrl: websiteDevelopment,
     href: "/services/website-development",
   },
   {
@@ -73,8 +73,7 @@ const serviceData = [
       "UI/UX for mobile screens",
       "Backend integration & APIs",
     ],
-    imageUrl:
-      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=2070&auto=format&fit=crop",
+    imageUrl: appDevelopment,
     href: "/services/app-development",
   },
   {
@@ -87,24 +86,23 @@ const serviceData = [
       "Workflow automation",
       "Data-driven insights",
     ],
-    imageUrl:
-      "https://images.unsplash.com/photo-1620712943543-aebc692385C5?q=80&w=2070&auto=format&fit=crop",
+    imageUrl: ai,
     href: "/services/ai-automation",
   },
-  {
-    icon: WrenchScrewdriverIcon,
-    title: "Bug Fixing & Responsiveness",
-    description:
-      "Fix layout, code, and issues while ensuring your site is mobile-friendly.",
-    features: [
-      "Cross-browser compatibility",
-      "Mobile layout optimization",
-      "JavaScript bug fixing",
-    ],
-    imageUrl:
-      "https://images.unsplash.com/photo-1581094488347-3d1490232d4b?q=80&w=2070&auto=format&fit=crop",
-    href: "/services/bug-fixing",
-  },
+  // {
+  //   icon: WrenchScrewdriverIcon,
+  //   title: "Bug Fixing & Responsiveness",
+  //   description:
+  //     "Fix layout, code, and issues while ensuring your site is mobile-friendly.",
+  //   features: [
+  //     "Cross-browser compatibility",
+  //     "Mobile layout optimization",
+  //     "JavaScript bug fixing",
+  //   ],
+  //   imageUrl:
+  //     "https://images.unsplash.com/photo-1581094488347-3d1490232d4b?q=80&w=2070&auto=format&fit=crop",
+  //   href: "/services/bug-fixing",
+  // },
   {
     icon: ShieldCheckIcon,
     title: "Website Maintenance & Security",
@@ -115,8 +113,7 @@ const serviceData = [
       "Automated backups",
       "Plugin & dependency updates",
     ],
-    imageUrl:
-      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop",
+    imageUrl: maintenance,
     href: "/services/maintenance",
   },
   {
@@ -129,13 +126,11 @@ const serviceData = [
       "Core Web Vitals improvement",
       "On-page SEO setup",
     ],
-    imageUrl:
-      "https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=2070&auto=format&fit=crop",
+    imageUrl: seo,
     href: "/services/speed-seo",
   },
 ];
 
-// --- Reusable Service Card Component ---
 const ServiceCard = ({ service }) => {
   const { icon: Icon, title, description, features, imageUrl, href } = service;
 
@@ -144,42 +139,35 @@ const ServiceCard = ({ service }) => {
       variants={itemVariants}
       whileHover={{ y: -8, scale: 1.02 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      // --- UPDATED: Background, border, and radius changed ---
-      className="
-        border border-primary rounded-lg overflow-hidden flex flex-col h-full
-        bg-background
-      "
-      // --- END OF UPDATE ---
+      className="border border-primary rounded-lg overflow-hidden flex flex-col h-full bg-background"
     >
-        <Link to={href}>
-
-      {/* Image & Icon */}
-      <div className="relative w-full h-48">
-        <img
-          src={imageUrl}
-          alt={title}
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute top-4 left-4 bg-foreground rounded-full p-3 shadow-lg">
-          <Icon className="w-6 h-6 text-background" />
+      <Link to={href}>
+        <div className="relative w-full h-48">
+          <img
+            src={imageUrl}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute top-4 left-4 bg-foreground rounded-full p-3 shadow-lg">
+            <Icon className="w-6 h-6 text-background" />
+          </div>
         </div>
-      </div>
 
-      {/* Content */}
-      <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-semibold mb-2 text-foreground">{title}</h3>
-        <p className="text-sm text-muted-foreground mb-4">{description}</p>
+        <div className="p-6 flex flex-col flex-grow">
+          <h3 className="text-xl font-semibold mb-2 text-foreground">
+            {title}
+          </h3>
+          <p className="text-sm text-muted-foreground mb-4">{description}</p>
 
-        <p className="text-sm font-semibold text-foreground mb-2">
-          Key Features:
-        </p>
-        <ul className="list-disc list-inside space-y-1 text-muted-foreground text-sm mb-6">
-          {features.map((feature, index) => (
-            <li key={index}>{feature}</li>
-          ))}
-        </ul>
+          <p className="text-sm font-semibold text-foreground mb-2">
+            Key Features:
+          </p>
+          <ul className="list-disc list-inside space-y-1 text-muted-foreground text-sm mb-6">
+            {features.map((feature, index) => (
+              <li key={index}>{feature}</li>
+            ))}
+          </ul>
 
-        {/* Learn More Button */}
           <motion.div
             whileHover={{
               scale: 1.05,
@@ -190,13 +178,12 @@ const ServiceCard = ({ service }) => {
             Learn More
             <ArrowRightIcon className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
           </motion.div>
-      </div>
-        </Link>
+        </div>
+      </Link>
     </motion.div>
   );
 };
 
-// --- Main Section Component ---
 const ServiceOfferings = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,

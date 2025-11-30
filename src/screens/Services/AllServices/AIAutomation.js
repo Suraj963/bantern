@@ -1,11 +1,9 @@
-// src/screens/AIAutomation.jsx
-
 import React from "react";
 import SubpageHero from "../../../Common/SubpageHero";
 import ContentBlockImage from "../../../Common/ContentBlockImage";
 import Breadcrumbs from "../../../Common/Breadcrumbs";
 import KeyFeaturesGrid from "../../../Common/KeyFeaturesGrid";
-// --- Process icons (solid) ---
+import ai from "../../../assets/ai.png";
 import {
   MagnifyingGlassIcon,
   ClipboardDocumentListIcon,
@@ -14,7 +12,6 @@ import {
   BeakerIcon,
   RocketLaunchIcon,
 } from "@heroicons/react/24/solid";
-// --- Feature icons (outline) ---
 import {
   ChatBubbleLeftRightIcon,
   BoltIcon,
@@ -29,7 +26,6 @@ import AnimatedSection from "../../../Common/AnimatedSection";
 import FAQSection from "../../../Common/FAQSection";
 import FinalCtaBanner from "../../../Common/FinalCtaBanner";
 
-// --- New AI Feature Data (content updated to Bantern/company voice) ---
 const featureData = [
   {
     icon: ChatBubbleLeftRightIcon,
@@ -69,7 +65,6 @@ const featureData = [
   },
 ];
 
-// --- AI Automation PROCESS (6 steps) (content updated to Bantern/company voice) ---
 const PROCESS = [
   {
     id: 1,
@@ -157,7 +152,6 @@ const PROCESS = [
   },
 ];
 
-// --- AI-specific FAQ items (content updated to Bantern/company voice) ---
 const faqData = [
   {
     id: 1,
@@ -197,7 +191,6 @@ const AIAutomation = () => {
     { name: "AI Automation", href: "/services/ai-automation" },
   ];
 
-  // Props for the reusable Process component
   const processDataProps = {
     title: "Our AI Automation Methodology",
     subtitle:
@@ -219,9 +212,7 @@ const AIAutomation = () => {
         paragraph1="Bantern’s AI Automation services reduce manual effort, improve response times, and unlock new capabilities. Solutions include conversational agents, document processing, and event-driven automation that integrate securely with existing systems."
         paragraph2="From rapid prototyping to production-grade deployments, Bantern handles data pipelines, model integration, prompt engineering, and monitoring—focused on measurable outcomes such as efficiency gains, accuracy improvements, and auditable AI behavior."
         ctaText="Explore AI Automation"
-        imageSrc={
-          "https://images.unsplash.com/photo-1531497865140-8e3a7f07a23b?q=80&w=1400&auto=format&fit=crop"
-        }
+        imageSrc={ai}
         reverse={false}
       />
 

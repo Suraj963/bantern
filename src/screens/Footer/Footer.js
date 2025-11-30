@@ -1,5 +1,3 @@
-/* src/components/Footer/Footer.jsx */
-
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
@@ -8,7 +6,6 @@ import {
   ArrowUpIcon,
   ArrowRightIcon,
 } from "@heroicons/react/24/solid";
-// --- 1. UPDATED: Imported new icons ---
 import {
   FaLinkedin,
   FaTwitter,
@@ -18,7 +15,6 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 
-// --- Animation Variants ---
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -36,7 +32,6 @@ const itemVariants = {
   },
 };
 
-// --- Link Data ---
 const quickLinks = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
@@ -45,13 +40,11 @@ const quickLinks = [
 ];
 
 const serviceLinks = [
-  { name: "Web Design", path: "/services/website-design" },
   { name: "Web Development", path: "/services/website-development" },
-  { name: "Mobile App Design", path: "/services/app-development" },
-  { name: "AI & ML Solutions", path: "/services/ai-automation" },
+  { name: "Mobile App Development", path: "/services/app-development" },
+  { name: "AI & Automation", path: "/services/ai-automation" },
 ];
 
-// --- 2. UPDATED: Added new social links ---
 const socialLinks = [
   { icon: FaLinkedin, path: "https://linkedin.com" },
   { icon: FaTwitter, path: "https://twitter.com" },
@@ -60,9 +53,7 @@ const socialLinks = [
   { icon: FaFacebook, path: "https://facebook.com" },
   { icon: FaYoutube, path: "https://youtube.com" },
 ];
-// --- END OF UPDATE ---
 
-// --- Footer Component ---
 const Footer = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -82,12 +73,9 @@ const Footer = () => {
       className="w-full bg-background mt-20"
     >
       <div className="w-full max-w-screen-xl mx-auto p-8 md:p-12">
-        {/* Top border line */}
         <motion.hr variants={itemVariants} className="border-border/50 mb-10" />
 
-        {/* === Top Section: 4-Column Grid === */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
-          {/* Column 1: Brand */}
           <motion.div variants={itemVariants} className="flex flex-col">
             <Link to="/" className="flex items-center space-x-3 mb-4">
               <span className="bg-primary p-2 rounded-full">
@@ -103,7 +91,6 @@ const Footer = () => {
             </p>
           </motion.div>
 
-          {/* Column 2: Quick Links */}
           <motion.div variants={itemVariants}>
             <h3 className="text-lg font-semibold text-primary mb-4">
               Quick Links
@@ -122,7 +109,6 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Column 3: Services */}
           <motion.div variants={itemVariants}>
             <h3 className="text-lg font-semibold text-primary mb-4">
               Services
@@ -141,7 +127,6 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Column 4: Get in Touch */}
           <motion.div variants={itemVariants}>
             <h3 className="text-lg font-semibold text-primary mb-4">
               Get in Touch
@@ -168,20 +153,19 @@ const Footer = () => {
                 <Link
                   to="/contact"
                   className="
-      inline-flex items-center
-      bg-foreground text-background
-      px-4 py-2 rounded-full 
-      text-sm font-bold 
-      transition-colors
-      hover:scale-105 active:scale-95
-    "
+                            inline-flex items-center
+                            bg-foreground text-background
+                            px-4 py-2 rounded-full 
+                            text-sm font-bold 
+                            transition-colors
+                            hover:scale-105 active:scale-95
+                          "
                 >
                   Get in Touch
                   <ArrowRightIcon className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                 </Link>
               </li>
 
-              {/* --- 3. UPDATED: Social Icons (now wraps) --- */}
               <div className="flex flex-wrap gap-4 pt-4">
                 {socialLinks.map((link, index) => (
                   <a
@@ -199,7 +183,6 @@ const Footer = () => {
           </motion.div>
         </div>
 
-        {/* === Bottom Bar: Copyright & Back to Top === */}
         <motion.hr variants={itemVariants} className="border-border/50" />
         <motion.div
           variants={itemVariants}

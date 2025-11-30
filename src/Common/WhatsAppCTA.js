@@ -1,16 +1,13 @@
-/* src/components/WhatsAppCTA.jsx */
+import React from "react";
+import { motion } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FaWhatsapp } from 'react-icons/fa'; // Import the WhatsApp icon
-
-// --- CONFIGURE YOUR WHATSAPP LINK ---
-// I've added '91' as the country code for India. 
-// If this is incorrect, please replace it with your correct country code.
-const userNumber = "919513276042"; 
-const defaultMessage = "Hello, I saw your website and I'm interested in your services.";
-const whatsappUrl = `https://wa.me/${userNumber}?text=${encodeURIComponent(defaultMessage)}`;
-// ---
+const userNumber = "919513276042";
+const defaultMessage =
+  "Hello, I saw your website and I'm interested in your services.";
+const whatsappUrl = `https://wa.me/${userNumber}?text=${encodeURIComponent(
+  defaultMessage
+)}`;
 
 const WhatsAppCTA = () => {
   return (
@@ -19,32 +16,24 @@ const WhatsAppCTA = () => {
       target="_blank"
       rel="noopener noreferrer"
       title="Chat on WhatsApp"
-      
-      // Animation: Load-in
       initial={{ scale: 0, opacity: 0, y: 50 }}
       animate={{ scale: 1, opacity: 1, y: 0 }}
       transition={{ duration: 0.5, type: "spring", stiffness: 100, delay: 1.5 }}
-      
-      // Animation: Hover
       whileHover={{ scale: 1.1, rotate: 10 }}
       whileTap={{ scale: 0.95 }}
-      
-      // Animation: Continuous Pulse
-      animatePulse={{ 
+      animatePulse={{
         scale: [1, 1.05, 1],
         boxShadow: [
           "0 0 20px 0px hsl(var(--primary) / 0.3)",
           "0 0 30px 10px hsl(var(--primary) / 0.5)",
           "0 0 20px 0px hsl(var(--primary) / 0.3)",
-        ]
+        ],
       }}
       transitionPulse={{
         duration: 2.5,
         repeat: Infinity,
-        ease: "easeInOut"
+        ease: "easeInOut",
       }}
-
-      // Styling
       className="
         fixed bottom-6 right-6 z-50 
         w-16 h-16 rounded-full 

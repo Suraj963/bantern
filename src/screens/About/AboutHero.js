@@ -1,12 +1,9 @@
-/* src/components/AboutHero.jsx */
-
 import { motion } from "framer-motion";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 
-// --- Animation Variants ---
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -24,11 +21,9 @@ const itemVariants = {
   },
 };
 
-// --- Stat Card Sub-Component ---
 const StatCard = ({ value, label }) => (
   <motion.div
     variants={itemVariants}
-    // --- UPDATED: Background color now uses your --primary variable ---
     className="bg-card/50 border border-border/50 rounded-2xl p-6 h-full"
     style={{
       background:
@@ -41,9 +36,7 @@ const StatCard = ({ value, label }) => (
     <p className="text-muted-foreground mt-1 text-sm md:text-base">{label}</p>
   </motion.div>
 );
-// --- END OF UPDATE ---
 
-// --- Image Card Sub-Component ---
 const ImageCard = ({ src, alt, className }) => (
   <motion.div
     variants={itemVariants}
@@ -55,7 +48,6 @@ const ImageCard = ({ src, alt, className }) => (
   </motion.div>
 );
 
-// --- Text Block Sub-Component ---
 const TextBlock = () => (
   <motion.div
     variants={itemVariants}
@@ -90,7 +82,6 @@ const TextBlock = () => (
   </motion.div>
 );
 
-// --- Main Component ---
 const AboutHero = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -105,36 +96,27 @@ const AboutHero = () => {
       animate={inView ? "visible" : "hidden"}
       className="w-full max-w-screen-xl mx-auto p-4 md:p-8 pt-0 sm:pt-28 lg:pt-6"
     >
-      {/* --- 1. MOBILE LAYOUT (lg:hidden) --- */}
       <div className="flex flex-col gap-6 lg:hidden">
-        {/* 1. Text Block */}
         <TextBlock />
 
-        {/* 2. Main Image */}
         <ImageCard
-          src="/about_image1.png" // Your local image
+          src="/about_image1.png"
           alt="Women collaborating with tablet"
           className="w-full h-[300px]"
         />
 
-        {/* --- UPDATED: Reduced mobile height --- */}
         <div className="grid grid-cols-2 gap-6 h-[150px]">
           <StatCard value="98%" label="Satisfaction Rate" />
           <StatCard value="50%" label="Increase in Web Traffic" />
         </div>
-
-        {/* The other 2 images are hidden on mobile as requested */}
       </div>
 
-      {/* --- 2. DESKTOP LAYOUT (hidden lg:grid) --- */}
-      {/* This is the 3-COLUMN layout from your reference image */}
       <div className="hidden lg:grid grid-cols-3 gap-6">
-        {/* === Column 1 (Left) === */}
         <div className="flex flex-col gap-6">
           <ImageCard
-            src="/about_image1.png" // Your local image
+            src="/about_image1.png"
             alt="Women collaborating with tablet"
-            className="w-full h-[400px]" // Taller main image
+            className="w-full h-[400px]"
           />
           <div className="grid grid-cols-2 gap-6 h-[200px]">
             <StatCard value="98%" label="Satisfaction Rate" />
@@ -142,22 +124,20 @@ const AboutHero = () => {
           </div>
         </div>
 
-        {/* === Column 2 (Center) === */}
         <div className="flex flex-col gap-6">
           <TextBlock />
           <ImageCard
-            src="/about_image2.png" // Your local image
+            src="/about_image2.png"
             alt="Team at planning table"
             className="w-full h-full"
           />
         </div>
 
-        {/* === Column 3 (Right) === */}
         <div className="flex flex-col gap-6">
           <ImageCard
-            src="/about_image3.png" // Your local image
+            src="/about_image3.png"
             alt="Two developers at desk"
-            className="w-full h-full" // Fills the full column height
+            className="w-full h-full"
           />
         </div>
       </div>

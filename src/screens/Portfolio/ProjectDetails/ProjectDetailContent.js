@@ -1,18 +1,14 @@
-/* src/components/ProjectDetailContent.jsx */
-
 import { motion } from "framer-motion";
 import React from "react";
 
-// Animation for the container
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.1, delayChildren: 0.4 }, // Starts after header
+    transition: { staggerChildren: 0.1, delayChildren: 0.4 },
   },
 };
 
-// Animation for each item
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -38,17 +34,12 @@ const ProjectDetailContent = ({
       animate="visible"
       className="flex flex-col gap-10"
     >
-      {/* Title and Short Description */}
       <motion.div variants={itemVariants}>
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{title}</h1>
         <p className="text-lg text-muted-foreground">{description}</p>
       </motion.div>
 
-      {/* Image Gallery */}
-      <motion.div
-        variants={itemVariants}
-        className="grid grid-cols-2 gap-4"
-      >
+      <motion.div variants={itemVariants} className="grid grid-cols-2 gap-4">
         {galleryImages.map((src, index) => (
           <motion.div
             key={index}
@@ -56,7 +47,6 @@ const ProjectDetailContent = ({
             whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            {/* 🔥 Reduced height using fixed + responsive ratio */}
             <img
               src={src}
               alt={`${title} ${index + 1}`}
@@ -70,25 +60,23 @@ const ProjectDetailContent = ({
         ))}
       </motion.div>
 
-      {/* Project Overview */}
       <motion.div variants={itemVariants} className="space-y-4">
-        <h2 className="text-3xl font-semibold text-foreground">Project Overview</h2>
+        <h2 className="text-3xl font-semibold text-foreground">
+          Project Overview
+        </h2>
         <p className="text-muted-foreground leading-relaxed">{overview}</p>
       </motion.div>
 
-      {/* Challenges */}
       <motion.div variants={itemVariants} className="space-y-4">
         <h2 className="text-3xl font-semibold text-foreground">Challenges</h2>
         <p className="text-muted-foreground leading-relaxed">{challenges}</p>
       </motion.div>
 
-      {/* Results */}
       <motion.div variants={itemVariants} className="space-y-4">
         <h2 className="text-3xl font-semibold text-foreground">Results</h2>
         <p className="text-muted-foreground leading-relaxed">{results}</p>
       </motion.div>
 
-      {/* Tools */}
       <motion.div variants={itemVariants}>
         <h3 className="text-xl font-semibold mb-3">Tools Used:</h3>
         <div className="flex flex-wrap gap-3">

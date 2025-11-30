@@ -1,11 +1,8 @@
-// src/screens/BugFixing.jsx
-
-import React from 'react';
-import SubpageHero from '../../../Common/SubpageHero';
-import ContentBlockImage from '../../../Common/ContentBlockImage';
-import Breadcrumbs from '../../../Common/Breadcrumbs';
-import KeyFeaturesGrid from '../../../Common/KeyFeaturesGrid';
-// --- NEW: Import icons needed for the process data array ---
+import React from "react";
+import SubpageHero from "../../../Common/SubpageHero";
+import ContentBlockImage from "../../../Common/ContentBlockImage";
+import Breadcrumbs from "../../../Common/Breadcrumbs";
+import KeyFeaturesGrid from "../../../Common/KeyFeaturesGrid";
 import {
   MagnifyingGlassIcon,
   WrenchScrewdriverIcon,
@@ -20,13 +17,11 @@ import {
   CodeBracketIcon,
   BoltIcon,
 } from "@heroicons/react/24/outline";
-import Process from '../../../Common/Process';
-import AnimatedSection from '../../../Common/AnimatedSection';
-import FAQSection from '../../../Common/FAQSection';
-import FinalCtaBanner from '../../../Common/FinalCtaBanner';
+import Process from "../../../Common/Process";
+import AnimatedSection from "../../../Common/AnimatedSection";
+import FAQSection from "../../../Common/FAQSection";
+import FinalCtaBanner from "../../../Common/FinalCtaBanner";
 
-
-// --- Feature Data (No Change) ---
 const featureData = [
   {
     icon: BugAntIcon,
@@ -66,10 +61,8 @@ const featureData = [
   },
 ];
 
-
-// --- 1. DEFINING THE SPECIFIC PROCESS DATA ---
 const PROCESS = [
-    {
+  {
     id: 1,
     name: "Analysis",
     icon: MagnifyingGlassIcon,
@@ -154,99 +147,93 @@ const PROCESS = [
     ],
   },
 ];
-// --- END OF PROCESS DATA ---
 
-// --- Data for the FAQ items ---
 const faqData = [
   {
     id: 1,
     question: "How quickly can Bantern fix bugs on my website?",
-    answer: "Critical issues are prioritized and often resolved within 24–48 hours. For complex problems, Bantern provides a detailed timeline after an initial assessment and prioritizes fixes by impact and severity.",
+    answer:
+      "Critical issues are prioritized and often resolved within 24–48 hours. For complex problems, Bantern provides a detailed timeline after an initial assessment and prioritizes fixes by impact and severity.",
   },
   {
     id: 2,
     question: "Does Bantern work with existing codebases?",
-    answer: "Yes. Bantern is experienced in working with existing projects across various technology stacks, including WordPress, custom CMS, React, Angular, and more.",
+    answer:
+      "Yes. Bantern is experienced in working with existing projects across various technology stacks, including WordPress, custom CMS, React, Angular, and more.",
   },
   {
     id: 3,
     question: "How does Bantern test responsiveness fixes?",
-    answer: "Bantern uses a combination of real devices, browser developer tools, and cloud testing platforms to validate changes across iOS, Android, and desktop resolutions, ensuring consistent behavior on all screens.",
+    answer:
+      "Bantern uses a combination of real devices, browser developer tools, and cloud testing platforms to validate changes across iOS, Android, and desktop resolutions, ensuring consistent behavior on all screens.",
   },
   {
     id: 4,
     question: "Can Bantern help prevent future bugs?",
-    answer: "Yes. Bantern implements testing strategies, automated checks, code reviews, and monitoring to detect issues early and reduce future regressions. All fixes are documented for transparency and maintainability.",
+    answer:
+      "Yes. Bantern implements testing strategies, automated checks, code reviews, and monitoring to detect issues early and reduce future regressions. All fixes are documented for transparency and maintainability.",
   },
   {
     id: 5,
     question: "What if the issue source is unknown?",
-    answer: "Bantern offers comprehensive website audits to locate underlying problems and provides a detailed report with recommended solutions and estimates before any remediation work begins.",
+    answer:
+      "Bantern offers comprehensive website audits to locate underlying problems and provides a detailed report with recommended solutions and estimates before any remediation work begins.",
   },
 ];
 
-
-
 const BugFixing = () => {
+  const pathItems = [
+    { name: "Services", href: "/services" },
+    { name: "Bug fixing", href: "/services/bug-fixing" },
+  ];
 
-    const pathItems = [
-        { name: "Services", href: "/services" },
-        { name: "Bug fixing", href: "/services/bug-fixing" },
-    ];
-    
-    // Props for the reusable Process component
-    const processDataProps = {
-        title: "Our Design Methodology",
-        subtitle: "We follow a structured six-step methodology to ensure every design is successful and scalable.",
-    };
+  const processDataProps = {
+    title: "Our Design Methodology",
+    subtitle:
+      "We follow a structured six-step methodology to ensure every design is successful and scalable.",
+  };
 
-    return (
-        <div className="flex flex-col gap-16">
+  return (
+    <div className="flex flex-col gap-16">
+      <Breadcrumbs items={pathItems} />
 
-            <Breadcrumbs items={pathItems} /> 
+      <SubpageHero
+        category="Service"
+        title="Bug Fixing & Responsiveness"
+        subtitle="Fix layout, code, and browser issues while ensuring your site is mobile-friendly and performs flawlessly across all devices."
+      />
 
-            <SubpageHero
-                category="Service"
-                title="Bug Fixing & Responsiveness"
-                subtitle="Fix layout, code, and browser issues while ensuring your site is mobile-friendly and performs flawlessly across all devices."
-            />
-              
-            <ContentBlockImage
-                title="Eliminate Bugs. Enhance Performance. Deliver Perfection"
-                paragraph1="Website errors and unresponsive layouts can cost traffic, credibility, and conversions. Bantern provides fast, effective bug-fixing and responsiveness services to ensure websites look and function flawlessly across devices, screen sizes, and browsers. Whether the issue is a CSS layout glitch, a JavaScript error, a mobile rendering problem, or cross-browser incompatibility, Bantern diagnoses and resolves problems precisely while preserving existing functionality."
-                paragraph2="If users report bugs or poor mobile experience, Bantern can revamp frontend implementations to improve responsiveness and performance. The result is a consistent, reliable user experience that reduces bounce rates and increases engagement."
-                ctaText="Get Started"
-                imageSrc={"https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1936&auto=format&fit=crop"}
-                reverse={false} 
-            />
+      <ContentBlockImage
+        title="Eliminate Bugs. Enhance Performance. Deliver Perfection"
+        paragraph1="Website errors and unresponsive layouts can cost traffic, credibility, and conversions. Bantern provides fast, effective bug-fixing and responsiveness services to ensure websites look and function flawlessly across devices, screen sizes, and browsers. Whether the issue is a CSS layout glitch, a JavaScript error, a mobile rendering problem, or cross-browser incompatibility, Bantern diagnoses and resolves problems precisely while preserving existing functionality."
+        paragraph2="If users report bugs or poor mobile experience, Bantern can revamp frontend implementations to improve responsiveness and performance. The result is a consistent, reliable user experience that reduces bounce rates and increases engagement."
+        ctaText="Get Started"
+        imageSrc={
+          "https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1936&auto=format&fit=crop"
+        }
+        reverse={false}
+      />
 
-            <KeyFeaturesGrid
-            featureData={featureData}
-            />
-            
-            {/* --- 2. UPDATED: Passing specific data to the Process component --- */}
-            <Process 
-                title={processDataProps.title} 
-                subtitle={processDataProps.subtitle} 
-                stepsData={PROCESS} // Pass the newly defined array
-            />
+      <KeyFeaturesGrid featureData={featureData} />
 
-            <AnimatedSection>
-                <FAQSection 
-                faqData={faqData}
-                /> 
-            </AnimatedSection>
+      <Process
+        title={processDataProps.title}
+        subtitle={processDataProps.subtitle}
+        stepsData={PROCESS}
+      />
 
-            <FinalCtaBanner 
-                category="Ready to Start?"
-                headline="Ready to Fix Your Website Issues?"
-                subtext="Bantern will ensure your website works perfectly across all devices and browsers."
-                ctaText="Get Help Now"
-            />
-           
+      <AnimatedSection>
+        <FAQSection faqData={faqData} />
+      </AnimatedSection>
 
-        </div>
-    );
+      <FinalCtaBanner
+        category="Ready to Start?"
+        headline="Ready to Fix Your Website Issues?"
+        subtext="Bantern will ensure your website works perfectly across all devices and browsers."
+        ctaText="Get Help Now"
+      />
+    </div>
+  );
 };
 
 export default BugFixing;

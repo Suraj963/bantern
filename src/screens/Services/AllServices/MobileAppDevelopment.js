@@ -1,11 +1,9 @@
-// src/screens/MobileAppDevelopment.jsx
-
 import React from "react";
 import SubpageHero from "../../../Common/SubpageHero";
 import ContentBlockImage from "../../../Common/ContentBlockImage";
 import Breadcrumbs from "../../../Common/Breadcrumbs";
 import KeyFeaturesGrid from "../../../Common/KeyFeaturesGrid";
-// --- Process icons (solid) ---
+import appDevelopment from "../../../assets/app-development.png";
 import {
   MagnifyingGlassIcon,
   ClipboardDocumentListIcon,
@@ -14,7 +12,6 @@ import {
   BeakerIcon,
   RocketLaunchIcon,
 } from "@heroicons/react/24/solid";
-// --- Feature icons (outline) ---
 import {
   DevicePhoneMobileIcon,
   DeviceTabletIcon,
@@ -29,7 +26,6 @@ import AnimatedSection from "../../../Common/AnimatedSection";
 import FAQSection from "../../../Common/FAQSection";
 import FinalCtaBanner from "../../../Common/FinalCtaBanner";
 
-// --- Mobile App Feature Data ---
 const featureData = [
   {
     icon: DevicePhoneMobileIcon,
@@ -69,7 +65,6 @@ const featureData = [
   },
 ];
 
-// --- Mobile App DEVELOPMENT PROCESS (6 steps) ---
 const PROCESS = [
   {
     id: 1,
@@ -157,11 +152,11 @@ const PROCESS = [
   },
 ];
 
-// --- Mobile App FAQ items ---
 const faqData = [
   {
     id: 1,
-    question: "Which platform should organizations build for first — iOS, Android, or both?",
+    question:
+      "Which platform should organizations build for first — iOS, Android, or both?",
     answer:
       "Bantern recommends platform selection based on target audience and business goals. Clients often begin with the primary platform for their users or choose cross-platform frameworks (React Native/Flutter) to reach both platforms with shared code.",
   },
@@ -173,7 +168,8 @@ const faqData = [
   },
   {
     id: 3,
-    question: "How does Bantern handle push notifications and background tasks?",
+    question:
+      "How does Bantern handle push notifications and background tasks?",
     answer:
       "Bantern implements reliable push notification systems using platform services (APNs, FCM) and adopts background processing patterns appropriate for each platform while respecting battery and privacy constraints.",
   },
@@ -185,7 +181,8 @@ const faqData = [
   },
   {
     id: 5,
-    question: "How does Bantern ensure data security and privacy in mobile apps?",
+    question:
+      "How does Bantern ensure data security and privacy in mobile apps?",
     answer:
       "Bantern follows industry best practices including secure authentication, encrypted storage, secure network communication (HTTPS), minimal permissions, and adherence to relevant privacy regulations such as GDPR where applicable.",
   },
@@ -194,10 +191,12 @@ const faqData = [
 const MobileAppDevelopment = () => {
   const pathItems = [
     { name: "Services", href: "/services" },
-    { name: "Mobile App Development", href: "/services/mobile-app-development" },
+    {
+      name: "Mobile App Development",
+      href: "/services/mobile-app-development",
+    },
   ];
 
-  // Props for the reusable Process component
   const processDataProps = {
     title: "Our Mobile App Development Process",
     subtitle:
@@ -219,9 +218,7 @@ const MobileAppDevelopment = () => {
         paragraph1="Bantern builds mobile applications that delight users and solve real business problems. From consumer-facing apps to internal tools, Bantern delivers performant, maintainable, and secure mobile solutions."
         paragraph2="Bantern’s approach covers the full lifecycle — research, design, engineering, testing, and app store launches — with a focus on measurable outcomes and scalable architecture."
         ctaText="Get Started"
-        imageSrc={
-          "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1400&auto=format&fit=crop"
-        }
+        imageSrc={appDevelopment}
         reverse={false}
       />
 

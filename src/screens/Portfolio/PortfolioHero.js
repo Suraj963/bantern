@@ -1,12 +1,9 @@
-/* src/components/PortfolioHero.jsx */
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ChevronRightIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
-// --- Animation Variants (Consistent with main Hero) ---
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -36,17 +33,14 @@ const PortfolioHero = () => {
     <motion.section
       variants={containerVariants}
       initial="hidden"
-      animate="visible" // Self-animates on page load
+      animate="visible"
       className="relative flex flex-col items-center justify-center text-center 
                  min-h-[70vh] w-full px-4 pt-0 pb-16 overflow-hidden"
       style={{
-        // Radial glow background (consistent theme)
         background: `radial-gradient(ellipse 80% 60% at 50% 100%, hsl(var(--primary) / 0.1), transparent)`,
       }}
     >
-      {/* 1. Content Container (Staggered Animation) */}
       <div className="relative z-10 max-w-4xl px-4">
-        {/* Category Pill */}
         <motion.div
           variants={itemVariants}
           className="inline-block bg-primary/10 text-primary border border-primary/30 px-4 py-1.5 rounded-full text-sm font-medium mb-6 uppercase tracking-wider"
@@ -54,7 +48,6 @@ const PortfolioHero = () => {
           Our Featured Work
         </motion.div>
 
-        {/* Title */}
         <motion.h1
           variants={itemVariants}
           className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-foreground tracking-tight max-w-4xl mx-auto"
@@ -63,7 +56,6 @@ const PortfolioHero = () => {
           <span className="text-primary">Software Design</span>
         </motion.h1>
 
-        {/* Subtitle */}
         <motion.p
           variants={itemVariants}
           className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-8"
@@ -72,20 +64,19 @@ const PortfolioHero = () => {
           client collaborations built to drive real business value.
         </motion.p>
 
-        {/* CTA Button (White Theme) */}
         <motion.div variants={itemVariants} className="flex justify-center">
           <Link
             to="/audit"
             className="
-    bg-foreground text-background 
-    px-6 py-2 rounded-full 
-    text-base font-medium 
-    flex items-center gap-1 
-    shadow-lg 
-    transition-all duration-200 
-    group
-    hover:scale-105
-  "
+                        bg-foreground text-background 
+                        px-6 py-2 rounded-full 
+                        text-base font-medium 
+                        flex items-center gap-1 
+                        shadow-lg 
+                        transition-all duration-200 
+                        group
+                        hover:scale-105
+                      "
           >
             Book Your Free Audit
             <ArrowRightIcon className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />

@@ -1,18 +1,16 @@
-// src/screens/WebsiteDevelopment.jsx
-
-import React from 'react';
-import SubpageHero from '../../../Common/SubpageHero';
-import ContentBlockImage from '../../../Common/ContentBlockImage';
-import Breadcrumbs from '../../../Common/Breadcrumbs';
-import KeyFeaturesGrid from '../../../Common/KeyFeaturesGrid';
-// --- NEW: Import icons needed for the process data array ---
-import { 
-    MagnifyingGlassIcon, 
-    ClipboardDocumentListIcon, 
-    PaintBrushIcon, 
-    CodeBracketIcon, 
-    BeakerIcon, 
-    RocketLaunchIcon,
+import React from "react";
+import SubpageHero from "../../../Common/SubpageHero";
+import ContentBlockImage from "../../../Common/ContentBlockImage";
+import Breadcrumbs from "../../../Common/Breadcrumbs";
+import KeyFeaturesGrid from "../../../Common/KeyFeaturesGrid";
+import websiteDevelopment from "../../../assets/website-development.png";
+import {
+  MagnifyingGlassIcon,
+  ClipboardDocumentListIcon,
+  PaintBrushIcon,
+  CodeBracketIcon,
+  BeakerIcon,
+  RocketLaunchIcon,
 } from "@heroicons/react/24/solid";
 import {
   ServerStackIcon,
@@ -21,13 +19,11 @@ import {
   BoltIcon,
   LinkIcon,
 } from "@heroicons/react/24/outline";
-import Process from '../../../Common/Process';
-import AnimatedSection from '../../../Common/AnimatedSection';
-import FAQSection from '../../../Common/FAQSection';
-import FinalCtaBanner from '../../../Common/FinalCtaBanner';
+import Process from "../../../Common/Process";
+import AnimatedSection from "../../../Common/AnimatedSection";
+import FAQSection from "../../../Common/FAQSection";
+import FinalCtaBanner from "../../../Common/FinalCtaBanner";
 
-
-// --- Feature Data (No Change to structure; descriptions adjusted to neutral/company voice) ---
 const featureData = [
   {
     icon: CodeBracketIcon,
@@ -67,151 +63,177 @@ const featureData = [
   },
 ];
 
-
-// --- 1. DEFINING THE SPECIFIC PROCESS DATA (Text updated to Bantern/company voice) ---
 const PROCESS = [
-    {
-        id: 1,
-        name: "Discovery",
-        icon: MagnifyingGlassIcon,
-        title: "Discovery & Research",
-        description: "Bantern conducts discovery workshops to understand business goals, target users, and technical constraints.",
-        details: [ "Requirement gathering", "Market & competitor analysis", "User persona creation", "Define project scope & success metrics" ],
-    },
-    {
-        id: 2,
-        name: "Planning",
-        icon: ClipboardDocumentListIcon,
-        title: "Planning & Strategy",
-        description: "Bantern creates a detailed technical roadmap, architecture plan, and sprint schedule to guide delivery.",
-        details: [ "Technology stack selection", "System architecture design", "Feature prioritization", "Milestone and timeline planning" ],
-    },
-    {
-        id: 3,
-        name: "Design",
-        icon: PaintBrushIcon,
-        title: "UI/UX Design",
-        description: "Bantern designs intuitive, accessible interfaces and prototypes that prioritize usability and brand fidelity.",
-        details: [ "Wireframing and prototyping", "High-fidelity mockups", "User flow mapping", "Design system creation" ],
-    },
-    {
-        id: 4,
-        name: "Development",
-        icon: CodeBracketIcon,
-        title: "Development",
-        description: "Bantern implements the solution using modular, testable code and industry best practices for maintainability.",
-        details: [ "Frontend & Backend development", "Agile/Scrum delivery", "CI/CD implementation", "Code reviews & QA" ],
-    },
-    {
-        id: 5,
-        name: "Testing",
-        icon: BeakerIcon,
-        title: "Testing & QA",
-        description: "Bantern runs comprehensive testing to validate functionality, performance, and cross-platform compatibility.",
-        details: [ "Functional testing", "Performance optimization", "Cross-browser/device compatibility", "Accessibility checks" ],
-    },
-    {
-        id: 6,
-        name: "Launch",
-        icon: RocketLaunchIcon,
-        title: "Deployment & Handoff",
-        description: "Bantern manages deployment, monitoring setup, and handoff documentation to ensure a smooth launch and ongoing support.",
-        details: [ "Server deployment", "Post-launch monitoring", "Client training & documentation", "Ongoing maintenance & updates" ],
-    },
+  {
+    id: 1,
+    name: "Discovery",
+    icon: MagnifyingGlassIcon,
+    title: "Discovery & Research",
+    description:
+      "Bantern conducts discovery workshops to understand business goals, target users, and technical constraints.",
+    details: [
+      "Requirement gathering",
+      "Market & competitor analysis",
+      "User persona creation",
+      "Define project scope & success metrics",
+    ],
+  },
+  {
+    id: 2,
+    name: "Planning",
+    icon: ClipboardDocumentListIcon,
+    title: "Planning & Strategy",
+    description:
+      "Bantern creates a detailed technical roadmap, architecture plan, and sprint schedule to guide delivery.",
+    details: [
+      "Technology stack selection",
+      "System architecture design",
+      "Feature prioritization",
+      "Milestone and timeline planning",
+    ],
+  },
+  {
+    id: 3,
+    name: "Design",
+    icon: PaintBrushIcon,
+    title: "UI/UX Design",
+    description:
+      "Bantern designs intuitive, accessible interfaces and prototypes that prioritize usability and brand fidelity.",
+    details: [
+      "Wireframing and prototyping",
+      "High-fidelity mockups",
+      "User flow mapping",
+      "Design system creation",
+    ],
+  },
+  {
+    id: 4,
+    name: "Development",
+    icon: CodeBracketIcon,
+    title: "Development",
+    description:
+      "Bantern implements the solution using modular, testable code and industry best practices for maintainability.",
+    details: [
+      "Frontend & Backend development",
+      "Agile/Scrum delivery",
+      "CI/CD implementation",
+      "Code reviews & QA",
+    ],
+  },
+  {
+    id: 5,
+    name: "Testing",
+    icon: BeakerIcon,
+    title: "Testing & QA",
+    description:
+      "Bantern runs comprehensive testing to validate functionality, performance, and cross-platform compatibility.",
+    details: [
+      "Functional testing",
+      "Performance optimization",
+      "Cross-browser/device compatibility",
+      "Accessibility checks",
+    ],
+  },
+  {
+    id: 6,
+    name: "Launch",
+    icon: RocketLaunchIcon,
+    title: "Deployment & Handoff",
+    description:
+      "Bantern manages deployment, monitoring setup, and handoff documentation to ensure a smooth launch and ongoing support.",
+    details: [
+      "Server deployment",
+      "Post-launch monitoring",
+      "Client training & documentation",
+      "Ongoing maintenance & updates",
+    ],
+  },
 ];
-// --- END OF PROCESS DATA ---
 
-// --- Data for the FAQ items (Content updated to Bantern/company voice) ---
 const faqData = [
   {
     id: 1,
     question: "What technologies does Bantern use for web development?",
-    answer: "Bantern leverages modern web technologies such as React, Next.js, TypeScript, Node.js, and reliable database solutions (PostgreSQL, MongoDB, Firebase). The chosen stack is matched to project needs and long-term maintainability.",
+    answer:
+      "Bantern leverages modern web technologies such as React, Next.js, TypeScript, Node.js, and reliable database solutions (PostgreSQL, MongoDB, Firebase). The chosen stack is matched to project needs and long-term maintainability.",
   },
   {
     id: 2,
     question: "How long does web development typically take?",
-    answer: "Timelines vary with scope and complexity. Typical projects range from 4–12 weeks for standard websites and 2–4+ months for complex web applications. Bantern provides a detailed timeline after the discovery phase.",
+    answer:
+      "Timelines vary with scope and complexity. Typical projects range from 4–12 weeks for standard websites and 2–4+ months for complex web applications. Bantern provides a detailed timeline after the discovery phase.",
   },
   {
     id: 3,
     question: "Does Bantern handle both frontend and backend development?",
-    answer: "Yes. Bantern provides end-to-end development services covering frontend interfaces, backend systems, APIs, and database design to ensure an integrated and consistent solution.",
+    answer:
+      "Yes. Bantern provides end-to-end development services covering frontend interfaces, backend systems, APIs, and database design to ensure an integrated and consistent solution.",
   },
   {
     id: 4,
     question: "How does Bantern ensure website security?",
-    answer: "Security is built into every project. Bantern follows best practices including secure authentication, encrypted communication, input validation, regular dependency updates, and vulnerability scanning to reduce risk.",
+    answer:
+      "Security is built into every project. Bantern follows best practices including secure authentication, encrypted communication, input validation, regular dependency updates, and vulnerability scanning to reduce risk.",
   },
   {
     id: 5,
     question: "Can Bantern work with existing designs or teams?",
-    answer: "Absolutely. Bantern can implement existing designs, collaborate with in-house teams, or provide full design and development services depending on client needs.",
+    answer:
+      "Absolutely. Bantern can implement existing designs, collaborate with in-house teams, or provide full design and development services depending on client needs.",
   },
 ];
 
-
-
 const WebsiteDevelopment = () => {
+  const pathItems = [
+    { name: "Services", href: "/services" },
+    { name: "Website Development", href: "/services/website-development" },
+  ];
 
-    const pathItems = [
-        { name: "Services", href: "/services" },
-        { name: "Website Development", href: "/services/website-development" },
-    ];
-    
-    // Props for the reusable Process component
-    const processDataProps = {
-        title: "Our Development Methodology",
-        subtitle: "Bantern follows a structured six-step methodology to deliver robust, maintainable web applications.",
-    };
+  const processDataProps = {
+    title: "Our Development Methodology",
+    subtitle:
+      "Bantern follows a structured six-step methodology to deliver robust, maintainable web applications.",
+  };
 
-    return (
-        <div className="flex flex-col gap-16">
+  return (
+    <div className="flex flex-col gap-16">
+      <Breadcrumbs items={pathItems} />
 
-            <Breadcrumbs items={pathItems} /> 
+      <SubpageHero
+        category="Service"
+        title="Web Development Service"
+        subtitle="Custom, high-performance web development by Bantern using modern technologies for optimal results."
+      />
 
-            <SubpageHero
-                category="Service"
-                title="Web Development Service"
-                subtitle="Custom, high-performance web development by Bantern using modern technologies for optimal results."
-            />
-              
-            <ContentBlockImage
-                title="Build Powerful Web Applications with Modern Technologies"
-                paragraph1="Bantern builds fast, scalable, and secure web applications tailored to business objectives. Our development approach focuses on reliability, maintainability, and delivering measurable outcomes."
-                paragraph2="From marketing sites and landing pages to complex web applications and dashboards, Bantern provides end-to-end development services including architecture, implementation, testing, and deployment."
-                ctaText="Get Started"
-                imageSrc={"https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1936&auto=format&fit=crop"}
-                reverse={false} 
-            />
+      <ContentBlockImage
+        title="Build Powerful Web Applications with Modern Technologies"
+        paragraph1="Bantern builds fast, scalable, and secure web applications tailored to business objectives. Our development approach focuses on reliability, maintainability, and delivering measurable outcomes."
+        paragraph2="From marketing sites and landing pages to complex web applications and dashboards, Bantern provides end-to-end development services including architecture, implementation, testing, and deployment."
+        ctaText="Get Started"
+        imageSrc={websiteDevelopment}
+        reverse={false}
+      />
 
-            <KeyFeaturesGrid
-            featureData={featureData}
-            />
-            
-            {/* --- 2. UPDATED: Passing specific data to the Process component --- */}
-            <Process 
-                title={processDataProps.title} 
-                subtitle={processDataProps.subtitle} 
-                stepsData={PROCESS} // Pass the newly defined array
-            />
+      <KeyFeaturesGrid featureData={featureData} />
 
-            <AnimatedSection>
-                <FAQSection 
-                faqData={faqData}
-                /> 
-            </AnimatedSection>
+      <Process
+        title={processDataProps.title}
+        subtitle={processDataProps.subtitle}
+        stepsData={PROCESS}
+      />
 
-            <FinalCtaBanner 
-                category="Ready to Start?"
-                headline="Ready to Build Your Next Web Project?"
-                subtext="Bantern delivers powerful, scalable web applications that meet business objectives and exceed user expectations."
-                ctaText="Start your project"
-            />
-           
+      <AnimatedSection>
+        <FAQSection faqData={faqData} />
+      </AnimatedSection>
 
-        </div>
-    );
+      <FinalCtaBanner
+        category="Ready to Start?"
+        headline="Ready to Build Your Next Web Project?"
+        subtext="Bantern delivers powerful, scalable web applications that meet business objectives and exceed user expectations."
+        ctaText="Start your project"
+      />
+    </div>
+  );
 };
 
 export default WebsiteDevelopment;

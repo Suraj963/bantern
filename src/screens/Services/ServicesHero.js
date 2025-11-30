@@ -1,12 +1,8 @@
-/* src/components/ServicesHero/ServicesHero.jsx */
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-// CHANGED: Using SOLID icon for the primary CTA
 import { ArrowRightIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import React from "react";
 
-// --- Animation Variants (No change) ---
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -42,7 +38,6 @@ const ServicesHero = () => {
       }}
     >
       <div className="relative z-10 flex flex-col items-center">
-        {/* 1. "Our Services" Pill (No change) */}
         <motion.div
           variants={itemVariants}
           className="mb-6 flex items-center gap-1 text-sm font-medium text-primary bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-full px-4 py-1.5 transition-colors cursor-pointer"
@@ -50,15 +45,6 @@ const ServicesHero = () => {
           <span>Our Services</span>
           <ChevronRightIcon className="w-4 h-4" />
         </motion.div>
-
-        {/* ======================================
-          CHANGED: Main Headline
-          - Ripped out the "Scalable Solutions" fluff.
-          - Ripped out the inconsistent 'font-serif' and gradient.
-          - Replaced with a strong, direct, SANS-SERIF headline
-            that matches your "for all business" brand.
-          ======================================
-        */}
         <motion.h1
           variants={itemVariants}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground max-w-4xl"
@@ -67,35 +53,18 @@ const ServicesHero = () => {
           <br />
           Built Right.
         </motion.h1>
-
-        {/* ======================================
-          CHANGED: Sub-headline
-          - Replaced "end-to-end software solutions" fluff.
-          - Added a direct, confident promise.
-          ======================================
-        */}
         <motion.p
           variants={itemVariants}
           className="mt-8 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-lg text-muted-foreground max-w-2xl"
         >
-          We are your dedicated technical partner for growing any business, of any size.
+          We are your dedicated technical partner for growing any business, of
+          any size.
         </motion.p>
-
-        {/* ======================================
-          CHANGED: Call to Action
-          - Ripped out the weak, dead-end "View Work" button.
-          - Replaced with your STANDARD, BULLETPROOF CTA block.
-          - This funnels all users to your one conversion goal.
-          ======================================
-        */}
         <motion.div
           variants={itemVariants}
           className="mt-12 w-full flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-2"
         >
-          <Link
-            to="/audit"
-            className="w-full sm:w-auto"
-          >
+          <Link to="/audit" className="w-full sm:w-auto">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

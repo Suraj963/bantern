@@ -10,30 +10,25 @@ const About = () => {
     <>
       {/* <div className="flex flex-col gap-16 md:gap-24"> */}
 
-        <AnimatedSection>
-          <AboutUs />
-        </AnimatedSection>
+      <AnimatedSection>
+        <AboutUs />
+      </AnimatedSection>
 
-        <AboutHero />
+      <AboutHero />
 
-        <AnimatedSection>
-          <OurMission />
-        </AnimatedSection>
+      <AnimatedSection>
+        <OurMission />
+      </AnimatedSection>
 
-        <AnimatedSection>
-          <FeaturedProjects />
-        </AnimatedSection>
+      <AnimatedSection>
+        <FeaturedProjects />
+      </AnimatedSection>
 
-        <AnimatedSection>
-          <ContactSection />
-        </AnimatedSection>
+      <AnimatedSection>
+        <ContactSection />
+      </AnimatedSection>
 
-        {/* You can add your other "About" page components here.
-        Remember to wrap them in <AnimatedSection> so they
-        fade in as the user scrolls down.
-      */}
-
-        {/*
+      {/*
       <AnimatedSection>
         <OurTeam />
       </AnimatedSection>
