@@ -20,7 +20,7 @@ const Home = () => {
       </AnimatedSection> */}
       <AnimatedSection>
         {/* <AboutUs /> */}
-        <HowItWorks/>
+        <HowItWorks />
       </AnimatedSection>
       <AnimatedSection>
         <Services />

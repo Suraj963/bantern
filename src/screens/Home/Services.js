@@ -1,5 +1,3 @@
-/* src/components/Services.jsx */
-
 import React, { useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import {
@@ -13,13 +11,9 @@ import {
 } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { BoltIcon, ShoppingCartIcon } from "@heroicons/react/24/solid";
-// --- 1. IMPORT EMBLA AND AUTOPLAY ---
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-/**
- * A single service card component (No change)
- */
 const ServiceCard = ({ icon: Icon, title, path, children }) => {
   return (
     <motion.div
@@ -43,7 +37,6 @@ const ServiceCard = ({ icon: Icon, title, path, children }) => {
   );
 };
 
-// --- Service data array (No change) ---
 const servicesList = [
   {
     icon: CodeBracketIcon,
@@ -53,7 +46,7 @@ const servicesList = [
     path: "/services",
   },
   {
-    icon: ShoppingCartIcon, // NEW
+    icon: ShoppingCartIcon,
     title: "E-Commerce Solutions",
     description:
       "Full-featured online stores with secure payments and inventory management to sell your products.",
@@ -67,7 +60,7 @@ const servicesList = [
     path: "/services",
   },
   {
-    icon: SparklesIcon, // NEW
+    icon: SparklesIcon,
     title: "Custom Software",
     description:
       "Bespoke software solutions, automations, and dashboards to solve your unique business problems.",
@@ -89,24 +82,18 @@ const servicesList = [
   },
 ];
 
-
-/**
- * The main "What We Offer" services section
- */
 const Services = () => {
-  // --- 2. SET UP EMBLA CAROUSEL ---
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "start" },
     [
       Autoplay({
-        delay: 4000, // 4-second pause on each card
-        stopOnInteraction: true, // Stops on manual drag
-        stopOnMouseEnter: true, // Stops on hover
+        delay: 4000,
+        stopOnInteraction: true,
+        stopOnMouseEnter: true,
       }),
     ]
   );
 
-  // Restart autoplay when mouse leaves
   useEffect(() => {
     if (!emblaApi) return;
     const autoplay = emblaApi.plugins().autoplay;
@@ -124,11 +111,9 @@ const Services = () => {
       emblaApi.rootNode().removeEventListener("mouseleave", restartAutoplay);
     };
   }, [emblaApi]);
-  // --- END OF EMBLA SETUP ---
 
   return (
     <section className="w-full py-4 md:py-8 overflow-hidden pt-0 sm:pt-20 lg:pt-5">
-      {/* 5. New container to constrain heading (No change) */}
       <div className="w-full max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="flex flex-col items-center text-center">
           <div className="bg-card border border-border/50 rounded-full px-4 py-1 text-sm text-primary mb-4">
@@ -150,9 +135,7 @@ const Services = () => {
           </p>
         </div>
       </div>
-      {/* End of constrained container */}
 
-      {/* --- 3. UPDATED: Scroller markup for Embla --- */}
       <div
         className="w-full embla"
         ref={emblaRef}
@@ -165,7 +148,6 @@ const Services = () => {
           {[...servicesList, ...servicesList].map((service, index) => (
             <div
               key={index}
-              // --- UPDATED: Restored original fixed widths ---
               className="embla__slide flex-shrink-0 w-80 md:w-96 p-3"
             >
               <ServiceCard
@@ -179,9 +161,7 @@ const Services = () => {
           ))}
         </div>
       </div>
-      {/* --- END OF UPDATE --- */}
 
-      {/* 4. Button re-constrained in its own container (No change) */}
       <div className="w-full max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="flex justify-center mt-12">
           <Link to="/services">

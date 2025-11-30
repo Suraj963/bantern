@@ -1,25 +1,23 @@
-/* src/components/Process.jsx */
-
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  MagnifyingGlassIcon, 
-  ClipboardDocumentListIcon, 
-  PaintBrushIcon, 
-  CodeBracketIcon, 
-  BeakerIcon, 
+import {
+  MagnifyingGlassIcon,
+  ClipboardDocumentListIcon,
+  PaintBrushIcon,
+  CodeBracketIcon,
+  BeakerIcon,
   RocketLaunchIcon,
-  ChevronRightIcon
+  ChevronRightIcon,
 } from "@heroicons/react/24/solid";
 
-// 1. Define the data for all 6 steps (No change)
 const processSteps = [
   {
     id: 1,
     name: "Discovery",
     icon: MagnifyingGlassIcon,
     title: "Discovery & Research",
-    description: "Understanding your vision, goals, and target audience to build a solid foundation.",
+    description:
+      "Understanding your vision, goals, and target audience to build a solid foundation.",
     details: [
       "Requirement gathering",
       "Market analysis",
@@ -32,7 +30,8 @@ const processSteps = [
     name: "Planning",
     icon: ClipboardDocumentListIcon,
     title: "Planning & Strategy",
-    description: "Creating a detailed roadmap, defining architecture, and planning our sprints.",
+    description:
+      "Creating a detailed roadmap, defining architecture, and planning our sprints.",
     details: [
       "Technology stack selection",
       "System architecture design",
@@ -45,7 +44,8 @@ const processSteps = [
     name: "Design",
     icon: PaintBrushIcon,
     title: "UI/UX Design",
-    description: "Crafting intuitive, beautiful, and responsive interfaces that your users will love.",
+    description:
+      "Crafting intuitive, beautiful, and responsive interfaces that your users will love.",
     details: [
       "Wireframing and prototyping",
       "High-fidelity mockups",
@@ -58,7 +58,8 @@ const processSteps = [
     name: "Development",
     icon: CodeBracketIcon,
     title: "Development",
-    description: "Bringing the designs to life with clean, efficient, and scalable code.",
+    description:
+      "Bringing the designs to life with clean, efficient, and scalable code.",
     details: [
       "Frontend & Backend development",
       "Agile/Scrum methodology",
@@ -71,7 +72,8 @@ const processSteps = [
     name: "Testing",
     icon: BeakerIcon,
     title: "Testing & QA",
-    description: "Ensuring functionality, performance, and compatibility across all devices.",
+    description:
+      "Ensuring functionality, performance, and compatibility across all devices.",
     details: [
       "Functional testing",
       "Performance optimization",
@@ -84,7 +86,8 @@ const processSteps = [
     name: "Launch",
     icon: RocketLaunchIcon,
     title: "Launch & Support",
-    description: "Deploying the application and providing ongoing support for a seamless experience.",
+    description:
+      "Deploying the application and providing ongoing support for a seamless experience.",
     details: [
       "Server deployment",
       "Post-launch monitoring",
@@ -94,38 +97,38 @@ const processSteps = [
   },
 ];
 
-// 2. Animation variants for the content (No change)
 const contentVariants = {
   initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 20, duration: 0.2 } },
-  exit: { opacity: 0, y: -20, transition: { duration: 0.2 } }
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 100, damping: 20, duration: 0.2 },
+  },
+  exit: { opacity: 0, y: -20, transition: { duration: 0.2 } },
 };
 
-// 3. Card gradients (No change)
 const cardGradients = [
-  "radial-gradient(at top left, hsl(154 100% 50% / 0.2), transparent 70%)",   // Green (Primary)
-  "radial-gradient(at top right, hsl(217 91% 60% / 0.2), transparent 70%)",  // Blue
+  "radial-gradient(at top left, hsl(154 100% 50% / 0.2), transparent 70%)", // Green (Primary)
+  "radial-gradient(at top right, hsl(217 91% 60% / 0.2), transparent 70%)", // Blue
   "radial-gradient(at bottom left, hsl(262 83% 58% / 0.2), transparent 70%)", // Purple
-  "radial-gradient(at bottom right, hsl(174 72% 56% / 0.2), transparent 70%)",// Teal
-  "radial-gradient(at top, hsl(24 96% 53% / 0.2), transparent 70%)",          // Orange
-  "radial-gradient(at bottom, hsl(0 84% 60% / 0.2), transparent 70%)",       // Red
+  "radial-gradient(at bottom right, hsl(174 72% 56% / 0.2), transparent 70%)", // Teal
+  "radial-gradient(at top, hsl(24 96% 53% / 0.2), transparent 70%)", // Orange
+  "radial-gradient(at bottom, hsl(0 84% 60% / 0.2), transparent 70%)", // Red
 ];
 
 const Process1 = () => {
   const [activeStep, setActiveStep] = useState(1);
   const intervalRef = useRef(null);
 
-  // 4. Function to start/reset the auto-cycle (No change)
   const startAutoCycle = () => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
     intervalRef.current = setInterval(() => {
       setActiveStep((prevStep) => (prevStep === 6 ? 1 : prevStep + 1));
-    }, 5000); 
+    }, 5000);
   };
 
-  // 5. Start the auto-cycle on component mount (No change)
   useEffect(() => {
     startAutoCycle();
     return () => {
@@ -135,23 +138,20 @@ const Process1 = () => {
     };
   }, []);
 
-  // 6. Handle manual step click (No change)
   const handleStepClick = (stepId) => {
     setActiveStep(stepId);
-    startAutoCycle(); // Reset the timer
+    startAutoCycle();
   };
 
-  // 7. Get the data for the currently active step (No change)
   const currentStepData = processSteps.find((step) => step.id === activeStep);
 
   return (
     <section className="w-full max-w-screen-xl mx-auto p-4 md:p-8">
-      {/* === TOP HEADING (No change) === */}
       <div className="flex flex-col items-center text-center">
         <div className="bg-card border border-border/50 rounded-full px-4 py-1 text-sm text-primary mb-4">
           Our Process
         </div>
-        <h2 
+        <h2
           className="
             text-4xl md:text-6xl font-bold mb-4
             bg-clip-text text-transparent 
@@ -162,65 +162,80 @@ const Process1 = () => {
           How We Work
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mb-12">
-          A structured approach to delivering exceptional results for your project.
+          A structured approach to delivering exceptional results for your
+          project.
         </p>
       </div>
 
-      {/* === 6-STEP PROGRESS BAR (No change) === */}
       <div className="flex justify-between items-start mb-12 relative">
-        {/* The line */}
         <div className="absolute top-5 sm:top-6 left-0 w-full h-0.5 bg-border -translate-y-1/2" />
-        
-        {/* The steps */}
+
         {processSteps.map((step) => (
-          <div 
-            key={step.id} 
-            className="flex flex-col items-center z-10 cursor-pointer w-1/6 px-1" // Use 1/6 width
+          <div
+            key={step.id}
+            className="flex flex-col items-center z-10 cursor-pointer w-1/6 px-1"
             onClick={() => handleStepClick(step.id)}
           >
             <motion.div
               animate={{
-                backgroundColor: activeStep === step.id ? 'hsl(var(--foreground))' : 'hsl(var(--card))',
-                borderColor: activeStep === step.id ? 'hsl(var(--foreground))' : 'hsl(var(--border))',
+                backgroundColor:
+                  activeStep === step.id
+                    ? "hsl(var(--foreground))"
+                    : "hsl(var(--card))",
+                borderColor:
+                  activeStep === step.id
+                    ? "hsl(var(--foreground))"
+                    : "hsl(var(--border))",
                 scale: activeStep === step.id ? 1.1 : 1,
               }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 flex items-center justify-center flex-shrink-0" // Made circles smaller
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 flex items-center justify-center flex-shrink-0"
             >
-              <span className={`text-sm sm:text-base ${activeStep === step.id ? 'text-background font-bold' : 'text-foreground'}`}>
+              <span
+                className={`text-sm sm:text-base ${
+                  activeStep === step.id
+                    ? "text-background font-bold"
+                    : "text-foreground"
+                }`}
+              >
                 {step.id}
               </span>
             </motion.div>
-            <span className="text-[10px] sm:text-sm text-muted-foreground mt-2 text-center">{step.name}</span>
+            <span className="text-[10px] sm:text-sm text-muted-foreground mt-2 text-center">
+              {step.name}
+            </span>
           </div>
         ))}
       </div>
 
-
-      {/* === MAIN CARD (No change) === */}
       <div className="bg-card/50 border border-border/50 rounded-2xl p-6 md:p-10 min-h-0">
         <AnimatePresence mode="wait">
           <motion.div
-            key={activeStep} // This triggers the animation
+            key={activeStep}
             variants={contentVariants}
             initial="initial"
             animate="animate"
             exit="exit"
             className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12"
           >
-            {/* Left Column: Details (No change) */}
             <div className="flex flex-col">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                   <currentStepData.icon className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <span className="text-primary font-semibold">Step 0{currentStepData.id}</span>
-                  <h3 className="text-3xl md:text-4xl font-bold">{currentStepData.title}</h3>
+                  <span className="text-primary font-semibold">
+                    Step 0{currentStepData.id}
+                  </span>
+                  <h3 className="text-3xl md:text-4xl font-bold">
+                    {currentStepData.title}
+                  </h3>
                 </div>
               </div>
-              
-              <p className="text-lg text-muted-foreground mb-6">{currentStepData.description}</p>
+
+              <p className="text-lg text-muted-foreground mb-6">
+                {currentStepData.description}
+              </p>
               <ul className="space-y-3">
                 {currentStepData.details.map((detail, index) => (
                   <li key={index} className="flex items-center">
@@ -231,27 +246,26 @@ const Process1 = () => {
               </ul>
             </div>
 
-
-            {/* Right Column: SUB CARD */}
-            <div 
+            <div
               className="relative bg-card/80 border border-border/50 rounded-2xl p-4 sm:p-8 flex items-center justify-center min-h-[14rem] md:min-h-[18rem]"
-              style={{ 
-                backgroundImage: cardGradients[currentStepData.id - 1] 
+              style={{
+                backgroundImage: cardGradients[currentStepData.id - 1],
               }}
             >
-              {/* --- 1. UPDATED: Giant number color --- */}
               <div className="absolute bottom-[-2rem] right-[-1rem] text-8xl sm:text-9xl font-bold text-foreground opacity-20 pointer-events-none">
                 0{currentStepData.id}
               </div>
-              {/* --- END OF UPDATE --- */}
-              
-              {/* Centered content (No change) */}
+
               <div className="flex flex-col items-center text-center">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg bg-muted flex items-center justify-center mb-6">
                   <currentStepData.icon className="w-6 h-6 sm:w-9 sm:h-9 text-primary" />
                 </div>
-                <h4 className="text-xl sm:text-2xl font-semibold mb-2">{currentStepData.title}</h4>
-                <p className="text-muted-foreground max-w-xs text-sm sm:text-base">{currentStepData.description}</p>
+                <h4 className="text-xl sm:text-2xl font-semibold mb-2">
+                  {currentStepData.title}
+                </h4>
+                <p className="text-muted-foreground max-w-xs text-sm sm:text-base">
+                  {currentStepData.description}
+                </p>
               </div>
             </div>
           </motion.div>

@@ -1,11 +1,12 @@
-/* src/components/ProjectDetailHeader.jsx */
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeftIcon, ClockIcon, CurrencyDollarIcon } from "@heroicons/react/24/solid";
+import {
+  ArrowLeftIcon,
+  ClockIcon,
+  CurrencyDollarIcon,
+} from "@heroicons/react/24/solid";
 import React from "react";
 
-// Animation for the container
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -14,7 +15,6 @@ const containerVariants = {
   },
 };
 
-// Animation for each item
 const itemVariants = {
   hidden: { opacity: 0, y: -20 },
   visible: {
@@ -24,9 +24,6 @@ const itemVariants = {
   },
 };
 
-/**
- * Reusable Header for a project detail page.
- */
 const ProjectDetailHeader = ({ category, timeline, budget }) => {
   return (
     <motion.div
@@ -35,9 +32,8 @@ const ProjectDetailHeader = ({ category, timeline, budget }) => {
       animate="visible"
       className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pb-6 border-b border-border/50"
     >
-      {/* Back to Projects Link */}
       <motion.div variants={itemVariants}>
-        <Link 
+        <Link
           to="/portfolio"
           className="flex items-center text-sm font-medium text-muted-foreground hover:text-primary transition-colors group"
         >
@@ -45,9 +41,11 @@ const ProjectDetailHeader = ({ category, timeline, budget }) => {
           Back to Projects
         </Link>
       </motion.div>
-      
-      {/* Meta Data */}
-      <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4 md:gap-6">
+
+      <motion.div
+        variants={itemVariants}
+        className="flex flex-wrap items-center gap-4 md:gap-6"
+      >
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-semibold">
             {category}

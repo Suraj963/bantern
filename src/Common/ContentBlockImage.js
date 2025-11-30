@@ -1,12 +1,9 @@
-/* src/components/ContentBlockImage.jsx */
-
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import { Link } from "react-router-dom";
 
-// --- Animation Variants (No Change) ---
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -24,9 +21,6 @@ const itemVariants = {
   },
 };
 
-/**
- * Reusable component for displaying large content blocks next to an image/mockup.
- */
 const ContentBlockImage = ({
   title,
   paragraph1,
@@ -53,7 +47,6 @@ const ContentBlockImage = ({
       <div
         className={`flex flex-col ${layoutOrder} gap-12 md:gap-16 items-center justify-between`}
       >
-        {/* === Left/Text Column (Item 1 on Desktop) === */}
         <div className="flex flex-col gap-6 lg:w-1/2">
           <motion.h2
             variants={itemVariants}
@@ -76,32 +69,29 @@ const ContentBlockImage = ({
             {paragraph2}
           </motion.p>
 
-          {/* CTA Button */}
           <Link
             to="/contact"
             className="
-    mt-4 bg-foreground text-background 
-    px-6 py-3 rounded-full 
-    text-base font-medium 
-    flex items-center group w-fit
-    transition-transform 
-    hover:scale-105 
-    active:scale-95
-  "
+                      mt-4 bg-foreground text-background 
+                      px-6 py-3 rounded-full 
+                      text-base font-medium 
+                      flex items-center group w-fit
+                      transition-transform 
+                      hover:scale-105 
+                      active:scale-95
+                    "
           >
             {ctaText}
             <ArrowRightIcon className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
 
-        {/* === Right/Image Column (Item 2 on Desktop) === */}
         <motion.div variants={itemVariants} className="lg:w-1/2 w-full">
           <motion.img
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
             src={imageSrc}
             alt={title}
-            // --- UPDATED: Reduced mobile height to h-64 ---
             className="w-full h-64 sm:h-96 lg:h-96 rounded-xl shadow-2xl border border-border/50 object-cover"
           />
         </motion.div>

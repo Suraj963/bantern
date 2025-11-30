@@ -1,13 +1,5 @@
-/* src/components/TechScroller.jsx */
-// This is the one, correct, bulletproof component.
-
 import React from "react";
-import {
-  FaReact,
-  FaNodeJs,
-  FaFigma,
-  FaJava,
-} from "react-icons/fa6";
+import { FaReact, FaNodeJs, FaFigma, FaJava } from "react-icons/fa6";
 import { FaMobileAlt } from "react-icons/fa";
 import {
   SiMongodb,
@@ -19,18 +11,17 @@ import {
   SiMysql,
 } from "react-icons/si";
 
-// This is the correct, professional tech stack.
 const techIcons = [
   { name: "React", icon: <FaReact /> },
   { name: "React Native", icon: <FaMobileAlt /> },
   { name: "JavaScript", icon: <SiJavascript /> },
   { name: "Node.js", icon: <FaNodeJs /> },
   { name: "Java", icon: <FaJava /> },
-  { name: "Spring Boot", icon: <SiSpringboot /> }, // The correct GREEN LEAF
+  { name: "Spring Boot", icon: <SiSpringboot /> },
   { name: "MySQL", icon: <SiMysql /> },
   { name: "MongoDB", icon: <SiMongodb /> },
-  { name: "Tailwind CSS", icon: <SiTailwindcss /> }, // The correct Tailwind logo
-  { name: "Stripe", icon: <SiStripe /> }, // The correct Stripe logo
+  { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+  { name: "Stripe", icon: <SiStripe /> },
   { name: "Figma", icon: <FaFigma /> },
   { name: "Vercel", icon: <SiVercel /> },
 ];

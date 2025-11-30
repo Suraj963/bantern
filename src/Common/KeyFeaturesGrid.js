@@ -1,10 +1,7 @@
-/* src/components/KeyFeaturesGrid.jsx */
-
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import React from "react";
 
-// --- Animation Variants (No Change) ---
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -22,9 +19,6 @@ const itemVariants = {
   },
 };
 
-/**
- * Reusable component for displaying Key Features in a grid.
- */
 const KeyFeaturesGrid = ({ featureData }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -39,7 +33,6 @@ const KeyFeaturesGrid = ({ featureData }) => {
       animate={inView ? "visible" : "hidden"}
       className="w-full max-w-screen-xl mx-auto p-4 md:p-8 pt-0 sm:pt-28 lg:pt-0"
     >
-      {/* Heading Block --- UPDATED: Added Shine Effect --- */}
       <div className="text-center mb-12">
         <motion.h2
           variants={itemVariants}
@@ -47,10 +40,10 @@ const KeyFeaturesGrid = ({ featureData }) => {
                bg-[linear-gradient(110deg,hsl(var(--foreground))_30%,hsl(var(--primary))_50%,hsl(var(--foreground))_70%)]
                bg-[200%_auto] animate-shine inline-block leading-[1.08] pb-0.5"
           style={{
-            overflow: "visible", // prevents clipping when parent has overflow-hidden
-            WebkitBackgroundClip: "text", // ensure background-clip works across browsers
-            WebkitTextFillColor: "transparent", // ensures text color is transparent for bg-clip
-            transform: "translateZ(0)", // promote to its own layer to avoid subpixel rasterization artifacts
+            overflow: "visible",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            transform: "translateZ(0)",
           }}
         >
           Key Features
@@ -65,24 +58,20 @@ const KeyFeaturesGrid = ({ featureData }) => {
         </motion.p>
       </div>
 
-      {/* Features Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {featureData.map((feature, index) => (
           <motion.div
             key={index}
             variants={itemVariants}
-            // --- UPDATED: Hover effect for lift and green border ---
             whileHover={{ y: -5 }}
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
             className="group bg-background border border-border/50 rounded-lg p-6 flex flex-col h-full 
                        transition-colors duration-300 hover:border-primary hover:shadow-xl hover:shadow-primary/20"
           >
-            {/* Icon */}
             <div className="mb-4">
               <feature.icon className="w-8 h-8 text-primary" />
             </div>
 
-            {/* Title & Description */}
             <h3 className="text-xl font-semibold text-foreground mb-2">
               {feature.title}
             </h3>

@@ -1,9 +1,7 @@
-/* src/components/ThemeToggle.jsx */
-
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useTheme } from '../context/ThemeContext';
-import { SunIcon, MoonIcon } from '@heroicons/react/24/solid';
+import React from "react";
+import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
+import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
@@ -15,7 +13,7 @@ const ThemeToggle = () => {
       whileTap={{ scale: 0.9 }}
       className="p-2 rounded-full bg-muted text-muted-foreground hover:text-primary transition-colors"
     >
-      {theme === 'dark' ? (
+      {theme === "dark" ? (
         <SunIcon className="w-5 h-5" />
       ) : (
         <MoonIcon className="w-5 h-5" />

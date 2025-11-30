@@ -1,15 +1,12 @@
-/* src/components/PortfolioProjectCard.jsx */
-
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { ProjectGridItem } from "./ProjectGridItem"; // Import the item component
+import { ProjectGridItem } from "./ProjectGridItem";
 import interior from "../../assets/iinterior.png";
 import dentist from "../../assets/dentist.png";
 import ecommerce from "../../assets/ecommerce.png";
 import veterinary from "../../assets/pets.png";
 import React from "react";
 
-// --- 7 Dummy Data Items for Bantern (No change) ---
 const projectData = [
   {
     id: 1,
@@ -18,7 +15,7 @@ const projectData = [
     description:
       "A professional dental clinic website providing appointment scheduling, service details, and patient resources.",
     tags: ["SEO", "Portfolio Showcase", "Client Testimonials"],
-    imageUrl: dentist, // Dental clinic image
+    imageUrl: dentist,
     url: "https://dental-liart-eight.vercel.app/",
   },
   {
@@ -28,7 +25,7 @@ const projectData = [
     description:
       "A modern ecommerce store featuring curated clothing collections with smooth shopping and secure checkout.",
     tags: ["SEO", "Portfolio Showcase", "Client Testimonials"],
-    imageUrl: ecommerce, // Skin clinic image
+    imageUrl: ecommerce,
     url: "https://ecommerce-lovat-one-65.vercel.app/",
   },
   {
@@ -38,7 +35,7 @@ const projectData = [
     description:
       "An elegant home interiors site showcasing portfolios, service packages, and client testimonials.",
     tags: ["SEO", "Portfolio Showcase", "Client Testimonials"],
-    imageUrl: interior, // Nutrition image
+    imageUrl: interior,
     url: "https://interior-seven-gray.vercel.app/",
   },
   {
@@ -48,12 +45,11 @@ const projectData = [
     description:
       "A user-friendly pet care platform offering service booking, pet health tips, and community forums.",
     tags: ["SEO", "Portfolio Showcase", "Client Testimonials"],
-    imageUrl: veterinary, // Office/Analytics image
+    imageUrl: veterinary,
     url: "https://veterinary-beta.vercel.app/",
   },
 ];
 
-// --- Animation Variants (Staggered Entrance) ---
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -105,7 +101,6 @@ const PortfolioProjectCard = () => {
         </p>
       </div>
 
-      {/* Grid Display */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projectData.map((project, index) => (
           <div key={index} className="h-full">

@@ -1,24 +1,16 @@
-/* src/components/BentoCard.jsx */
-
 import { motion } from "framer-motion";
 
 /**
- * A reusable card component for the bento grid.
- * @param {string} className - Additional classes for grid layout (e.g., col-span-2)
- * @param {React.ReactNode} children - Content to display inside the card
- * @param {object} variants - Framer Motion variants passed from the parent
+ * @param {string} className
+ * @param {React.ReactNode} children
+ * @param {object} variants
  */
 export const BentoCard = ({ className, children, variants }) => {
   return (
     <motion.div
-      // Apply the variants from the parent
       variants={variants}
-      
-      // "Come out" effect on hover
-      whileHover={{ scale: 1.05 }} 
+      whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      
-      // Base styles
       className={`
         group relative overflow-hidden 
         bg-background border border-border 
@@ -29,17 +21,14 @@ export const BentoCard = ({ className, children, variants }) => {
         rounded-2xl 
       `}
     >
-      {/* The content */}
-      <div className="relative z-10 flex flex-col h-full">
-        {children}
-      </div>
-      
-      {/* Subtle Glow Effect on Hover */}
-      <div 
+      <div className="relative z-10 flex flex-col h-full">{children}</div>
+
+      <div
         className="absolute -top-1/4 -left-1/4 w-[150%] h-[150%] 
                    opacity-0 transition-opacity duration-500 group-hover:opacity-100"
         style={{
-          background: 'radial-gradient(circle, hsl(var(--primary) / 0.10), transparent 50%)'
+          background:
+            "radial-gradient(circle, hsl(var(--primary) / 0.10), transparent 50%)",
         }}
       />
     </motion.div>
