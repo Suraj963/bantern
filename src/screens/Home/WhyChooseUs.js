@@ -98,7 +98,9 @@ const WhyChooseUs = () => {
 
         <motion.h2
           variants={itemVariants}
-          className="text-4xl md:text-6xl font-bold mb-4"
+          className="text-4xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent 
+              bg-[linear-gradient(110deg,hsl(var(--foreground))_30%,hsl(var(--primary))_50%,hsl(var(--foreground))_70%)]
+              bg-[200%_auto] animate-shine"
         >
           Why Work With Us?
         </motion.h2>
