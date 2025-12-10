@@ -9,7 +9,7 @@ const ThankYou = () => {
         </h1>
         <p className="text-sm text-muted-foreground mb-4">
           We'll email you to confirm the slot and next steps. If you don't see
-          an email in 10 minutes, check spam or write to hello@bantern.com.
+          an email in 10 minutes, check spam or write to nexawhale@gmail.com.
         </p>
         <Link to="/" className="text-sm text-primary underline">
           Return to home

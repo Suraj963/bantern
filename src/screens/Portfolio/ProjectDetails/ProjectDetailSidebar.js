@@ -115,7 +115,7 @@ const ProjectDetailSidebar = ({
           requirements.
         </p>
         <motion.a
-          href="mailto:hello@bantern.com"
+          href="mailto:nexawhale@gmail.com"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="

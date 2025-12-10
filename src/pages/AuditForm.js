@@ -51,9 +51,9 @@ export default function AuditForm() {
           <input
             type="hidden"
             name="_subject"
-            value="New Audit Booking from Bantern"
+            value="New Audit Booking from NexaWhale"
           />
-          <input type="hidden" name="source" value="bantern-audit-form" />
+          <input type="hidden" name="source" value="NexaWhale-audit-form" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <label className="flex flex-col">

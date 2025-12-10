@@ -70,7 +70,7 @@ const WEBSITE_DESIGN_PROCESS = [
     icon: MagnifyingGlassIcon,
     title: "Project Scoping",
     description:
-      "Bantern begins by understanding your brand, goals, and audience to establish a strong project foundation.",
+      "NexaWhale begins by understanding your brand, goals, and audience to establish a strong project foundation.",
     details: [
       "Brand alignment & competitor analysis",
       "Audience identification & goal setting",
@@ -84,7 +84,7 @@ const WEBSITE_DESIGN_PROCESS = [
     icon: ClipboardDocumentListIcon,
     title: "Wireframing & Planning",
     description:
-      "Bantern creates clear structures and wireframes to map user flow and outline the website’s core framework.",
+      "NexaWhale creates clear structures and wireframes to map user flow and outline the website’s core framework.",
     details: [
       "Sitemap and user journey mapping",
       "Wireframing key pages",
@@ -98,7 +98,7 @@ const WEBSITE_DESIGN_PROCESS = [
     icon: PaintBrushIcon,
     title: "Visual Mockups & Prototyping",
     description:
-      "Bantern designs high-quality visual mockups and interactive prototypes aligned with your brand aesthetic.",
+      "NexaWhale designs high-quality visual mockups and interactive prototypes aligned with your brand aesthetic.",
     details: [
       "High-fidelity design mockups",
       "Custom typography and color systems",
@@ -112,7 +112,7 @@ const WEBSITE_DESIGN_PROCESS = [
     icon: CodeBracketIcon,
     title: "Frontend Build",
     description:
-      "Bantern develops mobile-first, responsive, and accessible frontend code that brings your design to life.",
+      "NexaWhale develops mobile-first, responsive, and accessible frontend code that brings your design to life.",
     details: [
       "Building scalable UI components",
       "Responsive layout engineering",
@@ -126,7 +126,7 @@ const WEBSITE_DESIGN_PROCESS = [
     icon: BeakerIcon,
     title: "QA & Accessibility",
     description:
-      "Bantern performs extensive testing to ensure your website functions flawlessly across all devices.",
+      "NexaWhale performs extensive testing to ensure your website functions flawlessly across all devices.",
     details: [
       "Functional & UI/UX testing",
       "Performance optimization",
@@ -140,7 +140,7 @@ const WEBSITE_DESIGN_PROCESS = [
     icon: RocketLaunchIcon,
     title: "Deployment & Handoff",
     description:
-      "Bantern deploys your website, conducts final launch checks, and provides full documentation and training.",
+      "NexaWhale deploys your website, conducts final launch checks, and provides full documentation and training.",
     details: [
       "Hosting & domain configuration",
       "Pre-launch quality checks",
@@ -155,31 +155,31 @@ const faqData = [
     id: 1,
     question: "Why do I need ongoing website maintenance?",
     answer:
-      "Ongoing maintenance ensures your website remains secure, optimized, and compatible with the latest technologies. Bantern helps prevent downtime, improve performance, and protect your platform from evolving security risks.",
+      "Ongoing maintenance ensures your website remains secure, optimized, and compatible with the latest technologies. NexaWhale helps prevent downtime, improve performance, and protect your platform from evolving security risks.",
   },
   {
     id: 2,
     question: "How often do you perform updates?",
     answer:
-      "Bantern performs automated system checks daily and deploys manual updates weekly or immediately when security patches are released, ensuring your website stays safe and up to date.",
+      "NexaWhale performs automated system checks daily and deploys manual updates weekly or immediately when security patches are released, ensuring your website stays safe and up to date.",
   },
   {
     id: 3,
     question: "What happens if my website gets hacked?",
     answer:
-      "Bantern provides emergency recovery, malware removal, security patching, and restoration from clean backups. We secure your website and implement long-term protection measures to prevent future incidents.",
+      "NexaWhale provides emergency recovery, malware removal, security patching, and restoration from clean backups. We secure your website and implement long-term protection measures to prevent future incidents.",
   },
   {
     id: 4,
     question: "Do you provide reports on maintenance activities?",
     answer:
-      "Yes. Bantern provides detailed monthly reports covering updates, performance metrics, security scans, and backup confirmations for complete transparency.",
+      "Yes. NexaWhale provides detailed monthly reports covering updates, performance metrics, security scans, and backup confirmations for complete transparency.",
   },
   {
     id: 5,
     question: "Can I cancel maintenance services anytime?",
     answer:
-      "Yes. Bantern offers flexible monthly billing with no long-term commitments. You may cancel anytime.",
+      "Yes. NexaWhale offers flexible monthly billing with no long-term commitments. You may cancel anytime.",
   },
 ];
 
@@ -202,13 +202,13 @@ const WebsiteDesign = () => {
       <SubpageHero
         category="Service"
         title="Website Design Service"
-        subtitle="Custom, responsive web designs crafted by Bantern to elevate your brand and captivate your audience."
+        subtitle="Custom, responsive web designs crafted by NexaWhale to elevate your brand and captivate your audience."
       />
 
       <ContentBlockImage
         title="Transform Your Brand with Professional Website Design"
-        paragraph1="In today's digital-first world, your website is one of your most important brand assets. Bantern delivers modern, visually stunning, and mobile-first website designs that strengthen your digital presence and leave a lasting impression."
-        paragraph2="Whether you’re building a new brand or refreshing an outdated design, Bantern creates high-performance, conversion-focused websites that align with your business goals. Every layout, visual choice, and user flow is crafted with precision to ensure a seamless and impactful user experience."
+        paragraph1="In today's digital-first world, your website is one of your most important brand assets. NexaWhale delivers modern, visually stunning, and mobile-first website designs that strengthen your digital presence and leave a lasting impression."
+        paragraph2="Whether you’re building a new brand or refreshing an outdated design, NexaWhale creates high-performance, conversion-focused websites that align with your business goals. Every layout, visual choice, and user flow is crafted with precision to ensure a seamless and impactful user experience."
         ctaText="Get Started"
         imageSrc={
           "https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1936&auto=format&fit=crop"
@@ -230,7 +230,7 @@ const WebsiteDesign = () => {
 
       <FinalCtaBanner
         category="Ready to Start?"
-        headline="Build Your Digital Presence with Bantern"
+        headline="Build Your Digital Presence with NexaWhale"
         subtext="Get a detailed consultation and a strategic roadmap for launching a high-performance website that elevates your brand."
         ctaText="Start your project"
       />

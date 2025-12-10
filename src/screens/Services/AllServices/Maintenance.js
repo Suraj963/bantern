@@ -65,7 +65,7 @@ const PROCESS = [
     icon: WrenchScrewdriverIcon,
     title: "Initial System Audit",
     description:
-      "Bantern starts by analyzing website health, identifying vulnerabilities, outdated components, and performance bottlenecks.",
+      "NexaWhale starts by analyzing website health, identifying vulnerabilities, outdated components, and performance bottlenecks.",
     details: [
       "Full website health check",
       "Outdated plugin/theme detection",
@@ -79,7 +79,7 @@ const PROCESS = [
     icon: ShieldCheckIcon,
     title: "Security Hardening",
     description:
-      "Bantern secures websites by implementing protective layers and industry best practices to safeguard data and prevent attacks.",
+      "NexaWhale secures websites by implementing protective layers and industry best practices to safeguard data and prevent attacks.",
     details: [
       "Malware & threat scanning",
       "Firewall and security rules setup",
@@ -93,7 +93,7 @@ const PROCESS = [
     icon: ArrowPathIcon,
     title: "Updates & Patch Management",
     description:
-      "Bantern manages updates and patches to ensure stability, compatibility, and long-term reliability.",
+      "NexaWhale manages updates and patches to ensure stability, compatibility, and long-term reliability.",
     details: [
       "CMS & platform updates",
       "Plugin & dependency upgrades",
@@ -107,7 +107,7 @@ const PROCESS = [
     icon: CircleStackIcon,
     title: "Backup & Restore Setup",
     description:
-      "Bantern configures automated backup systems and verifies restore procedures to keep data safe and recoverable.",
+      "NexaWhale configures automated backup systems and verifies restore procedures to keep data safe and recoverable.",
     details: [
       "Daily/weekly automated backups",
       "Off-site storage configuration",
@@ -121,7 +121,7 @@ const PROCESS = [
     icon: ChartBarIcon,
     title: "Performance Optimization",
     description:
-      "Bantern continuously improves loading speed, responsiveness, and overall user experience with targeted optimizations.",
+      "NexaWhale continuously improves loading speed, responsiveness, and overall user experience with targeted optimizations.",
     details: [
       "Speed & caching improvements",
       "Image & asset optimization",
@@ -135,7 +135,7 @@ const PROCESS = [
     icon: BellAlertIcon,
     title: "Monitoring & Continuous Protection",
     description:
-      "Bantern actively monitors websites and responds promptly to downtime, security threats, and performance issues.",
+      "NexaWhale actively monitors websites and responds promptly to downtime, security threats, and performance issues.",
     details: [
       "24/7 uptime monitoring",
       "Real-time threat alerts",
@@ -156,25 +156,25 @@ const faqData = [
     id: 2,
     question: "How often are updates performed?",
     answer:
-      "Bantern performs automated system checks daily. Critical security patches are applied immediately, major updates are scheduled weekly, and routine maintenance occurs monthly. All updates are tested in staging before deployment to production.",
+      "NexaWhale performs automated system checks daily. Critical security patches are applied immediately, major updates are scheduled weekly, and routine maintenance occurs monthly. All updates are tested in staging before deployment to production.",
   },
   {
     id: 3,
     question: "What happens if my website is compromised?",
     answer:
-      "Bantern provides emergency recovery services including isolating and cleaning infections, restoring from clean backups when necessary, patching vulnerabilities, and implementing additional protections to prevent recurrence.",
+      "NexaWhale provides emergency recovery services including isolating and cleaning infections, restoring from clean backups when necessary, patching vulnerabilities, and implementing additional protections to prevent recurrence.",
   },
   {
     id: 4,
     question: "Do you provide reports on maintenance activities?",
     answer:
-      "Yes. Bantern delivers regular reports summarizing maintenance actions, security scans, backup status, and performance metrics. Premium plans include more frequent reporting and real-time alerts for critical incidents.",
+      "Yes. NexaWhale delivers regular reports summarizing maintenance actions, security scans, backup status, and performance metrics. Premium plans include more frequent reporting and real-time alerts for critical incidents.",
   },
   {
     id: 5,
     question: "Can I cancel maintenance services anytime?",
     answer:
-      "Yes. Bantern offers flexible monthly billing with no long-term commitments. Clients may cancel at any time, though continued basic updates are recommended to maintain security.",
+      "Yes. NexaWhale offers flexible monthly billing with no long-term commitments. Clients may cancel at any time, though continued basic updates are recommended to maintain security.",
   },
 ];
 
@@ -187,7 +187,7 @@ const Maintenance = () => {
   const processDataProps = {
     title: "Our Maintenance Methodology",
     subtitle:
-      "Bantern follows a structured approach to ensure websites remain secure, updated, and high-performing.",
+      "NexaWhale follows a structured approach to ensure websites remain secure, updated, and high-performing.",
   };
 
   return (
@@ -202,8 +202,8 @@ const Maintenance = () => {
 
       <ContentBlockImage
         title="Protect Your Investment. Stay Secure. Perform Better"
-        paragraph1="A website is a critical business asset that requires continuous attention to remain secure, fast, and reliable. Bantern’s Website Maintenance & Security services cover updates, bug fixes, malware protection, emergency recovery, and performance tuning. Tailored maintenance plans are available custom platforms to ensure protection against vulnerabilities, downtime, and data loss. With automated backups, uptime monitoring, and expert support, websites remain stable and secure."
-        paragraph2="Whether the platform is a corporate site, blog, or e-commerce store, Bantern ensures it stays up to date, resilient to attacks, and optimized for performance—preserving traffic, trust, and revenue."
+        paragraph1="A website is a critical business asset that requires continuous attention to remain secure, fast, and reliable. NexaWhale’s Website Maintenance & Security services cover updates, bug fixes, malware protection, emergency recovery, and performance tuning. Tailored maintenance plans are available custom platforms to ensure protection against vulnerabilities, downtime, and data loss. With automated backups, uptime monitoring, and expert support, websites remain stable and secure."
+        paragraph2="Whether the platform is a corporate site, blog, or e-commerce store, NexaWhale ensures it stays up to date, resilient to attacks, and optimized for performance—preserving traffic, trust, and revenue."
         ctaText="Get Protected"
         imageSrc={maintenance}
         reverse={false}
@@ -224,7 +224,7 @@ const Maintenance = () => {
       <FinalCtaBanner
         category="Ready to Start?"
         headline="Ready to Secure Your Website?"
-        subtext="Protect your online presence with professional maintenance and security services from Bantern."
+        subtext="Protect your online presence with professional maintenance and security services from NexaWhale."
         ctaText="Get Protected"
       />
     </div>

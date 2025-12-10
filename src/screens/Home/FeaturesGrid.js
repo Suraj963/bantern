@@ -335,11 +335,11 @@ const FeaturesGrid = () => {
                 ease: "easeInOut",
                 delay: 0.5,
               }}
-              href="mailto:hello@bantern.com"
+              href="mailto:nexawhale@gmail.com"
               className="flex items-center gap-3 px-6 py-3 text-lg font-medium transition-colors rounded-full bg-muted hover:bg-muted/80 text-muted-foreground"
             >
               <EnvelopeIcon className="w-5 h-5" />
-              <span>hello@bantern.com</span>
+              <span>nexawhale@gmail.com</span>
             </motion.a>
           </div>
         </BentoCard>

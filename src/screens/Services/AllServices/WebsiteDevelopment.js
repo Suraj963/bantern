@@ -70,7 +70,7 @@ const PROCESS = [
     icon: MagnifyingGlassIcon,
     title: "Discovery & Research",
     description:
-      "Bantern conducts discovery workshops to understand business goals, target users, and technical constraints.",
+      "NexaWhale conducts discovery workshops to understand business goals, target users, and technical constraints.",
     details: [
       "Requirement gathering",
       "Market & competitor analysis",
@@ -84,7 +84,7 @@ const PROCESS = [
     icon: ClipboardDocumentListIcon,
     title: "Planning & Strategy",
     description:
-      "Bantern creates a detailed technical roadmap, architecture plan, and sprint schedule to guide delivery.",
+      "NexaWhale creates a detailed technical roadmap, architecture plan, and sprint schedule to guide delivery.",
     details: [
       "Technology stack selection",
       "System architecture design",
@@ -98,7 +98,7 @@ const PROCESS = [
     icon: PaintBrushIcon,
     title: "UI/UX Design",
     description:
-      "Bantern designs intuitive, accessible interfaces and prototypes that prioritize usability and brand fidelity.",
+      "NexaWhale designs intuitive, accessible interfaces and prototypes that prioritize usability and brand fidelity.",
     details: [
       "Wireframing and prototyping",
       "High-fidelity mockups",
@@ -112,7 +112,7 @@ const PROCESS = [
     icon: CodeBracketIcon,
     title: "Development",
     description:
-      "Bantern implements the solution using modular, testable code and industry best practices for maintainability.",
+      "NexaWhale implements the solution using modular, testable code and industry best practices for maintainability.",
     details: [
       "Frontend & Backend development",
       "Agile/Scrum delivery",
@@ -126,7 +126,7 @@ const PROCESS = [
     icon: BeakerIcon,
     title: "Testing & QA",
     description:
-      "Bantern runs comprehensive testing to validate functionality, performance, and cross-platform compatibility.",
+      "NexaWhale runs comprehensive testing to validate functionality, performance, and cross-platform compatibility.",
     details: [
       "Functional testing",
       "Performance optimization",
@@ -140,7 +140,7 @@ const PROCESS = [
     icon: RocketLaunchIcon,
     title: "Deployment & Handoff",
     description:
-      "Bantern manages deployment, monitoring setup, and handoff documentation to ensure a smooth launch and ongoing support.",
+      "NexaWhale manages deployment, monitoring setup, and handoff documentation to ensure a smooth launch and ongoing support.",
     details: [
       "Server deployment",
       "Post-launch monitoring",
@@ -153,33 +153,33 @@ const PROCESS = [
 const faqData = [
   {
     id: 1,
-    question: "What technologies does Bantern use for web development?",
+    question: "What technologies does NexaWhale use for web development?",
     answer:
-      "Bantern leverages modern web technologies such as React, Next.js, TypeScript, Node.js, and reliable database solutions (PostgreSQL, MongoDB, Firebase). The chosen stack is matched to project needs and long-term maintainability.",
+      "NexaWhale leverages modern web technologies such as React, Next.js, TypeScript, Node.js, and reliable database solutions (PostgreSQL, MongoDB, Firebase). The chosen stack is matched to project needs and long-term maintainability.",
   },
   {
     id: 2,
     question: "How long does web development typically take?",
     answer:
-      "Timelines vary with scope and complexity. Typical projects range from 4–12 weeks for standard websites and 2–4+ months for complex web applications. Bantern provides a detailed timeline after the discovery phase.",
+      "Timelines vary with scope and complexity. Typical projects range from 4–12 weeks for standard websites and 2–4+ months for complex web applications. NexaWhale provides a detailed timeline after the discovery phase.",
   },
   {
     id: 3,
-    question: "Does Bantern handle both frontend and backend development?",
+    question: "Does NexaWhale handle both frontend and backend development?",
     answer:
-      "Yes. Bantern provides end-to-end development services covering frontend interfaces, backend systems, APIs, and database design to ensure an integrated and consistent solution.",
+      "Yes. NexaWhale provides end-to-end development services covering frontend interfaces, backend systems, APIs, and database design to ensure an integrated and consistent solution.",
   },
   {
     id: 4,
-    question: "How does Bantern ensure website security?",
+    question: "How does NexaWhale ensure website security?",
     answer:
-      "Security is built into every project. Bantern follows best practices including secure authentication, encrypted communication, input validation, regular dependency updates, and vulnerability scanning to reduce risk.",
+      "Security is built into every project. NexaWhale follows best practices including secure authentication, encrypted communication, input validation, regular dependency updates, and vulnerability scanning to reduce risk.",
   },
   {
     id: 5,
-    question: "Can Bantern work with existing designs or teams?",
+    question: "Can NexaWhale work with existing designs or teams?",
     answer:
-      "Absolutely. Bantern can implement existing designs, collaborate with in-house teams, or provide full design and development services depending on client needs.",
+      "Absolutely. NexaWhale can implement existing designs, collaborate with in-house teams, or provide full design and development services depending on client needs.",
   },
 ];
 
@@ -192,7 +192,7 @@ const WebsiteDevelopment = () => {
   const processDataProps = {
     title: "Our Development Methodology",
     subtitle:
-      "Bantern follows a structured six-step methodology to deliver robust, maintainable web applications.",
+      "NexaWhale follows a structured six-step methodology to deliver robust, maintainable web applications.",
   };
 
   return (
@@ -202,13 +202,13 @@ const WebsiteDevelopment = () => {
       <SubpageHero
         category="Service"
         title="Web Development Service"
-        subtitle="Custom, high-performance web development by Bantern using modern technologies for optimal results."
+        subtitle="Custom, high-performance web development by NexaWhale using modern technologies for optimal results."
       />
 
       <ContentBlockImage
         title="Build Powerful Web Applications with Modern Technologies"
-        paragraph1="Bantern builds fast, scalable, and secure web applications tailored to business objectives. Our development approach focuses on reliability, maintainability, and delivering measurable outcomes."
-        paragraph2="From marketing sites and landing pages to complex web applications and dashboards, Bantern provides end-to-end development services including architecture, implementation, testing, and deployment."
+        paragraph1="NexaWhale builds fast, scalable, and secure web applications tailored to business objectives. Our development approach focuses on reliability, maintainability, and delivering measurable outcomes."
+        paragraph2="From marketing sites and landing pages to complex web applications and dashboards, NexaWhale provides end-to-end development services including architecture, implementation, testing, and deployment."
         ctaText="Get Started"
         imageSrc={websiteDevelopment}
         reverse={false}
@@ -229,7 +229,7 @@ const WebsiteDevelopment = () => {
       <FinalCtaBanner
         category="Ready to Start?"
         headline="Ready to Build Your Next Web Project?"
-        subtext="Bantern delivers powerful, scalable web applications that meet business objectives and exceed user expectations."
+        subtext="NexaWhale delivers powerful, scalable web applications that meet business objectives and exceed user expectations."
         ctaText="Start your project"
       />
     </div>

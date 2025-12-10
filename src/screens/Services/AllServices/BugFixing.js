@@ -151,33 +151,33 @@ const PROCESS = [
 const faqData = [
   {
     id: 1,
-    question: "How quickly can Bantern fix bugs on my website?",
+    question: "How quickly can NexaWhale fix bugs on my website?",
     answer:
-      "Critical issues are prioritized and often resolved within 24–48 hours. For complex problems, Bantern provides a detailed timeline after an initial assessment and prioritizes fixes by impact and severity.",
+      "Critical issues are prioritized and often resolved within 24–48 hours. For complex problems, NexaWhale provides a detailed timeline after an initial assessment and prioritizes fixes by impact and severity.",
   },
   {
     id: 2,
-    question: "Does Bantern work with existing codebases?",
+    question: "Does NexaWhale work with existing codebases?",
     answer:
-      "Yes. Bantern is experienced in working with existing projects across various technology stacks, including WordPress, custom CMS, React, Angular, and more.",
+      "Yes. NexaWhale is experienced in working with existing projects across various technology stacks, including WordPress, custom CMS, React, Angular, and more.",
   },
   {
     id: 3,
-    question: "How does Bantern test responsiveness fixes?",
+    question: "How does NexaWhale test responsiveness fixes?",
     answer:
-      "Bantern uses a combination of real devices, browser developer tools, and cloud testing platforms to validate changes across iOS, Android, and desktop resolutions, ensuring consistent behavior on all screens.",
+      "NexaWhale uses a combination of real devices, browser developer tools, and cloud testing platforms to validate changes across iOS, Android, and desktop resolutions, ensuring consistent behavior on all screens.",
   },
   {
     id: 4,
-    question: "Can Bantern help prevent future bugs?",
+    question: "Can NexaWhale help prevent future bugs?",
     answer:
-      "Yes. Bantern implements testing strategies, automated checks, code reviews, and monitoring to detect issues early and reduce future regressions. All fixes are documented for transparency and maintainability.",
+      "Yes. NexaWhale implements testing strategies, automated checks, code reviews, and monitoring to detect issues early and reduce future regressions. All fixes are documented for transparency and maintainability.",
   },
   {
     id: 5,
     question: "What if the issue source is unknown?",
     answer:
-      "Bantern offers comprehensive website audits to locate underlying problems and provides a detailed report with recommended solutions and estimates before any remediation work begins.",
+      "NexaWhale offers comprehensive website audits to locate underlying problems and provides a detailed report with recommended solutions and estimates before any remediation work begins.",
   },
 ];
 
@@ -205,8 +205,8 @@ const BugFixing = () => {
 
       <ContentBlockImage
         title="Eliminate Bugs. Enhance Performance. Deliver Perfection"
-        paragraph1="Website errors and unresponsive layouts can cost traffic, credibility, and conversions. Bantern provides fast, effective bug-fixing and responsiveness services to ensure websites look and function flawlessly across devices, screen sizes, and browsers. Whether the issue is a CSS layout glitch, a JavaScript error, a mobile rendering problem, or cross-browser incompatibility, Bantern diagnoses and resolves problems precisely while preserving existing functionality."
-        paragraph2="If users report bugs or poor mobile experience, Bantern can revamp frontend implementations to improve responsiveness and performance. The result is a consistent, reliable user experience that reduces bounce rates and increases engagement."
+        paragraph1="Website errors and unresponsive layouts can cost traffic, credibility, and conversions. NexaWhale provides fast, effective bug-fixing and responsiveness services to ensure websites look and function flawlessly across devices, screen sizes, and browsers. Whether the issue is a CSS layout glitch, a JavaScript error, a mobile rendering problem, or cross-browser incompatibility, NexaWhale diagnoses and resolves problems precisely while preserving existing functionality."
+        paragraph2="If users report bugs or poor mobile experience, NexaWhale can revamp frontend implementations to improve responsiveness and performance. The result is a consistent, reliable user experience that reduces bounce rates and increases engagement."
         ctaText="Get Started"
         imageSrc={
           "https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1936&auto=format&fit=crop"
@@ -229,7 +229,7 @@ const BugFixing = () => {
       <FinalCtaBanner
         category="Ready to Start?"
         headline="Ready to Fix Your Website Issues?"
-        subtext="Bantern will ensure your website works perfectly across all devices and browsers."
+        subtext="NexaWhale will ensure your website works perfectly across all devices and browsers."
         ctaText="Get Help Now"
       />
     </div>
