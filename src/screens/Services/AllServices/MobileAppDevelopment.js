@@ -31,37 +31,37 @@ const featureData = [
     icon: DevicePhoneMobileIcon,
     title: "Native & Cross-Platform Apps",
     description:
-      "Bantern delivers performant native apps (iOS/Android) and cross-platform apps (React Native, Flutter) tailored to each client’s needs.",
+      "NexaWhale delivers performant native apps (iOS/Android) and cross-platform apps (React Native, Flutter) tailored to each client’s needs.",
   },
   {
     icon: DeviceTabletIcon,
     title: "App Design & UX",
     description:
-      "Bantern produces pixel-perfect mobile UI/UX with platform conventions, smooth gestures, and accessibility best practices.",
+      "NexaWhale produces pixel-perfect mobile UI/UX with platform conventions, smooth gestures, and accessibility best practices.",
   },
   {
     icon: ServerStackIcon,
     title: "Backend & APIs",
     description:
-      "Bantern builds robust backend systems, secure APIs, and realtime sync capabilities to power mobile features and scale with users.",
+      "NexaWhale builds robust backend systems, secure APIs, and realtime sync capabilities to power mobile features and scale with users.",
   },
   {
     icon: CircleStackIcon,
     title: "Offline & Sync",
     description:
-      "Bantern implements reliable offline-first behavior and efficient data synchronization strategies for a seamless user experience.",
+      "NexaWhale implements reliable offline-first behavior and efficient data synchronization strategies for a seamless user experience.",
   },
   {
     icon: ShieldCheckIcon,
     title: "Mobile Security",
     description:
-      "Bantern applies secure authentication, encrypted storage, and mobile security best practices to protect user data and ensure compliance.",
+      "NexaWhale applies secure authentication, encrypted storage, and mobile security best practices to protect user data and ensure compliance.",
   },
   {
     icon: ChartBarIcon,
     title: "Analytics & Monitoring",
     description:
-      "Bantern integrates analytics, crash reporting, and performance monitoring to measure adoption and respond to issues quickly.",
+      "NexaWhale integrates analytics, crash reporting, and performance monitoring to measure adoption and respond to issues quickly.",
   },
 ];
 
@@ -72,7 +72,7 @@ const PROCESS = [
     icon: MagnifyingGlassIcon,
     title: "Discovery & Requirements",
     description:
-      "Bantern aligns on business goals, target users, and core features to establish a clear product vision for each mobile app.",
+      "NexaWhale aligns on business goals, target users, and core features to establish a clear product vision for each mobile app.",
     details: [
       "Stakeholder interviews & goal setting",
       "User research & persona definition",
@@ -86,7 +86,7 @@ const PROCESS = [
     icon: ClipboardDocumentListIcon,
     title: "Architecture & Roadmap",
     description:
-      "Bantern designs the app architecture, determines native vs cross-platform approach, and prepares a delivery roadmap.",
+      "NexaWhale designs the app architecture, determines native vs cross-platform approach, and prepares a delivery roadmap.",
     details: [
       "Platform strategy (iOS/Android/Hybrid)",
       "System & API architecture",
@@ -100,7 +100,7 @@ const PROCESS = [
     icon: PaintBrushIcon,
     title: "UI/UX Design & Prototyping",
     description:
-      "Bantern creates high-fidelity screens, interactive prototypes, and flows that reflect real device behavior and accessibility needs.",
+      "NexaWhale creates high-fidelity screens, interactive prototypes, and flows that reflect real device behavior and accessibility needs.",
     details: [
       "Wireframes & interaction design",
       "High-fidelity mockups",
@@ -114,7 +114,7 @@ const PROCESS = [
     icon: CodeBracketIcon,
     title: "App Development",
     description:
-      "Bantern implements the app using best practices, modular architecture, and CI/CD to ensure reliable delivery.",
+      "NexaWhale implements the app using best practices, modular architecture, and CI/CD to ensure reliable delivery.",
     details: [
       "Frontend (mobile) implementation",
       "Backend & API development",
@@ -128,7 +128,7 @@ const PROCESS = [
     icon: BeakerIcon,
     title: "QA & Performance Testing",
     description:
-      "Bantern conducts comprehensive testing to validate stability, performance, and compatibility across devices and networks.",
+      "NexaWhale conducts comprehensive testing to validate stability, performance, and compatibility across devices and networks.",
     details: [
       "Functional & regression testing",
       "Device & OS compatibility testing",
@@ -142,7 +142,7 @@ const PROCESS = [
     icon: RocketLaunchIcon,
     title: "Launch & Post-Launch Support",
     description:
-      "Bantern manages app store submissions, monitors performance, and iterates rapidly based on user feedback.",
+      "NexaWhale manages app store submissions, monitors performance, and iterates rapidly based on user feedback.",
     details: [
       "App Store & Play Store submission",
       "Monitoring & crash reporting",
@@ -158,33 +158,33 @@ const faqData = [
     question:
       "Which platform should organizations build for first — iOS, Android, or both?",
     answer:
-      "Bantern recommends platform selection based on target audience and business goals. Clients often begin with the primary platform for their users or choose cross-platform frameworks (React Native/Flutter) to reach both platforms with shared code.",
+      "NexaWhale recommends platform selection based on target audience and business goals. Clients often begin with the primary platform for their users or choose cross-platform frameworks (React Native/Flutter) to reach both platforms with shared code.",
   },
   {
     id: 2,
-    question: "Does Bantern build native apps or cross-platform apps?",
+    question: "Does NexaWhale build native apps or cross-platform apps?",
     answer:
-      "Bantern develops both native (iOS/Android) and cross-platform applications (React Native, Flutter), selecting the approach that best balances performance, time-to-market, and long-term maintainability.",
+      "NexaWhale develops both native (iOS/Android) and cross-platform applications (React Native, Flutter), selecting the approach that best balances performance, time-to-market, and long-term maintainability.",
   },
   {
     id: 3,
     question:
-      "How does Bantern handle push notifications and background tasks?",
+      "How does NexaWhale handle push notifications and background tasks?",
     answer:
-      "Bantern implements reliable push notification systems using platform services (APNs, FCM) and adopts background processing patterns appropriate for each platform while respecting battery and privacy constraints.",
+      "NexaWhale implements reliable push notification systems using platform services (APNs, FCM) and adopts background processing patterns appropriate for each platform while respecting battery and privacy constraints.",
   },
   {
     id: 4,
-    question: "Does Bantern assist with app store submission and approvals?",
+    question: "Does NexaWhale assist with app store submission and approvals?",
     answer:
-      "Yes. Bantern handles packaging, metadata, screenshots, and submissions for both Apple App Store and Google Play, and addresses review feedback to ensure compliance with store guidelines.",
+      "Yes. NexaWhale handles packaging, metadata, screenshots, and submissions for both Apple App Store and Google Play, and addresses review feedback to ensure compliance with store guidelines.",
   },
   {
     id: 5,
     question:
-      "How does Bantern ensure data security and privacy in mobile apps?",
+      "How does NexaWhale ensure data security and privacy in mobile apps?",
     answer:
-      "Bantern follows industry best practices including secure authentication, encrypted storage, secure network communication (HTTPS), minimal permissions, and adherence to relevant privacy regulations such as GDPR where applicable.",
+      "NexaWhale follows industry best practices including secure authentication, encrypted storage, secure network communication (HTTPS), minimal permissions, and adherence to relevant privacy regulations such as GDPR where applicable.",
   },
 ];
 
@@ -210,13 +210,13 @@ const MobileAppDevelopment = () => {
       <SubpageHero
         category="Service"
         title="Mobile App Development"
-        subtitle="Native & cross-platform mobile apps designed for performance, usability, and scale by Bantern."
+        subtitle="Native & cross-platform mobile apps designed for performance, usability, and scale by NexaWhale."
       />
 
       <ContentBlockImage
         title="Build Engaging Mobile Experiences"
-        paragraph1="Bantern builds mobile applications that delight users and solve real business problems. From consumer-facing apps to internal tools, Bantern delivers performant, maintainable, and secure mobile solutions."
-        paragraph2="Bantern’s approach covers the full lifecycle — research, design, engineering, testing, and app store launches — with a focus on measurable outcomes and scalable architecture."
+        paragraph1="NexaWhale builds mobile applications that delight users and solve real business problems. From consumer-facing apps to internal tools, NexaWhale delivers performant, maintainable, and secure mobile solutions."
+        paragraph2="NexaWhale’s approach covers the full lifecycle — research, design, engineering, testing, and app store launches — with a focus on measurable outcomes and scalable architecture."
         ctaText="Get Started"
         imageSrc={appDevelopment}
         reverse={false}
@@ -236,7 +236,7 @@ const MobileAppDevelopment = () => {
 
       <FinalCtaBanner
         category="Ready to Launch?"
-        headline="Let Bantern build your next mobile app."
+        headline="Let NexaWhale build your next mobile app."
         subtext="Deliver a delightful, performant app experience that scales with your users."
         ctaText="Start your app"
       />

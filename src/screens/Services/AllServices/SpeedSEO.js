@@ -65,7 +65,7 @@ const PROCESS = [
     icon: MagnifyingGlassIcon,
     title: "Website Audit & Core Web Vital Analysis",
     description:
-      "Bantern begins by analyzing the website’s performance, SEO structure, and identifying speed bottlenecks.",
+      "NexaWhale begins by analyzing the website’s performance, SEO structure, and identifying speed bottlenecks.",
     details: [
       "Core Web Vitals scan (LCP, FID, CLS)",
       "Performance & speed report",
@@ -79,7 +79,7 @@ const PROCESS = [
     icon: ClipboardDocumentListIcon,
     title: "Optimization Plan & SEO Strategy",
     description:
-      "Bantern prepares a detailed roadmap outlining code-level improvements, SEO fixes, and optimization priorities.",
+      "NexaWhale prepares a detailed roadmap outlining code-level improvements, SEO fixes, and optimization priorities.",
     details: [
       "Prioritizing speed-impact tasks",
       "Technical SEO planning",
@@ -93,7 +93,7 @@ const PROCESS = [
     icon: WrenchScrewdriverIcon,
     title: "Performance Optimization",
     description:
-      "Bantern implements optimizations to improve speed, stability, and the overall loading experience.",
+      "NexaWhale implements optimizations to improve speed, stability, and the overall loading experience.",
     details: [
       "Image & asset optimization",
       "Code minification/compression",
@@ -107,7 +107,7 @@ const PROCESS = [
     icon: GlobeAltIcon,
     title: "Technical & On-Page SEO",
     description:
-      "Bantern improves discoverability through proper indexing, metadata, schema, and content optimization.",
+      "NexaWhale improves discoverability through proper indexing, metadata, schema, and content optimization.",
     details: [
       "Keyword & meta improvements",
       "Schema markup implementation",
@@ -121,7 +121,7 @@ const PROCESS = [
     icon: ChartBarIcon,
     title: "Testing & Validation",
     description:
-      "Bantern validates improvements across performance tools and real devices to ensure accurate results.",
+      "NexaWhale validates improvements across performance tools and real devices to ensure accurate results.",
     details: [
       "Google Lighthouse testing",
       "Cross-browser performance checks",
@@ -135,7 +135,7 @@ const PROCESS = [
     icon: RocketLaunchIcon,
     title: "Deployment & Ongoing Monitoring",
     description:
-      "Bantern deploys enhancements and continuously tracks performance to maintain long-term rankings.",
+      "NexaWhale deploys enhancements and continuously tracks performance to maintain long-term rankings.",
     details: [
       "Deploying final optimizations",
       "Continuous Core Web Vital tracking",
@@ -148,9 +148,9 @@ const PROCESS = [
 const faqData = [
   {
     id: 1,
-    question: "How much can Bantern improve my website speed?",
+    question: "How much can NexaWhale improve my website speed?",
     answer:
-      "Many websites see substantial load-time improvements after optimization. Exact gains depend on the current setup, but Bantern typically targets significant improvements in user-perceived performance and aims for competitive PageSpeed scores through targeted technical work.",
+      "Many websites see substantial load-time improvements after optimization. Exact gains depend on the current setup, but NexaWhale typically targets significant improvements in user-perceived performance and aims for competitive PageSpeed scores through targeted technical work.",
   },
   {
     id: 2,
@@ -162,19 +162,19 @@ const faqData = [
     id: 3,
     question: "How long does SEO take to show results?",
     answer:
-      "Technical SEO fixes can show impact in a few weeks, while content and authority improvements typically take several months to mature. Bantern provides monthly reports to track keyword movement, traffic changes, and other KPIs so progress is measurable.",
+      "Technical SEO fixes can show impact in a few weeks, while content and authority improvements typically take several months to mature. NexaWhale provides monthly reports to track keyword movement, traffic changes, and other KPIs so progress is measurable.",
   },
   {
     id: 4,
     question: "Do you work with e-commerce sites?",
     answer:
-      "Yes. E-commerce platforms benefit greatly from speed and SEO optimizations. Bantern specializes in optimizing product pages, category structures, faceted navigation, and technical challenges unique to online stores to improve conversion rates and performance.",
+      "Yes. E-commerce platforms benefit greatly from speed and SEO optimizations. NexaWhale specializes in optimizing product pages, category structures, faceted navigation, and technical challenges unique to online stores to improve conversion rates and performance.",
   },
   {
     id: 5,
     question: "What's included in ongoing SEO services?",
     answer:
-      "Ongoing packages typically include monthly technical audits, content optimizations, backlink monitoring, performance tracking, competitor analysis, and regular reporting. Bantern also monitors algorithm updates and adjusts strategies to maintain effectiveness.",
+      "Ongoing packages typically include monthly technical audits, content optimizations, backlink monitoring, performance tracking, competitor analysis, and regular reporting. NexaWhale also monitors algorithm updates and adjusts strategies to maintain effectiveness.",
   },
 ];
 
@@ -187,7 +187,7 @@ const SpeedSEO = () => {
   const processDataProps = {
     title: "Our Optimization Methodology",
     subtitle:
-      "Bantern follows a structured six-step methodology to improve speed and search visibility.",
+      "NexaWhale follows a structured six-step methodology to improve speed and search visibility.",
   };
 
   return (
@@ -202,8 +202,8 @@ const SpeedSEO = () => {
 
       <ContentBlockImage
         title="Accelerate Your Growth with Speed & Visibility"
-        paragraph1="In a world where seconds matter and visibility drives business, a fast and search-optimized website is essential. Bantern's Speed Optimization & SEO services focus on reducing load times, improving Core Web Vitals, and increasing organic visibility. By combining technical optimization with SEO best practices—image compression, code minification, caching strategies, metadata improvements, and structured data—Bantern ensures sites perform well in both tests and real-world usage."
-        paragraph2="Whether targeting global audiences or local leads, Bantern delivers measurable improvements using data-driven tools and real-world insights. The approach centers on sustainable gains that boost discoverability, user experience, and conversion rates."
+        paragraph1="In a world where seconds matter and visibility drives business, a fast and search-optimized website is essential. NexaWhale's Speed Optimization & SEO services focus on reducing load times, improving Core Web Vitals, and increasing organic visibility. By combining technical optimization with SEO best practices—image compression, code minification, caching strategies, metadata improvements, and structured data—NexaWhale ensures sites perform well in both tests and real-world usage."
+        paragraph2="Whether targeting global audiences or local leads, NexaWhale delivers measurable improvements using data-driven tools and real-world insights. The approach centers on sustainable gains that boost discoverability, user experience, and conversion rates."
         ctaText="Boost My Site"
         imageSrc={seo}
         reverse={false}
@@ -224,7 +224,7 @@ const SpeedSEO = () => {
       <FinalCtaBanner
         category="Ready to Start?"
         headline="Ready to Accelerate Your Website?"
-        subtext="Boost your speed, rankings, and conversions with professional optimization from Bantern."
+        subtext="Boost your speed, rankings, and conversions with professional optimization from NexaWhale."
         ctaText="Get Started"
       />
     </div>

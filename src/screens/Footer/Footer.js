@@ -82,7 +82,7 @@ const Footer = () => {
                 <BoltIcon className="w-5 h-5 text-primary-foreground" />
               </span>
               <span className="text-foreground text-2xl font-bold">
-                Bantern
+                NexaWhale
               </span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs">
@@ -134,18 +134,18 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:hello@bantern.com"
+                  href="mailto:nexawhale@gmail.com"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  hello@bantern.com
+                  nexawhale@gmail.com
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:9513276042"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  +1 (234) 567-890
+                  9513276042
                 </a>
               </li>
 
@@ -189,7 +189,7 @@ const Footer = () => {
           className="flex flex-col-reverse md:flex-row justify-between items-center gap-6 mt-8"
         >
           <p className="text-sm text-muted-foreground text-center md:text-left">
-            © {new Date().getFullYear()} Bantern Solutions. All rights reserved.
+            © {new Date().getFullYear()} NexaWhale Solutions. All rights reserved.
           </p>
 
           <button

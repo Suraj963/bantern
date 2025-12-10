@@ -11,7 +11,7 @@ const testimonialData = [
     avatar:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=256&auto=format&fit=crop",
     heading: "Incredible Skill & True Partnership",
-    text: "Bantern's team is open-minded, curious, and deeply invested. They took our product vision and brought it to life beautifully. They aren't just developers; they're true partners in success.",
+    text: "NexaWhale's team is open-minded, curious, and deeply invested. They took our product vision and brought it to life beautifully. They aren't just developers; they're true partners in success.",
   },
   {
     name: "Sarah Jenkins",
@@ -27,7 +27,7 @@ const testimonialData = [
     avatar:
       "https://images.unsplash.com/photo-1506794778202-cad84cf4F1d?q=80&w=256&auto=format&fit=crop",
     heading: "Their React/Node Skills are Through the Roof",
-    text: "I've been working with Bantern for a couple of months and I can't express how impressed I am. Their programming skills are through the roof. We have a streamlined, efficient workflow.",
+    text: "I've been working with NexaWhale for a couple of months and I can't express how impressed I am. Their programming skills are through the roof. We have a streamlined, efficient workflow.",
   },
   {
     name: "Michael Bronn",
@@ -43,7 +43,7 @@ const testimonialData = [
     avatar:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=256&auto=format&fit=crop",
     heading: "Scalable Architecture Experts",
-    text: "The team at Bantern designed a cloud-native architecture that scaled perfectly with our user growth. Their expertise in DevOps and AWS is second to none. Truly exceptional.",
+    text: "The team at NexaWhale designed a cloud-native architecture that scaled perfectly with our user growth. Their expertise in DevOps and AWS is second to none. Truly exceptional.",
   },
   {
     name: "David Kim",
@@ -179,7 +179,7 @@ const Testimonials = () => {
             variants={itemVariants}
             className="text-lg text-muted-foreground max-w-2xl mb-12"
           >
-            See what our clients have to say about working with Bantern.
+            See what our clients have to say about working with NexaWhale.
           </motion.p>
         </div>
       </div>

@@ -133,7 +133,7 @@ const Navbar = () => {
                 <BoltIcon className="h-5 w-5 text-primary-foreground" />
               </span>
               <span className="text-foreground text-2xl font-bold">
-                Bantern
+                NexaWhale
               </span>
             </Link>
           </div>

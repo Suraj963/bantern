@@ -58,7 +58,7 @@ const TextBlock = () => (
       <span className="text-primary">smart technology</span>
     </h2>
     <p className="text-muted-foreground mb-6">
-      We are Bantern, a dedicated team of engineers and designers. We thrive on
+      We are NexaWhale, a dedicated team of engineers and designers. We thrive on
       complex challenges and build high-performance, scalable software that
       drives your business forward.
     </p>

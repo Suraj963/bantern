@@ -53,7 +53,7 @@ const AboutUs = () => {
     },
   };
 
-  const companyName = "Bantern Solutions";
+  const companyName = "NexaWhale Solutions";
   const companySlogan = "Innovating the Future, Together";
 
   return (

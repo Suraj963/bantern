@@ -163,14 +163,14 @@ const ContactSection = () => {
             <ContactInfoItem
               icon={EnvelopeIcon}
               title="Email"
-              value="hello@bantern.com"
-              href="mailto:hello@bantern.com"
+              value="nexawhale@gmail.com"
+              href="mailto:nexawhale@gmail.com"
             />
             <ContactInfoItem
               icon={PhoneIcon}
               title="Phone"
-              value="+1 (234) 567-890"
-              href="tel:+1234567890"
+              value="9513276042"
+              href="9513276042"
             />
             <ContactInfoItem
               icon={MapPinIcon}
@@ -194,12 +194,12 @@ const ContactSection = () => {
               <input
                 type="hidden"
                 name="_subject"
-                value="New Contact Inquiry from Bantern Site"
+                value="New Contact Inquiry from NexaWhale Site"
               />
               <input
                 type="hidden"
                 name="source"
-                value="bantern-contact-section"
+                value="NexaWhale-contact-section"
               />
 
               <FormField

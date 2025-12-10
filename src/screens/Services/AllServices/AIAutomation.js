@@ -31,37 +31,37 @@ const featureData = [
     icon: ChatBubbleLeftRightIcon,
     title: "AI Chatbots & Conversational Agents",
     description:
-      "Bantern builds advanced conversational agents and virtual assistants that understand context, handle multi-turn conversations, and automate common user interactions.",
+      "NexaWhale builds advanced conversational agents and virtual assistants that understand context, handle multi-turn conversations, and automate common user interactions.",
   },
   {
     icon: BoltIcon,
     title: "Automation Workflows",
     description:
-      "Bantern designs and implements automated end-to-end workflows that reduce manual effort, trigger actions across systems, and orchestrate business processes.",
+      "NexaWhale designs and implements automated end-to-end workflows that reduce manual effort, trigger actions across systems, and orchestrate business processes.",
   },
   {
     icon: Cog6ToothIcon,
     title: "Model Integration & APIs",
     description:
-      "Bantern integrates state-of-the-art ML models and LLMs into products via secure, scalable APIs and microservices.",
+      "NexaWhale integrates state-of-the-art ML models and LLMs into products via secure, scalable APIs and microservices.",
   },
   {
     icon: CircleStackIcon,
     title: "Data Pipelines & ETL",
     description:
-      "Bantern develops reliable data collection, transformation, and storage pipelines that feed models with clean, labeled, and timely data.",
+      "NexaWhale develops reliable data collection, transformation, and storage pipelines that feed models with clean, labeled, and timely data.",
   },
   {
     icon: ServerStackIcon,
     title: "Custom Model Training & Fine-tuning",
     description:
-      "Bantern fine-tunes models on domain-specific data, optimizes for latency and accuracy, and produces tailored AI behavior for unique use cases.",
+      "NexaWhale fine-tunes models on domain-specific data, optimizes for latency and accuracy, and produces tailored AI behavior for unique use cases.",
   },
   {
     icon: ChartBarIcon,
     title: "Monitoring & Governance",
     description:
-      "Bantern provides continuous performance monitoring, bias and quality checks, observability, and governance to keep AI safe and performant in production.",
+      "NexaWhale provides continuous performance monitoring, bias and quality checks, observability, and governance to keep AI safe and performant in production.",
   },
 ];
 
@@ -72,7 +72,7 @@ const PROCESS = [
     icon: MagnifyingGlassIcon,
     title: "Discovery & Use-Case Definition",
     description:
-      "Bantern identifies high-impact AI automation opportunities and defines measurable success metrics aligned to business objectives.",
+      "NexaWhale identifies high-impact AI automation opportunities and defines measurable success metrics aligned to business objectives.",
     details: [
       "Stakeholder interviews and painpoint mapping",
       "Identify automation candidates and ROI estimates",
@@ -86,7 +86,7 @@ const PROCESS = [
     icon: ClipboardDocumentListIcon,
     title: "Technical Planning & Roadmap",
     description:
-      "Bantern designs the architecture, integration points, and delivery plan for the automation solution to ensure scalable production readiness.",
+      "NexaWhale designs the architecture, integration points, and delivery plan for the automation solution to ensure scalable production readiness.",
     details: [
       "Select model approach (off-the-shelf vs fine-tune)",
       "Define API and infrastructure requirements",
@@ -100,7 +100,7 @@ const PROCESS = [
     icon: PaintBrushIcon,
     title: "UX, Prompt & Interaction Design",
     description:
-      "Bantern crafts intuitive conversational experiences and prompt designs that guide AI behavior and set clear user expectations.",
+      "NexaWhale crafts intuitive conversational experiences and prompt designs that guide AI behavior and set clear user expectations.",
     details: [
       "Design conversation flows and prompt engineering",
       "Define error handling and fallback UX",
@@ -114,7 +114,7 @@ const PROCESS = [
     icon: CodeBracketIcon,
     title: "Build & Integration",
     description:
-      "Bantern implements model integrations, builds secure APIs, and connects automation workflows to existing systems and services.",
+      "NexaWhale implements model integrations, builds secure APIs, and connects automation workflows to existing systems and services.",
     details: [
       "API development and secure authentication",
       "Model integration and inference pipelines",
@@ -128,7 +128,7 @@ const PROCESS = [
     icon: BeakerIcon,
     title: "Validation & Safety Testing",
     description:
-      "Bantern executes thorough test cycles to validate model performance, safety, and reliability across production-like scenarios and edge cases.",
+      "NexaWhale executes thorough test cycles to validate model performance, safety, and reliability across production-like scenarios and edge cases.",
     details: [
       "Functional and regression testing",
       "Bias, safety, and content filtering checks",
@@ -142,7 +142,7 @@ const PROCESS = [
     icon: RocketLaunchIcon,
     title: "Deploy, Monitor & Iterate",
     description:
-      "Bantern deploys to production with real-time monitoring and an iterative roadmap for continuous improvement and governance.",
+      "NexaWhale deploys to production with real-time monitoring and an iterative roadmap for continuous improvement and governance.",
     details: [
       "Production rollout and canary releases",
       "Monitoring and alerting (metrics and logs)",
@@ -155,33 +155,33 @@ const PROCESS = [
 const faqData = [
   {
     id: 1,
-    question: "What types of AI automation does Bantern build?",
+    question: "What types of AI automation does NexaWhale build?",
     answer:
-      "Bantern builds conversational agents, document understanding pipelines, automation workflows, recommendation systems, and custom model integrations tailored to specific business needs.",
+      "NexaWhale builds conversational agents, document understanding pipelines, automation workflows, recommendation systems, and custom model integrations tailored to specific business needs.",
   },
   {
     id: 2,
     question: "Is a large dataset required to use AI effectively?",
     answer:
-      "Not always. Bantern evaluates available data and recommends the most cost-effective approach—ranging from prompt engineering to targeted fine-tuning and synthetic data augmentation when required.",
+      "Not always. NexaWhale evaluates available data and recommends the most cost-effective approach—ranging from prompt engineering to targeted fine-tuning and synthetic data augmentation when required.",
   },
   {
     id: 3,
-    question: "How does Bantern ensure AI safety and compliance?",
+    question: "How does NexaWhale ensure AI safety and compliance?",
     answer:
-      "Bantern implements guardrails including content filtering, rate limiting, human-in-the-loop checkpoints, and continuous bias monitoring, and follows privacy and compliance best practices relevant to each industry.",
+      "NexaWhale implements guardrails including content filtering, rate limiting, human-in-the-loop checkpoints, and continuous bias monitoring, and follows privacy and compliance best practices relevant to each industry.",
   },
   {
     id: 4,
     question: "Can AI automation integrate with existing systems?",
     answer:
-      "Yes. Bantern designs secure connectors and APIs to integrate with CRMs, databases, messaging platforms, and enterprise systems to enable end-to-end automation.",
+      "Yes. NexaWhale designs secure connectors and APIs to integrate with CRMs, databases, messaging platforms, and enterprise systems to enable end-to-end automation.",
   },
   {
     id: 5,
-    question: "How does Bantern measure success for AI automation projects?",
+    question: "How does NexaWhale measure success for AI automation projects?",
     answer:
-      "Bantern tracks outcome-driven KPIs such as time saved, error reduction, conversion lift, throughput improvement, and model accuracy/latency metrics aligned to business objectives.",
+      "NexaWhale tracks outcome-driven KPIs such as time saved, error reduction, conversion lift, throughput improvement, and model accuracy/latency metrics aligned to business objectives.",
   },
 ];
 
@@ -209,8 +209,8 @@ const AIAutomation = () => {
 
       <ContentBlockImage
         title="Automate Repetitive Workflows with AI"
-        paragraph1="Bantern’s AI Automation services reduce manual effort, improve response times, and unlock new capabilities. Solutions include conversational agents, document processing, and event-driven automation that integrate securely with existing systems."
-        paragraph2="From rapid prototyping to production-grade deployments, Bantern handles data pipelines, model integration, prompt engineering, and monitoring—focused on measurable outcomes such as efficiency gains, accuracy improvements, and auditable AI behavior."
+        paragraph1="NexaWhale’s AI Automation services reduce manual effort, improve response times, and unlock new capabilities. Solutions include conversational agents, document processing, and event-driven automation that integrate securely with existing systems."
+        paragraph2="From rapid prototyping to production-grade deployments, NexaWhale handles data pipelines, model integration, prompt engineering, and monitoring—focused on measurable outcomes such as efficiency gains, accuracy improvements, and auditable AI behavior."
         ctaText="Explore AI Automation"
         imageSrc={ai}
         reverse={false}
@@ -231,7 +231,7 @@ const AIAutomation = () => {
       <FinalCtaBanner
         category="Ready for AI?"
         headline="Bring AI into your product, safely and reliably."
-        subtext="Bantern designs automation that delivers measurable impact while keeping safety and governance front of mind."
+        subtext="NexaWhale designs automation that delivers measurable impact while keeping safety and governance front of mind."
         ctaText="Start your AI project"
       />
     </div>
