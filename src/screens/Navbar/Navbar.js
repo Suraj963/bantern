@@ -17,6 +17,8 @@ import {
 } from "@heroicons/react/24/outline";
 import ThemeToggle from "../../Common/ThemeToggle";
 
+// import nexalogo from "../../assets/nexalogo.png";
+
 const servicesDropdownItems = [
   // {
   //   title: "Website Design",
@@ -129,12 +131,17 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-3">
-              <span className="bg-primary p-2 rounded-full">
-                <BoltIcon className="h-5 w-5 text-primary-foreground" />
-              </span>
-              <span className="text-foreground text-2xl font-bold">
+              {/* <span className="bg-primary p-2 rounded-full"> */}
+              {/* <nexalogo className="h-5 w-5 text-primary-foreground" /> */}
+              <img
+                src="/nexawhaledark.png"
+                alt="Cake"
+                className="h-60 w-60 text-primary-foreground"
+              />
+              {/* </span> */}
+              {/* <span className="text-foreground text-2xl font-bold">
                 NexaWhale
-              </span>
+              </span> */}
             </Link>
           </div>
 
