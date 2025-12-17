@@ -78,12 +78,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           <motion.div variants={itemVariants} className="flex flex-col">
             <Link to="/" className="flex items-center space-x-3 mb-4">
-              <span className="bg-primary p-2 rounded-full">
-                <BoltIcon className="w-5 h-5 text-primary-foreground" />
-              </span>
-              <span className="text-foreground text-2xl font-bold">
-                NexaWhale
-              </span>
+              <img
+                src="/nexawhaledark.png"
+                alt="Cake"
+                className="h-60 w-60 text-primary-foreground"
+              />
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs">
               Innovating the Future, Together. We turn your vision into
@@ -189,7 +188,8 @@ const Footer = () => {
           className="flex flex-col-reverse md:flex-row justify-between items-center gap-6 mt-8"
         >
           <p className="text-sm text-muted-foreground text-center md:text-left">
-            © {new Date().getFullYear()} NexaWhale Solutions. All rights reserved.
+            © {new Date().getFullYear()} NexaWhale Solutions. All rights
+            reserved.
           </p>
 
           <button
