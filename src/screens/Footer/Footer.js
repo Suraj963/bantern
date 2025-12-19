@@ -79,9 +79,9 @@ const Footer = () => {
           <motion.div variants={itemVariants} className="flex flex-col">
             <Link to="/" className="flex items-center space-x-3 mb-4">
               <img
-                src="/nexawhaledark.png"
+                src="/nexawhaledarkCrop.png"
                 alt="Cake"
-                className="h-60 w-60 text-primary-foreground"
+                className="h-[64px] w-auto text-primary-foreground"
               />
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs">
