@@ -8,7 +8,7 @@ import CtaVideo from "./CtaVideo";
 import Hero from "./Hero";
 import HowItWorks from "./HowItWorks";
 import Services from "./Services";
-import Testimonials from "./Testimonials";
+// import Testimonials from "./Testimonials";
 import WhyChooseUs from "./WhyChooseUs";
 
 const Home = () => {
