@@ -134,7 +134,7 @@ const Navbar = () => {
               {/* <span className="bg-primary p-2 rounded-full"> */}
               {/* <nexalogo className="h-5 w-5 text-primary-foreground" /> */}
               <img
-                src="/nexawhaledarkCrop.png"
+                src="/nexawhaledarkCrop_v2.png"
                 alt="Cake"
                 className="h-[64px] w-auto text-primary-foreground"
               />
