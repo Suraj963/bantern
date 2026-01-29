@@ -1,12 +1,12 @@
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRightIcon,
   CodeBracketIcon,
   DevicePhoneMobileIcon,
-  CloudIcon,
+  // CloudIcon,
   SparklesIcon,
-  BugAntIcon,
+  // BugAntIcon,
   ShieldCheckIcon,
 } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";

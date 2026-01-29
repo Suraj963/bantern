@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ChevronRightIcon } from "@heroicons/react/24/solid";
+// import { ChevronRightIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 

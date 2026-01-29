@@ -4,18 +4,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Bars3Icon,
   XMarkIcon,
-  BoltIcon,
+  // BoltIcon,
   ChevronDownIcon,
   DevicePhoneMobileIcon,
-  PaintBrushIcon,
+  // PaintBrushIcon,
   CodeBracketIcon,
   CpuChipIcon,
-  WrenchScrewdriverIcon,
+  // WrenchScrewdriverIcon,
   ShieldCheckIcon,
   SparklesIcon,
   ArrowRightIcon,
 } from "@heroicons/react/24/outline";
-import ThemeToggle from "../../Common/ThemeToggle";
+// import ThemeToggle from "../../Common/ThemeToggle";
 
 // import nexalogo from "../../assets/nexalogo.png";
 

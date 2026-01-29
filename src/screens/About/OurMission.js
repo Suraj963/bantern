@@ -4,7 +4,7 @@ import {
   UsersIcon,
   CodeBracketIcon,
   GlobeAltIcon,
-  ArrowRightIcon,
+  // ArrowRightIcon,
 } from "@heroicons/react/24/solid";
 
 const OurMission = () => {

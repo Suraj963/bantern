@@ -1,10 +1,10 @@
 import AnimatedSection from "../../Common/AnimatedSection";
-import Process from "../../Common/Process";
-import AboutUs from "./AboutUs";
+// import Process from "../../Common/Process";
+// import AboutUs from "./AboutUs";
 import ContactSection from "./ContactSection";
 import CtaVideo from "./CtaVideo";
-import FeaturedProjects from "./FeaturedProjects";
-import FeaturesGrid from "./FeaturesGrid";
+// import FeaturedProjects from "./FeaturedProjects";
+// import FeaturesGrid from "./FeaturesGrid";
 import Hero from "./Hero";
 import HowItWorks from "./HowItWorks";
 import Services from "./Services";

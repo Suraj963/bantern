@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import {
-  BoltIcon,
+  // BoltIcon,
   ArrowUpIcon,
   ArrowRightIcon,
 } from "@heroicons/react/24/solid";
@@ -79,7 +79,7 @@ const Footer = () => {
           <motion.div variants={itemVariants} className="flex flex-col">
             <Link to="/" className="flex items-center space-x-3 mb-4">
               <img
-                src="/nexawhaledarkCrop.png"
+                src="/nexawhaledarkCrop_v2.png"
                 alt="Cake"
                 className="h-[64px] w-auto text-primary-foreground"
               />

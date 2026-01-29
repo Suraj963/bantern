@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export const ProjectGridItem = ({ project, variants }) => {
   return (
